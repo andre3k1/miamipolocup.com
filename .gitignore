@@ -1,3 +1,7 @@
+# Capistrano configuration
+config/deploy.rb
+config/deploy/
+
 # WordPress
 web/wp
 web/.htaccess

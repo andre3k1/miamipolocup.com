@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f294c1d4ba13182818bd55e3395f87c9",
+    "hash": "dcd154ff7a4838e0f53a2dd8a7597e38",
     "packages": [
         {
             "name": "composer/installers",
@@ -222,6 +222,26 @@
                 "environment"
             ],
             "time": "2014-10-16 14:50:21"
+        },
+        {
+            "name": "wpackagist-plugin/wpmbytplayer",
+            "version": "1.9.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wpmbytplayer/",
+                "reference": "tags/1.9.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wpmbytplayer.1.9.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wpmbytplayer/"
         }
     ],
     "packages-dev": [],

@@ -36,10 +36,11 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<!-- LOGO -->
 					<header class="no-margin">
 						<?php $logo_src = leimg('bkt_logo', 'bkt_logodisable', 'launchmodule_options'); ?><h1 class="<?php 
-							echo (!empty($logo_src) ? 'has' : 'no').'logo '; 
+							echo 'has'.'logo '; 
 							echo ((ler('heading_disable') == false) ? 'has' : 'no').'textheading'; 
-						?>"><?php 
-							if(!empty($logo_src)) echo "<img src=\"$logo_src\" alt=\"\" />"; 
+						?>">
+              <img src="/app/uploads/thepololife-logo.png" alt="The Polo Life, LLC." />
+            <?php
 							printf("<span>%s</span>", ler('heading_content')); 
 						?></h1>
 					</header>

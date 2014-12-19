@@ -18,7 +18,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 			<!-- LEARN MORE BUTTON (Premium) -->
 			<div id="learn-more-tab">
-				<a href="<?php le('lefx_pages_learnmoretab_link'); ?>" id="learn-more"><?php le('lefx_pages_learnmoretab_text'); ?> &rsaquo;</a>	
+				<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>	
 			</div><?php endif; ?>	
 			
 			<div id="signup" class="<?php 

@@ -1,0 +1,1094 @@
+/**
+ * Theme CSS
+ *
+ * Sign-Up Page Styling
+ *
+ * @package WordPress
+ * @subpackage Launch_Effect
+ *
+ */
+
+
+/* Table of Contents
+==================================================
+#Reset & Basics
+#Clearfix
+#Basic Styles
+#Container
+#Form
+#Messages
+#Social Media Buttons
+#Returning User Tooltip
+#Privacy Policy Modal
+#Footer
+#Site Credits
+#Lite Version Instructional Post
+#Plugin: jqModal */
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+display: block; }
+body {
+line-height: 1; }
+ol, ul {
+list-style: none; }
+blockquote, q {
+quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+content: none; }
+table {
+    border-collapse: collapse;
+border-spacing: 0; }
+
+/* #Clearfix: nicolasgallagher.com/micro-clearfix-hack/
+================================================== */
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* #Basic Styles
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Undo box-sizing: border-box for Fancybox */
+#fancybox-wrap div,
+#fancybox-wrap span,
+#fancybox-wrap {
+    box-sizing:content-box !important;
+    -webkit-box-sizing:content-box !important;
+    -moz-box-sizing:content-box !important;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:62.5%;
+    text-align:left;
+}
+
+html#signup-htmltag,
+body#signup-bodytag {
+    height:100%;
+    width:100%;
+}
+
+#fb-root > div {
+    left:-575px !important;
+}
+
+strong {
+    font-weight:bold;
+}
+
+em {
+    font-style:italic;
+}
+
+.clear {
+    clear:both;
+}
+
+
+input[type=text],
+input[type=email],
+textarea,
+input#submit-button,
+#respond input[type=submit] {
+    -webkit-appearance: none !important;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    -moz-transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+:focus{
+    outline:0;
+}
+
+/*----- To Fade In On Load -----*/
+
+#signup-content-wrapper {
+    opacity:0;
+}
+
+.spinner {
+    width:100px !important;
+}
+
+/* WP-REQUIRED CLASSES
+================================================== */
+
+.wp-caption-text {
+    font-style: italic;
+}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+.aligncenter {
+    text-align: center;
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+
+/* #Container
+================================================== */
+
+#signup-page-wrapper {
+    height:100%;
+    width:100%;
+    display:table;
+    vertical-align:middle;
+    position:relative;
+    z-index:900;
+}
+
+#signup-page {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+#signup {
+	clear: both;
+    padding:40px;
+    margin:0 auto 80px auto;
+}
+
+/*----- Sizes -----*/
+
+#signup.small {
+    width:390px !important;
+}
+
+#signup.medium {
+    width:590px !important;
+}
+
+#signup.large {
+    width:740px !important;
+}
+
+html.ie7 #signup.small {
+    width:310px !important;
+}
+
+html.ie7 #signup.medium {
+    width:510px !important;
+}
+
+html.ie7 #signup.large {
+    width:660px !important;
+}
+
+/*----- Sizes: Small -----*/
+
+#signup.small ul#inner-footer li.inner-footer_icon.facebooklike,
+#signup.small ul#inner-footer li.text-link {
+    float: left;
+    display: block;
+    width: 100%;
+    margin:10px 0;
+}
+
+#signup.small ul#inner-footer li.inner-footer_icon.facebooklike {
+    margin-bottom:30px;
+}
+
+
+/*----- Sizes: Large 2-Column Styling -----*/
+
+#signup.large .signup-left,
+#launchlitemodule #signup .signup-left {
+    float:left;
+    width:55%;
+    padding-right:40px;
+}
+
+html.ie7 #signup.large .signup-left,
+html.ie7 #launchlitemodule #signup .signup-left {
+    width:45%;
+}
+
+#signup.large .signup-right,
+#launchlitemodule #signup .signup-right {
+    float:left;
+    width:45%;
+}
+
+/*----- Positions -----*/
+
+#signup.left {
+    float:left;
+    margin-left:30px;
+    margin-right:0;
+}
+
+#signup.right {
+    float:right;
+    margin-right:30px;
+    margin-left:0;
+}
+
+#signup.center {
+    margin:0 auto 80px auto;
+}
+
+/*----- Logo and Video -----*/
+
+#signup-page header {
+    overflow:hidden;
+    position:relative;
+    margin:0 0 30px 0;
+}
+
+#signup-page header.no-margin {
+    margin: 0;
+}
+
+#signup-page header.no-margin h1 {
+    padding-bottom: 30px;
+}
+
+#signup-page header h1 {
+    position:relative;
+    margin:0;
+    line-height:1.2em;
+}
+
+#signup-page header h1.hastextheading.haslogo span {
+    margin-top:15px;
+}
+
+#signup-page header h1.notextheading.haslogo {
+
+}
+
+#signup-page header h1.notextheading.haslogo span {
+    text-indent:-9999px;
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+}
+
+#signup-page header h1.notextheading.nologo {
+    display:none;
+    margin:0;
+}
+
+#signup-page .video {
+    margin:0 0 30px 0;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    margin-bottom:15px;
+}
+
+#signup-editor-content {
+    margin-bottom:30px;
+}
+
+#presignup-content,
+#success-content {
+    margin-bottom:30px;
+}
+
+/* #Form
+================================================== */
+
+#signup a,
+#privacy-policy a {
+    text-decoration:none;
+}
+
+#signup a:hover {
+    text-decoration:underline;
+}
+
+#signup h2,
+#signup h3,
+#signup h4,
+#privacy-policy h2 {
+    margin:0 0 10px 0;
+}
+
+#signup p,
+#privacy-policy p {
+    margin:0 0 18px 0;
+    line-height:1.4em;
+}
+
+#signup ul#form-layout li {
+    margin:0 0 24px 0;
+    position:relative;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+}
+#signup ul#form-layout li:before,
+#signup ul#form-layout li:after {
+	content: " ";
+	display: table;
+}
+#signup ul#form-layout li:after {
+	clear: both;
+}	
+
+/* YES custom fields: No bottom margin for <li> containing submit button */
+#signup ul#form-layout li.hascf-submit-button {
+    margin:0;
+}
+
+#signup label {
+    display:block;
+    margin:0 0 8px 0;
+    line-height:1.3em;
+}
+
+/* Required field asterisk */
+#signup label span {
+    color: #DA342E;
+}
+
+#signup input[type=text],
+#signup input[type=email],
+#signup .radio-group,
+#signup .checkbox-group,
+#signup select,
+#signup textarea {
+    width:300px;
+}
+
+#signup textarea {
+    min-width:300px;
+    max-width:300px;
+}
+
+html.ie7 #signup input[type=text],
+html.ie7 #signup input[type=email],
+html.ie7 #signup .radio-group,
+html.ie7 #signup .checkbox-group,
+html.ie7 #signup select,
+html.ie7 #signup textarea {
+    width:260px;
+}
+
+html.ie7 #signup textarea {
+    min-width:260px;
+    max-width:260px;
+}
+
+#signup input[type=text],
+#signup input[type=email],
+#signup textarea,
+.lefx_buy_now input[type=text] {
+    margin:0;
+    padding: 10px;
+
+    display: block;
+    float: left;
+    overflow: hidden;
+
+    background: #F7F7F7;
+    border: 1px solid #DDD;
+
+    font-family:'Lucida Grande', sans-serif;
+    font-size: 1.2em;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0px 2px 3px #ddd;
+    -moz-box-shadow: inset 0px 2px 3px #ddd;
+    -webkit-box-shadow: inset 0px 2px 3px #ddd;
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+
+#signup input:focus,
+#signup textarea:focus {
+    background:#ffffff;
+    outline:0;
+
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+
+#signup .radio-group input,
+#signup .checkbox-group input {
+    float: left;
+    margin: 4px 10px 0 1px;
+}
+
+#signup input#submit-button {
+    width:auto;
+    height:35px;
+    margin:0;
+    padding:0px 15px;
+
+    background:transparent;
+    border:none;
+    color:#fff;
+
+    font-family: Helvetica, Arial, sans-serif !important;
+    font-size:1.1em;
+    font-weight:bold;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+
+#signup span#submit-button-border {
+    display:inline-block;
+    float:left;
+    position:relative;
+    overflow:hidden;
+    z-index:999;
+
+    border-width:1px;
+    border-style:solid;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#signup input#submit-button:hover {
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+
+#signup #submit-button-spinner {
+    position:absolute;
+    top:0;
+    left:0px;
+    height:100%;
+    width:100%;
+    padding:0;
+    display:none;
+}
+
+/*----- Email Field Layout (Single — No Custom Fields) -----*/
+
+/* 	Width of <li> must be specified because to keep field and button on same line, field must be set to 100% width */
+#signup.nocf ul#form-layout li.first {
+    width:300px;
+    margin:0 0 10px 0;
+}
+
+#email-layout {
+    display: table;
+    width: 100%;
+    position:relative;
+}
+
+html.ie7 #email-layout {
+    width:320px;
+}
+
+#email-layout label {
+    display: table-cell;
+}
+
+#email-layout span#emailinput {
+    display: table-cell;
+    width: 100%;
+    padding-right:10px;
+}
+
+#email-layout #email {
+    width: 100%;
+}
+
+html.ie7 #email-layout #email {
+    width: 165px;
+}
+
+/* #Messages
+================================================== */
+
+#success,
+#success-content,
+#newuser,
+#returninguser,
+#returninguserurl {
+    display:none;
+}
+
+#pass_thru_error {
+    color:#DA342E;
+    font-size:1.1em;
+    margin:3px 0 0 0;
+    float: right;
+}
+
+#error, .error {
+    display: none;
+    position:absolute;
+    bottom:0px;
+    left:10px;
+
+    width:auto;
+    padding:2px 6px;
+
+    background:#DA342E;
+    color:white;
+
+    font-size:1.1em;
+    font-weight:bold;
+
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: inset 0px 0px 3px #78000D;
+    -moz-box-shadow: inset 0px 0px 3px #78000D;
+    -webkit-box-shadow: inset 0px 0px 3px #78000D;
+}
+
+.fieldset-error {
+    bottom:-20px;
+    left:0px;
+}
+
+span.user,
+span.clicks,
+span.conversions {
+    font-weight:bold;
+}
+
+/* #Social Media Buttons
+================================================== */
+
+.social-container {
+    background:url('../im/social-bg.png') repeat;
+    position:relative;
+    padding:5px 0 13px 18px;
+    margin:10px 0 30px 0;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.social-block {
+    float:left !important;
+    margin:10px 18px 0 0 !important;
+    height:23px !important;
+}
+
+#fblikeblock {
+    width:135px !important;
+}
+
+#signup .disable {
+    display:none !important;
+}
+
+.fb_iframe_widget iframe {
+    overflow:visible !important;
+}
+
+/* #Returning User Tooltip
+================================================== */
+
+a#reusertip {
+    display:inline-block;
+    position:relative;
+    float:right;
+    margin-right:0px;
+
+    font-size:11px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none !important;
+}
+
+a#reusertip:hover {
+    text-decoration: none;
+}
+
+#reuserbubble {
+    display:none;
+    position: absolute;
+    top: -85px;
+    right: 0px;
+    z-index:901;
+
+    width: 124px;
+    padding: 12px;
+
+    opacity: 0.88;
+    background: black;
+    color: white;
+
+    font-size: 11px;
+    line-height: 13px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.reuserbubble-arrow {
+    position:absolute;
+    bottom: -18px;
+    right: 50px;
+
+    height:0;
+    width:0;
+
+    border-color: #000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+}
+
+/* #Privacy Policy Modal
+================================================== */
+
+span.privacy-policy {
+    display:block;
+    padding-top:10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.1em;
+    line-height:1.2em;
+}
+
+.nocf span.privacy-policy {
+    padding-top:5px;
+}
+
+#privacy-policy h2 {
+    margin:0 0 15px 0;
+    text-transform: capitalize;
+}
+
+#privacy-policy a.close {
+    position:absolute;
+    top:10px;
+    right:16px;
+
+    font-size:25px;
+    font-weight:bold;
+}
+
+#privacy-policy a.close:hover {
+    text-decoration:none;
+}
+
+/* #Footer (Social Icons)
+================================================== */
+
+ul#inner-footer {
+    margin:22px 0 0 0;
+}
+
+ul#inner-footer li {
+    float:right;
+    margin:0 0 0 10px;
+    padding-top:5px;
+}
+
+ul#inner-footer li p {
+    margin:0;
+    line-height:1.4em;
+}
+
+ul#inner-footer li p a {
+    text-decoration:none;
+}
+
+ul#inner-footer li p a:hover {
+    text-decoration:underline;
+}
+
+ul#inner-footer li.inner-footer_icon {
+    float:left;
+    margin:0 7px 0 0;
+    padding:0;
+}
+
+ul#inner-footer li.inner-footer_icon a {
+    display:block;
+    width:24px;
+    height:24px;
+    text-indent:-9999px;
+}
+
+ul#inner-footer li.inner-footer_icon.facebooklike {
+    width:85px;
+    margin:0;
+    float:right;
+    position:relative;
+    top:4px;
+}
+
+ul#inner-footer li.inner-footer_icon.facebook a {
+    background:url('../im/facebook.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.twitter a {
+    background:url('../im/twitter.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.instagram a {
+    background:url('../im/instagram.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.googleplus a {
+    background:url('../im/googleplus.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.pinterest a {
+    background:url('../im/pinterest.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.tumblr a {
+    background:url('../im/tumblr.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.soundcloud a {
+    background:url('../im/soundcloud.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.linkedin a {
+    background:url('../im/linkedin.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.youtube a {
+    background:url('../im/youtube.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon.yelp a {
+    background:url('../im/yelp.png') no-repeat top left;
+}
+
+ul#inner-footer li.inner-footer_icon a:hover {
+    background-position:bottom left;
+}
+
+/* #Site Credits
+================================================== */
+
+ul#footer {
+    position:fixed;
+    bottom:0px;
+    right:30px;
+    overflow:hidden;
+    z-index:1010;
+
+    padding:2px 10px;
+
+    background:#000;
+
+    font-size:1.1em;
+}
+
+ul#footer li {
+    float:left;
+    color:#aaa;
+    line-height:1.8em;
+}
+
+ul#footer li a {
+    color:#aaa;
+    text-decoration:underline;
+}
+
+ul#footer li a.logo {
+    position:relative;
+    top:-2px;
+    display:inline-block;
+
+    height:17px;
+    width:84px;
+
+    background:url('../im/mini-logo.png') no-repeat top center;
+
+    text-indent:-9999px;
+}
+
+/* #Lite Version Instructional Post
+================================================== */
+
+.lite #wrapper {
+    width: 700px;
+    margin: 40px auto 60px auto;
+    background: white;
+    padding: 40px 40px 40px 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 899;
+}
+
+.lite #wrapper header {
+    width:700px;
+    margin-bottom:40px;
+}
+
+.lite #wrapper header h1 {
+    margin:0;
+    position:relative;
+    font-family:Oswald;
+    font-weight:normal;
+    font-style:normal;
+    color:#252525;
+    text-shadow: none;
+    text-align:left;
+    font-size:9.0em;
+}
+
+.lite #wrapper header h1 a {
+    text-decoration: none;
+    color:#252525;
+}
+
+.lite #wrapper header h1 span {
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+}
+
+.lite #main {
+    float:left;
+    width:470px;
+}
+
+.lite .lepost {
+    margin:0 0 50px 0;
+}
+
+.lite .lepost h2.posttitle {
+    margin:0 0 15px 0;
+}
+
+.lite .lepost h2 a {
+    text-decoration:none;
+    color:#333333  !important;
+}
+
+.lite .lepost h2 a:hover {
+    color:#00bfbf;
+    text-decoration:underline;
+}
+
+.lite .lepost h1,
+.lite .lepost h2 {
+    line-height:1.2em;
+    margin:0 0 10px 0;
+    font-family:Podkova;
+    font-size:2.8em;
+    font-weight:normal;
+    font-style:normal;
+    color:#333333;
+    text-shadow: 0px 1px 1px #ffffff;
+    text-transform:none;
+}
+
+.lite .lepost h3 {
+    line-height:1.2em;
+    margin:0 0 15px 0;
+    font-family:Oswald;
+    font-size:2.0em;
+    font-weight:normal;
+    font-style:normal;
+    color:#999999;
+    text-shadow: none;
+    text-transform:uppercase;
+}
+
+.lite .lepost h4 {
+    line-height:1.2em;
+    margin:0 0 10px 0;
+    text-transform: uppercase;
+    font-family:Podkova;
+    font-size:1.5em;
+    font-weight:normal;
+    font-style:normal;
+    color:#D65543;
+    text-shadow: none;
+    text-transform:uppercase;
+}
+
+.lite .lepost p {
+    line-height:1.6em;
+    margin:0 0 25px 0;
+    font-size:1.5em;
+    font-weight:300;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.lite .lepost ul {
+    list-style-type:square;
+    margin:0 0 25px 0;
+    padding:0;
+}
+
+.lite .lepost ol {
+    list-style-type:decimal;
+    margin:0 0 25px 0;
+    padding:0;
+}
+
+.lite .lepost ul li,
+.lite .lepost ol li {
+    margin:0 0 0 15px;
+    padding:0;
+    line-height:1.4em;
+}
+
+/* PayPal Buy Now Button
+================================================== */
+
+.lefx_buy_now:before,
+.lefx_buy_now:after {
+    content: "";
+    display: table;
+}
+.lefx_buy_now:after {
+    clear: both;
+}
+.lefx_buy_now {
+	text-align: center;
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+#main .lefx_buy_now > p {
+	margin-bottom: 10px;
+}
+.lefx_buy_now label.qty:after {
+	content: "Qty: ";
+}
+.lefx_buy_now input[type="submit"] {
+    padding: 4px;
+    max-width: 100%;
+    max-height: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    cursor: pointer;
+}
+.lefx_buy_now .le-product-sel {
+	display: inline-block;
+	padding: 3px;
+}
+
+i.buy-now-cc {
+    display: block;
+    width:  160px;
+    height: 46px;
+    margin: 0 auto;
+    background-image:  url('../im/paypal-cc.jpg');
+    background-repeat: no-repeat;
+    background-size:   100%;
+}
+
+.buy-now-error {
+    width: 100%;
+    padding: 6px 10px;
+    border: 2px solid #c92b1f;
+    border-radius: 3px;
+    background-color: #ffdddd;
+    font-size: 12px;
+}
+
+
+/* captacha */
+#signup .captcha-holder {
+}
+
+#signup .input-holder-cap {
+    display:inline-block;
+}
+
+#signup.medium.hascf .input-holder-cap {
+    float:right;
+}
+
+#signup input.captcha, #signup input.sum, #signup span.calc {
+    display: inline-block !important;
+    width: 40px;
+    float:none !important;
+    text-align: center;
+}
+#signup input.captcha {
+    width:50px;
+}
+#signup span.calc { 
+    width: 20px;
+    font-weight:bold;
+    line-height: 37px;
+    vertical-align:top;
+}
+
+/* #Plugin: jqModal // Base styling courtesy of Brice Burgess <bhb@iceburg.net>
+================================================== */
+
+.jqmWindow{display:none;position:absolute;top:17%;left:50%;margin-left:-240px;width:480px;padding:40px;}.jqmOverlay{background-color:#000;}* iframe.jqm{position:absolute;top:0;left:0;z-index:-1;width:expression(this.parentNode.offsetWidth+'px');height:expression(this.parentNode.offsetHeight+'px');}* html .jqmWindow{position:absolute;top:expression((document.documentElement.scrollTop||document.body.scrollTop) 0 Math.round(17*(document.documentElement.offsetHeight||document.body.clientHeight) / 100px 0 px);}
+

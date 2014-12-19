@@ -443,7 +443,7 @@ function dynamic_css() {
 
 	}
 	#signup-page header h1 {
-		text-align: <?php echo ler('lefx_logo_alignment'); ?>;
+		text-align: center;
 	}
 	#signup-page header h1 {
 		font-family:<?php legogl('heading_font_goog', 'heading_font'); ?>;

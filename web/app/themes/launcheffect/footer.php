@@ -15,14 +15,13 @@
 		<a href="#" class="close">&times;</a>
 		<h2><?php le('lefx_privacy_policy_heading'); ?></h2>
 		<p><?php le('lefx_privacy_policy'); ?></p>
-	</div>
-	<!-- FOOTER BRANDING (Premium/Free) -->
-	<?php if(lefx_version() == 'premium') : get_template_part('premium/brand'); else : ?>
+  </div>
 
+	<!-- FOOTER BRANDING (Premium/Free)
 	<ul id="footer">
 		<li>Powered by <a href="http://www.launcheffectapp.com" class="logo" target="_blank">Launch Effect</a> for WordPress by <a href="http://www.barrelny.com" target="_blank">Barrel</a></li>
-	</ul>
-	<?php endif; ?>
+  </ul>
+  -->
 
 	<!-- Slideshow Script -->
 	<script type="text/javascript"><?php 

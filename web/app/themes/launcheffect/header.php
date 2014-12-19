@@ -27,7 +27,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
 
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title>Miami Beach Polo World Cup | The Polo Life, LLC.</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0">
@@ -52,34 +52,6 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	<?php if ($lefx_desc_fbadmins):?><meta property="fb:admins" content="<?php echo $lefx_desc_fbadmins; ?>"/><?php endif; ?>
 	<?php if ($lefx_desc_fbappid):?><meta property="fb:app_id" content="<?php echo $lefx_desc_fbappid; ?>"/><?php endif; ?>
 	<?php endif; ?>
-
-	<!--
-
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     `"MMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM        `MMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM         'MMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     `"MMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM        `MMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM         'MMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-
-	http://www.barrelny.com
-	<?php echo sprintf(__('Presenting Launch Effect %s %s for WordPress', 'launcheffect'), LE_VERSION, ucfirst(lefx_version())); ?>
-
-	-->
 
 	<?php if($bkt_favicon) : ?><link rel="shortcut icon" href="<?php echo $bkt_favicon; ?>" type="image/x-icon" /><?php endif; ?>
 

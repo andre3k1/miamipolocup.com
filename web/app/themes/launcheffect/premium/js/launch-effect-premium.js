@@ -1,5 +1,4 @@
 /*
-launch-effect - v - 2014-02-26
 A viral marketing theme for WordPress empowering designers, marketers, and enthusiasts to build websites with relative ease
 Lovingly coded by Barrel  - http://barrelny.com 
 */

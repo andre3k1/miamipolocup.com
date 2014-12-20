@@ -56,16 +56,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<div id="signup-body">
 						<!-- H2 SUBHEADING / P DESCRIPTION (PRESIGNUP) -->
-						<div id="presignup-content" class="signup-left">
-							<?php if($subheading_content = ler('subheading_content')) :?><h2><?php echo $subheading_content; ?></h2><?php endif; ?>
-
-							<?php if('After Subheading' == $lefx_editorcontent_placement) echo $placed_content; ?>
-
-							<?php if($description_content = ler('description_content')) echo wpautop($description_content); ?>
-
-							<?php if('After Body Text' == $lefx_editorcontent_placement) echo $placed_content; ?>
-
-						</div>
+						<div id="presignup-content" class="signup-left"></div>
 
 						<!-- H2 SUBHEADING / P DESCRIPTION (SUCCESS) -->
 						<div id="success-content">

@@ -21,12 +21,12 @@
 
 								    <div id="email-layout">
 								        <span id="emailinput">
-								            <input type="email" id="email" name="email" placeholder="Enter your email" />
+								            <input type="email" id="email" name="email" placeholder="Enter Your Email Address" />
 								        </span>
 										<!-- SUBMIT BUTTON -->
 										<span id="submit-button-border">
 											<span id="submit-button-spinner"></span>
-											<input type="submit" name="submit" value="NOTIFY ME" id="submit-button" />
+											<input type="submit" name="submit" value="Sign Up" id="submit-button" />
 										</span>
 								    </div>
 

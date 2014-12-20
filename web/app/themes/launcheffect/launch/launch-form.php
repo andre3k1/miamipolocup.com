@@ -81,15 +81,11 @@
 									</span>
 								</li>
 								<?php endif; ?>
-								<?php if(get_option('lefx_enable_privacy_policy') == true) : ?>
 
 								<!-- PRIVACY POLICY LINK -->
 								<li>
-									<span class="privacy-policy">
-										<?php le('lefx_privacy_policy_label');?> <a href="#" id="modal-privacy" class="modal-trigger"><?php le('lefx_privacy_policy_heading'); ?></a>
-									</span>
+									<span class="privacy-policy">Sign Up, Stay in the Know</span>
 								</li>
-								<?php endif; ?>
 
 							</ul>
 						</fieldset>

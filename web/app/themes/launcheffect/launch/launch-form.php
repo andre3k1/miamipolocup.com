@@ -20,12 +20,10 @@
 									<?php if( $label_content = ler('label_content')) : ?>
 
 									<label for="email">
-										<?php echo $label_content; if(ler('lefx_req_indicator')) echo '<span> *</span>'; ?>
+										YOUR EMAIL ADDRESS<span> *</span>
 										<?php if(get_option('lefx_reuser_enable') == true) : ?>
-
 										<a href="#" id="reusertip">
 											<?php echo ($lefx_reuser_label = ler('lefx_reuser_label')) ? $lefx_reuser_label: __('Returning User?', 'launcheffect'); ?>
-
 											<div id="reuserbubble">
 												<?php echo ($lefx_reuser_bubble = ler('lefx_reuser_bubble')) ? $lefx_reuser_bubble : __('Simply enter your email address and submit the form to view your stats.', 'launcheffect'); ?>
 												<div class="reuserbubble-arrow-border"></div>
@@ -33,7 +31,6 @@
 											</div>
 										</a>
 										<?php endif; ?>
-
 									</label>
 									<?php endif; ?>
 

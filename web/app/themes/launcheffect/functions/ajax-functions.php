@@ -372,7 +372,8 @@ function dynamic_css() {
 	$dropShadow  = '-webkit-box-shadow: 0px 0px 10px #111; -moz-box-shadow: 0px 0px 10px #111; box-shadow: 0px 0px 10px #111;';
 	$glow        = '-webkit-box-shadow: 0px 0px 10px #FFF;	-moz-box-shadow: 0px 0px 10px #FFF; box-shadow: 0px 0px 10px #FFF;';
 	$noShadow    = '-webkit-box-shadow: 0px 0px 0px #FFF; -moz-box-shadow: 0px 0px 0px #FFF; box-shadow: 0px 0px 0px #FFF;';
-	$ct_bg_color = ler('container_background_color');
+	$pg_bg_color = '#D4DEE0';
+	$ct_bg_color = 'transparent';
 
 	?>
 
@@ -381,7 +382,7 @@ function dynamic_css() {
 
 	html,
 	body {
-		background: <?php echo ($pg_bg_color = '#13224D'); ?>
+		background: <?php echo $pg_bg_color; ?>
 
 	}
 	<?php if ( $supersize = leimg('supersize', 'supersize_disable', 'plugin_options')) : ?>

@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Launch Effect
- * 
+ *
  */
 
 add_action('wp_ajax_dynamic_css_premium', 'dynamic_css_premium' );
@@ -28,39 +28,26 @@ function dynamic_css_premium() {
 	$dark_resp_bg    = darker('lefx_pages_nav_responsivebg');
 
 	?>
-<?php if ( get_option('lefx_pages_enable') ): ?>
 
 /* Learn More Tab
 ================================================== */
 
 	#learn-more-tab {
-		margin:<?php
-			switch( get_option('container_position') ) {
-				case 'left': echo '10px 0 0 30px'; break;
-				case 'right': echo '10px 30px 0 0; float:right'; break;
-				default: echo '10px auto 0 auto';
-			}
-		?>;
-		width:<?php
-			switch( get_option('container_width') ) {
-				case 'medium': echo 590; break;
-				case 'large': echo 740; break;
-				default: echo 400;
-			}
-		?>px;
+		margin: 10px auto 0 auto;
+		width: 590px;
 	}
 
 	a#learn-more {
-		background:<?php le('lefx_pages_learnmoretab_bgcolor'); ?>;
-		color:<?php le('lefx_pages_learnmoretab_color'); ?>;
-		font-size:<?php le('lefx_pages_learnmoretab_size'); ?>em;
-		font-family:<?php legogl('lefx_pages_learnmoretab_font_goog', 'lefx_pages_learnmoretab_font'); ?>;
+		font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 1.6em;
+		font-weight: 700;
+		color: #C53FA7;
+		background: transparent;
 	}
 
 	a#learn-more:hover {
-		background:<?php echo darker('lefx_pages_learnmoretab_bgcolor'); ?>;
+		background: transparent;
 	}
-<?php endif; ?>
 
 /* Sign Up with Custom Fields
 ================================================== */
@@ -108,12 +95,12 @@ function dynamic_css_premium() {
 		background:<?php le('lefx_progbarcolor'); ?>;
 	}
 
-	<?php 
+	<?php
 		$barInset = sprintf(
-			"inset 0px 1px 0px 0px #%s, inset 0px -5px 8px 0px #%s", 
-			lighter('lefx_progbarcolor'), 
+			"inset 0px 1px 0px 0px #%s, inset 0px -5px 8px 0px #%s",
+			lighter('lefx_progbarcolor'),
 			darker2('lefx_progbarcolor')
-		); 
+		);
 	?>#bar.stylish #bar-complete {
 		-webkit-box-shadow: <?php echo $barInset; ?>;
 		-moz-box-shadow: <?php echo $barInset; ?>;
@@ -133,13 +120,13 @@ function dynamic_css_premium() {
 		background-image:url('<?php echo $ct_bgimg; ?>');
 		background-color:transparent;
 		<?php elseif( $ct_bgcolor = ler('lefx_pages_container_bgcolor')): ?>background-color: <?php echo $ct_bgcolor; ?>;<?php endif; ?>
-			
-		<?php 
+
+		<?php
 			switch( get_option('lefx_pages_container_effects') ) {
-				case 'dropshadow': echo $dropShadow; 
-				case 'glow': echo $glow; 
-				default: echo $noShadow; 
-			} 
+				case 'dropshadow': echo $dropShadow;
+				case 'glow': echo $glow;
+				default: echo $noShadow;
+			}
 		?>
 
 		<?php if (ler('lefx_pages_tab_disable') == true): ?>margin-top:40px;<?php endif; ?>
@@ -155,12 +142,12 @@ function dynamic_css_premium() {
 		font-weight:<?php lewt('lefx_pages_textlogo_style'); ?>;
 		font-style:<?php lestyle('lefx_pages_textlogo_style'); ?>;
 		color:<?php echo $pg_text_logo_color = ler('lefx_pages_textlogo_color'); ?>;
-		text-shadow: <?php 
-			switch( get_option('lefx_pages_textlogo_effects') ) { 
+		text-shadow: <?php
+			switch( get_option('lefx_pages_textlogo_effects') ) {
 				case 'letterpress': echo $letterPress;
 				case 'shadow': echo $textShadow;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 		font-size:<?php echo $pg_txt_logo_size = ler('lefx_pages_textlogo_size'); ?>em;
 	}
@@ -270,12 +257,12 @@ function dynamic_css_premium() {
 		font-weight:<?php lewt('lefx_pages_h2_style'); ?>;
 		font-style:<?php lestyle('lefx_pages_h2_style'); ?>;
 		color:<?php echo $h2_color = ler('lefx_pages_h2_color'); ?>;
-		text-shadow: <?php 
-			switch( get_option('lefx_pages_h2_effects') ) { 
+		text-shadow: <?php
+			switch( get_option('lefx_pages_h2_effects') ) {
 				case 'letterpress': echo $letterPress; break;
 				case 'shadow': echo $textShadow; break;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 		text-transform:<?php le('lefx_pages_h2_case'); ?>;
 	}
@@ -290,12 +277,12 @@ function dynamic_css_premium() {
 		font-weight:<?php lewt('lefx_pages_h3_style'); ?>;
 		font-style:<?php lestyle('lefx_pages_h3_style'); ?>;
 		color:<?php le('lefx_pages_h3_color'); ?>;
-		text-shadow: <?php 
-			switch( get_option('lefx_pages_h3_effects') ) { 
+		text-shadow: <?php
+			switch( get_option('lefx_pages_h3_effects') ) {
 				case 'letterpress': echo $letterPress; break;
 				case 'shadow': echo $textShadow; break;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 		text-transform:<?php le('lefx_pages_h3_case'); ?>;
 	}
@@ -307,12 +294,12 @@ function dynamic_css_premium() {
 		font-weight:<?php lewt('lefx_pages_h4_style'); ?>;
 		font-style:<?php lestyle('lefx_pages_h4_style'); ?>;
 		color:<?php le('lefx_pages_h4_color'); ?>;
-		text-shadow: <?php 
-			switch( get_option('lefx_pages_h4_effects') ) { 
+		text-shadow: <?php
+			switch( get_option('lefx_pages_h4_effects') ) {
 				case 'letterpress': echo $letterPress;
 				case 'shadow': echo $textShadow;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 		text-transform:<?php echo ler('lefx_pages_h4_case'); ?>;
 	}
@@ -422,7 +409,7 @@ function dynamic_css_premium() {
 		<?php echo $noShadow; ?>
 	}
 
-	#launchlitemodule h2, 
+	#launchlitemodule h2,
 	#launchlitemodule h3,
 	#launchlitemodule h4 {
 		color:<?php le('lefx_pages_tab_subheading_color'); ?>;
@@ -468,10 +455,10 @@ function dynamic_css_premium() {
 		background: <?php echo le('buy_now_bg_color'); ?>;
 		<?php if ($disableGradient == false): ?>
 
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php 
-			echo $bn_bg_start = ler('buy_now_bg_start'); 
-		?>), color-stop(100%,<?php 
-			echo $bn_bg_end = ler('buy_now_bg_end'); 
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php
+			echo $bn_bg_start = ler('buy_now_bg_start');
+		?>), color-stop(100%,<?php
+			echo $bn_bg_end = ler('buy_now_bg_end');
 		?>));
 		background: -webkit-linear-gradient(top, <?php echo $bn_bg_start; ?> 0%, <?php echo $bn_bg_end; ?> 100%);
 		background:    -moz-linear-gradient(top, <?php echo $bn_bg_start; ?> 0%, <?php echo $bn_bg_end; ?> 100%);

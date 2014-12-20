@@ -17,14 +17,6 @@
 							<input type="hidden" name="code" id="code" value="<?php codeCheck(); ?>" />
 							<ul id="form-layout">
 								<li class="first">
-									<?php if( $label_content = ler('label_content')) : ?>
-
-									<label for="email">
-										YOUR EMAIL ADDRESS<span> *</span>
-									</label>
-									<?php endif; ?>
-
-									<!-- START IF NO CUSTOM FIELDS //////////////////////////////////////////////////////////////////// -->
 									<?php if(!get_option('lefx_cust_field1')) : ?>
 
 								    <div id="email-layout">

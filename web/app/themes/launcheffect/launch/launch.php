@@ -14,12 +14,10 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 	<div id="signup-page-wrapper">
 		<div id="signup-page">
-			<?php if(lefx_version() == 'premium') if(ler('lefx_pages_enable') != false) : ?>
-
-			<!-- LEARN MORE BUTTON (Premium) -->
+			<!-- SPONSOR US BUTTON -->
 			<div id="learn-more-tab">
 				<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
-			</div><?php endif; ?>
+			</div>
 
 			<div id="signup" class="<?php
 				echo 'medium center nocf';

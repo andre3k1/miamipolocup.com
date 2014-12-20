@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Launch Effect
- * 
+ *
  */
 
 function compress($buffer) {
@@ -15,7 +15,7 @@ function compress($buffer) {
 	/* remove tabs, spaces, newlines, etc. */
 	$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
 	/* fixes color hex saved without hash mark */
-	$buffer = str_replace('##', '#', $buffer); 
+	$buffer = str_replace('##', '#', $buffer);
 	return $buffer;
 }
 
@@ -58,7 +58,7 @@ function le_submit() {
 	$aweberConsumerSecret = get_option('lefx_aweberconsumersecret');
 
 	// grab your List's Unique Id by going to http://admin.mailchimp.com/lists/
-	// Click the "settings" link for the list - the Unique Id is at the bottom of that page. 
+	// Click the "settings" link for the list - the Unique Id is at the bottom of that page.
 	$list_id = get_option('lefx_mclistid');
 
 	$opt_in = (get_option('lefx_mcdouble') == true) ? false : true;
@@ -82,7 +82,7 @@ function le_submit() {
 			if ($count > 0) {
 				$reuser = 'true';
 				$stats = getDetail(LE_TABLE, 'email', $postEmail);
-		
+
 				foreach ($stats as $stat) {
 					$clicks = $stat->visits;
 					$conversions = $stat->conversions;
@@ -100,31 +100,31 @@ function le_submit() {
 				$mc_firstname = '';
 				$mc_lastname = '';
 
-				// Custom Fields		
+				// Custom Fields
 				if(lefx_version() == 'premium') {
 					$premium = array();
 					$premium['fields'] = $premium['values'] = $postfields = $custom_fields = array();
-	
+
 					for($i=1; $i<=10; $i++) {
 						$_idx = "field$i";
 						if(isset($_POST[$_idx])) {
 							$opt_val = get_option("lefx_cust_field{$i}");
 							$option = trim(preg_replace('/[^a-zA-Z 0-9]+/', '', $opt_val));
 							$fieldname =  "LE " . $option;
-					
+
 							if (is_array($_POST[$_idx]))
 								$postfields[$_idx] = implode(',', $_POST[$_idx]);
 							else
 								$postfields[$_idx] = $_POST[$_idx];
-					
+
 							$_field = $postfields[$_idx];
 							if(get_option("lefx_cust_field{$i}_required") == "on" && (!$_field || trim($_field) == ''))
 								array_push($required, "lefx_cust_field{$i}");
-				
+
 							array_push($premium['fields'], "custom_field$i");
 							array_push($premium['values'], $_field);
 							if (!empty($_field)) $custom_fields[] = "$opt_val: $_field";
-					
+
 							// Mail Chimp
 							switch( strtolower(trim($option)) ) {
 								case 'first name':
@@ -136,8 +136,8 @@ function le_submit() {
 								default:
 									$chimp_custom_fields["LEFIELD{$i}"] = array('name' => $fieldname, 'value' => $_field);
 							}
-					
-							// AWeber	
+
+							// AWeber
 							if (strtolower(trim($option)) != 'name') {
 								if ( !empty($_field) ) {
 									$aweber_custom_fields["LE " . str_replace(' ','_', $option)] = substr($_field,0,100);
@@ -151,36 +151,36 @@ function le_submit() {
 								$cm_le_fields[$fieldname] = $_field;
 								array_push($cm_custom_field_values, array('Key' => $fieldname, 'Value' => $_field));
 							} elseif (strtolower(trim($option)) == 'name') {
-								// use aweber name, or else combine mailchimp first and last, else empty	
+								// use aweber name, or else combine mailchimp first and last, else empty
 								$cm_name = $aweber_name;
 							}
-					
+
 						} else {
 							if( get_option("lefx_cust_field{$i}") != '' && get_option("lefx_cust_field{$i}_required") == "on")
 								array_push($required, "lefx_cust_field{$i}");
 						}
 					}
-			
+
 					// Use firstname & lastname if available
 					if (($mc_firstname || $mc_lastname) && empty($aweber_name) ) {
 						$aweber_name = $cm_name = trim($mc_firstname . ' ' . $mc_lastname);
 					}
 				}
-			
+
 				// set field names
 				$le_fields = array('LE Referral Code', 'LE Visits', 'LE Signups');
 			    $aweber_le_fields = array_merge($le_fields, array_keys($aweber_custom_fields));
 			    $cm_le_fields = array_merge($le_fields, array_keys($cm_le_fields));
-		
+
 				if (!count($required)) {
 					postData(LE_TABLE, $referralpost, $premium);
-					
+
 					if ($auto_responder||$admin_notify) {
 						$site_title = get_bloginfo('name');
 						$the_url = sprintf(site_url('?ref=%s'), @$_POST['code']);
 						$the_link = sprintf("<a href=\"%s\">referral link</a>", $the_url);
 					}
-				
+
 					// auto responder
 					if ($auto_responder) {
 						$headers = "From: $site_title <$auto_reply>". "\r\n";
@@ -190,13 +190,13 @@ function le_submit() {
 						$subject = !empty($subj)?$subj:$site_title. ": Auto-Response";
 						$the_shortcode = '[launchcode]';
 						$has_shortcode = strpos( $auto_copy, $the_shortcode);
-					
+
 						if ( $has_shortcode ) {
 							$auto_copy = str_replace( $the_shortcode, $the_link, $auto_copy );
 						}
 						$emailed = @wp_mail( $postEmail, $subject, $auto_copy, $headers );
 					}
-					
+
 					// admin notifier
 					if ($admin_notify) {
 						$site_title = get_bloginfo('name');
@@ -209,7 +209,7 @@ function le_submit() {
 						$copy .= implode('<br/><br/>',$custom_fields);
 						$emailed = @wp_mail( $admin_email, $subject, stripslashes($copy), $headers );
 					}
-			
+
 					// MailChimp integration
 					if($chimpkey) {
 						$chimpvars = $api->listMergeVars(get_option('lefx_mclistid'));
@@ -220,15 +220,15 @@ function le_submit() {
 							array_push($names ,$var['name']);
 						}
 						$chimpvars = array_flatten($chimpvars);
-				
+
 						if (!in_array('LECODE', $chimpvars, true)) {
 							$api->listMergeVarAdd(get_option('lefx_mclistid'), 'LECODE', 'LE Referral Code', array('public' => false));
 							$api->listMergeVarAdd(get_option('lefx_mclistid'), 'LEVISITS', 'LE Visits', array('public' => false));
 							$api->listMergeVarAdd(get_option('lefx_mclistid'), 'LESIGNUPS', 'LE Signups', array('public' => false));
 						}
-				
+
 						$mergeVars = array('FNAME' => $mc_firstname, 'LNAME' => $mc_lastname, 'LECODE' => $_POST['code']);
-				
+
 						if(isset($chimp_custom_fields)) {
 							foreach($chimp_custom_fields as $fieldtag => $field) {
 								$pos = array_search($fieldtag, $tags);
@@ -240,20 +240,20 @@ function le_submit() {
 								$mergeVars[$fieldtag] = $field['value'];
 							}
 						}
-				
-						$api->listSubscribe($list_id, $postEmail,$mergeVars,'html',$opt_in );	
+
+						$api->listSubscribe($list_id, $postEmail,$mergeVars,'html',$opt_in );
 					}
-			
+
 					//Campaign Monitor Integration
-					if ( !empty($cmkey) && !empty($cmclient) && !empty($cmlist) ) { 
+					if ( !empty($cmkey) && !empty($cmclient) && !empty($cmlist) ) {
 						// if client is undefined, ignore list value
 						$list = new CS_REST_Lists($cmlist, $cmkey);
 						$subscribers = new CS_REST_Subscribers($cmlist, $cmkey);
 						$cust_fields = $list->get_custom_fields();
 						$existing_fields = $cust_fields->response;
-	
+
 						if ($cm_le_fields) {
-							foreach ($existing_fields as $field) {	
+							foreach ($existing_fields as $field) {
 								$pos = array_search($field->FieldName, $cm_le_fields);
 								if ($pos !== false) unset($cm_le_fields[$pos]);
 							}
@@ -264,11 +264,11 @@ function le_submit() {
 								));
 							}
 						}
-						
+
 						array_push($cm_custom_field_values, array('Key' => "LE Referral Code", 'Value' => $_POST['code']));
 						array_push($cm_custom_field_values, array('Key' => "LE Visits", 'Value' => '0'));
 						array_push($cm_custom_field_values, array('Key' => "LE Signups", 'Value' => '0'));
-				
+
 						$result = $subscribers->add(
 							array(
 							    'EmailAddress' => $postEmail,
@@ -278,20 +278,20 @@ function le_submit() {
 							)
 						);
 					}
-			
+
 					// AWeber integration
 					if ( !empty($aweberConsumerKey) && !empty($aweberConsumerSecret) ) {
 						$aweberAccessKey = get_option('lefx_aweberaccesskey');
 						$aweberAccessSecret = get_option('lefx_aweberaccesssecret');
 						$aweberListId  = get_option('lefx_aweberlistid');
 						$aweberAccountId = get_option('lefx_aweberaccountid');
-				
+
 						$aweber = new AWeberAPI($aweberConsumerKey, $aweberConsumerSecret);
 						try {
 						    $account = $aweber->getAccount($aweberAccessKey, $aweberAccessSecret);
 						    $listURL = "/accounts/{$aweberAccountId}/lists/{$aweberListId}";
 						    $list = $account->loadFromUrl($listURL);
-	
+
 						    # create a subscriber
 						    $params = array(
 						        'email' => $postEmail,
@@ -301,12 +301,12 @@ function le_submit() {
 						        'misc_notes' => 'launch effect subscription',
 						        'name' => $aweber_name,
 						    );
-				    
+
 						    //add custom fields
 						    //if(isset($list->custom_fields)){
 							$aweber_fields = $list->custom_fields;
 							$existing_field_names = array();
-							foreach ($aweber_fields as $field) 
+							foreach ($aweber_fields as $field)
 								$existing_field_names[] = $field->name;
 							foreach ($aweber_le_fields as $fieldname) {
 								// Aweber will not allow additional name fields
@@ -314,7 +314,7 @@ function le_submit() {
 						    		$aweber_fields->create(array('name' => $fieldname));
 								}
 							}
-							if (count($aweber_custom_fields)) 
+							if (count($aweber_custom_fields))
 								$params['custom_fields'] = $aweber_custom_fields;
 							$params['custom_fields']['LE Referral Code'] = $_POST['code'];
 							$params['custom_fields']['LE Visits'] = "0";
@@ -323,7 +323,7 @@ function le_submit() {
 							$new_subscriber = $subscribers->create($params);
 							//}
 						    # success!
-				
+
 						} catch(AWeberAPIException $exc) {
 						    if (trim($exc->message) == "email: Subscriber already subscribed.") {}
 						    elseif (trim($exc->message)  == "email: Email address blocked. Please refer to http://www.aweber.com/faq/questions/518/.") {
@@ -338,7 +338,7 @@ function le_submit() {
 						}
 					}
 				}
-			}				
+			}
 		} else {
 			$email_check = 'invalid';
 		}
@@ -351,8 +351,8 @@ function le_submit() {
 		$return_arr["returncode"] = $returncode;
 		$return_arr["email"] = $postEmail;
 		$return_arr["code"] = $_POST['code'];
-	}  
-	
+	}
+
 	header("Content-type: text/json");
 	echo json_encode($return_arr);
 	exit;
@@ -366,7 +366,7 @@ function dynamic_css() {
 	ob_start("compress");
 
 	/* Variables
-	================================================== */		
+	================================================== */
 	$textShadow  = '0px 2px 1px #333';
 	$letterPress = '0px 1px 1px #' . lighter('container_background_color');
 	$dropShadow  = '-webkit-box-shadow: 0px 0px 10px #111; -moz-box-shadow: 0px 0px 10px #111; box-shadow: 0px 0px 10px #111;';
@@ -384,7 +384,7 @@ function dynamic_css() {
 		background: <?php echo ($pg_bg_color = ler('page_background_color')); ?>
 
 	}
-	<?php if ( $supersize = leimg('supersize', 'supersize_disable', 'plugin_options')) : ?> 
+	<?php if ( $supersize = leimg('supersize', 'supersize_disable', 'plugin_options')) : ?>
 
 	#background {
 		display:block;
@@ -392,7 +392,7 @@ function dynamic_css() {
 		top:0;
 		z-index:1;
 		height:100%;
-		width:100%; 
+		width:100%;
 		background: <?php printf('url("%s") no-repeat fixed center center %s;', $supersize, $pg_bg_color); ?>
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -424,21 +424,21 @@ function dynamic_css() {
 /* Container
 ================================================== */
 
-	#signup {	
+	#signup {
 		<?php if ($background = leimg('background','background_disable', 'launchmodule_options')) : ?>
 
-		background-image:url("<?php echo $background; ?>"); 
+		background-image:url("<?php echo $background; ?>");
 		background-color:transparent;
 		<?php elseif ( $ct_bg_color ) : ?>background-color: <?php echo $ct_bg_color; endif; ?>;
 		border-width:<?php le('container_border_width'); ?>;
 		border-color:<?php le('container_border_color'); ?>;
 		border-style:solid;
-		<?php 
-			switch( get_option('container_effects') ) { 
+		<?php
+			switch( get_option('container_effects') ) {
 				case 'dropshadow': echo $dropShadow; break;
 				case 'glow': echo $glow; break;
-				default: echo $noShadow; 
-			} 
+				default: echo $noShadow;
+			}
 		?>
 
 	}
@@ -450,18 +450,18 @@ function dynamic_css() {
 		font-weight:<?php lewt('heading_style'); ?>;
 		font-style:<?php lestyle('heading_style'); ?>;
 		color:<?php le('heading_color'); ?>;
-		text-shadow: <?php 
-			switch( get_option('heading_effects') ) { 
+		text-shadow: <?php
+			switch( get_option('heading_effects') ) {
 				case 'letterpress': echo $letterPress; break;
 				case 'shadow': echo $textShadow; break;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 		font-size:<?php echo $heading_size = ler('heading_size'); ?>em;
 	}
 	#signup-page header h1 span {
 		display: block;
-		text-align: <?php le('heading_alignment'); ?>;
+		text-align: center;
 	}
 	#signup a,
 	#privacy-policy a {
@@ -474,15 +474,15 @@ function dynamic_css() {
 		font-weight:<?php lewt('subheading_style'); ?>;
 		font-style:<?php lestyle('subheading_style'); ?>;
 		color:<?php echo $subheading_color = ler('subheading_color'); ?>;
-		text-shadow: <?php 
+		text-shadow: <?php
 			switch( get_option('subheading_effects') ) {
 				case 'letterpress': echo $letterPress; break;
 				case 'shadow': echo $textShadow; break;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 	}
-	
+
 	#signup h3, #signup h4 {
 		color:<?php echo $subheading_color; ?>;
 	}
@@ -495,19 +495,19 @@ function dynamic_css() {
 		font-family:<?php legogl('subheading_font_goog', 'subheading_font'); ?>;
 	}
 
-	#signup h2.social-heading, 
+	#signup h2.social-heading,
 	#signup label {
 		font-family:<?php legogl('label_font_goog', 'label_font'); ?>;
 		font-size:<?php le('label_size'); ?>em;
 		font-weight:<?php lewt('label_style') ?>;
 		font-style:<?php lestyle('label_style') ?>;
 		color:<?php echo $label_color = ler('label_color'); ?>;
-		text-shadow: <?php 
+		text-shadow: <?php
 			switch( get_option('label_effects') ) {
 				case 'letterpress': echo $letterPress; break;
 				case 'shadow': echo $textShadow; break;
-				default: echo 'none'; 
-			} 
+				default: echo 'none';
+			}
 		?>;
 	}
 
@@ -530,7 +530,7 @@ function dynamic_css() {
 		color:<?php echo $desc_color; ?>;
 		margin-left: 20px;
 	}
-	
+
 	#signup ol li {
 		list-style: decimal;
 	}
@@ -568,7 +568,7 @@ function dynamic_css() {
 
 /* Form
 ================================================== */
-										
+
 	#signup input#submit-button,
 	#signup #submit-button-spinner {
 		background-color:<?php echo $label_color; ?>;
@@ -586,7 +586,7 @@ function dynamic_css() {
 /* Media Queries
 ================================================== */
 
-	@media screen and <?php 
+	@media screen and <?php
 		switch( ler('container_width') ) {
 			case 'large': echo '(max-width: 768px) '; break;
 			case 'medium': echo '(max-width: 590px) '; break;
@@ -594,7 +594,7 @@ function dynamic_css() {
 		}
 	?>{
 		html,
-		body{ 
+		body{
 			background-color:<?php echo ($ct_bg_color ? $ct_bg_color : $pg_bg_color); ?>;
 		}
 		<?php if ($heading_size > 5) : ?>

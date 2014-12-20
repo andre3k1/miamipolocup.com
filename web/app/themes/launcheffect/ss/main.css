@@ -382,7 +382,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 #signup ul#form-layout li:after {
 	clear: both;
-}	
+}
 
 /* YES custom fields: No bottom margin for <li> containing submit button */
 #signup ul#form-layout li.hascf-submit-button {
@@ -1080,7 +1080,7 @@ i.buy-now-cc {
 #signup input.captcha {
     width:50px;
 }
-#signup span.calc { 
+#signup span.calc {
     width: 20px;
     font-weight:bold;
     line-height: 37px;

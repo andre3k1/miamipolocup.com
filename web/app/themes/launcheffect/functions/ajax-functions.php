@@ -446,18 +446,15 @@ function dynamic_css() {
 		text-align: center;
 	}
 	#signup-page header h1 {
-		font-family:<?php legogl('heading_font_goog', 'heading_font'); ?>;
-		font-weight:<?php lewt('heading_style'); ?>;
-		font-style:<?php lestyle('heading_style'); ?>;
-		color:<?php le('heading_color'); ?>;
-		text-shadow: <?php
-			switch( get_option('heading_effects') ) {
-				case 'letterpress': echo $letterPress; break;
-				case 'shadow': echo $textShadow; break;
-				default: echo 'none';
-			}
-		?>;
-		font-size:<?php echo $heading_size = ler('heading_size'); ?>em;
+		font-family: Raleway;
+		font-weight: 700;
+		font-style: normal;
+		color: #13224d;
+		text-shadow: #13224d -1px 1px 0,
+			#13224d -2px 2px 0,
+			#aa893a -3px 3px 0,
+			#aa893a -4px 4px 0;
+		font-size:2.5em;
 	}
 	#signup-page header h1 span {
 		display: block;

@@ -9,7 +9,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 ?>
 
@@ -20,9 +20,9 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'lefx-nav', 'menu_class' => 'nav') ); ?>
 
 		</nav>
-		
+
 		<?php if(ler('lefx_pages_tab_disable') != true) : ?>
-		
+
 		<div id="launchlite">
 			<div id="launchtab">
 				<a href="#"><?php le('lefx_pages_tab_text'); ?><span>&rsaquo;</span></a>
@@ -33,21 +33,21 @@
 			</div>
 		</div>
 		<?php endif; ?>
-		
+
 	</div>
 </div>
 <div id="wrapper">
 	<header class="no-margin">
-		<?php 
-			$logo_src = leimg('lefx_pages_logo', 'lefx_pages_logo_disable', 'pages_options'); 
+		<?php
+			$logo_src = leimg('lefx_pages_logo', 'lefx_pages_logo_disable', 'pages_options');
 			$logo_href = ler('lefx_pages_logolink');
 			$logo_text = ler('lefx_pages_textlogo');
-		?><h1 class="<?php 
-			echo ($logo_src) ? 'haslogo' : 'nologo'; 
-			echo (ler('lefx_pages_textlogo_disable') == false) ? ' hastextheading' : ' notextheading'; 
-		?>"><?php 
+		?><h1 class="<?php
+			echo ($logo_src) ? 'haslogo' : 'nologo';
+			echo (ler('lefx_pages_textlogo_disable') == false) ? ' hastextheading' : ' notextheading';
+		?>"><?php
 			$inner = sprintf('<span>%s</span>', $logo_text);
-			if($logo_src) $inner = sprintf('<img src="%s" alt="%s"/>%s', $logo_src, strip_tags($logo_text), $inner); 
+			if($logo_src) $inner = sprintf('<img src="%s" alt="%s"/>%s', $logo_src, strip_tags($logo_text), $inner);
 			if($logo_href) printf('<a href="%s">%s</a>', $logo_href, $inner);
 			else echo $inner;
 		?></h1>

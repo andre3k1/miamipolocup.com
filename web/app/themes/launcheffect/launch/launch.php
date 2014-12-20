@@ -35,14 +35,10 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<!-- LOGO -->
 					<header class="no-margin">
-						<?php $logo_src = leimg('bkt_logo', 'bkt_logodisable', 'launchmodule_options'); ?><h1 class="<?php 
-							echo 'has'.'logo '; 
-							echo ((ler('heading_disable') == false) ? 'has' : 'no').'textheading'; 
-						?>">
-              <img src="/app/uploads/thepololife-logo.png" alt="The Polo Life, LLC." />
-            <?php
-							printf("<span>%s</span>", ler('heading_content')); 
-						?></h1>
+						<h1 class="haslogo hastextheading">
+				  			<img src="/app/uploads/thepololife-logo.png" alt="The Polo Life, LLC." />
+							<span>April 23-25th, 2015 &#9816; South Beach Miami</span>
+						</h1>
 					</header>
 					<?php if('After Logo' == $lefx_editorcontent_placement) echo $placed_content; ?>
 					

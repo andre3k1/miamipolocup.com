@@ -22,12 +22,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 			</div><?php endif; ?>
 
 			<div id="signup" class="<?php
-				$classNames = array(
-					ler('container_width'),
-					ler('container_position'),
-					(get_option('lefx_cust_field1') ? 'hascf': 'nocf'),
-				);
-				echo implode(' ', array_filter($classNames));
+				echo 'medium center nocf';
 				$lefx_editorcontent_placement = ler('lefx_editorcontent_placement');
 			?>">
 				<div id="signup-content-wrapper">

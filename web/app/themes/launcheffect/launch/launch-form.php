@@ -47,7 +47,7 @@
 										<!-- SUBMIT BUTTON -->
 										<span id="submit-button-border">
 											<span id="submit-button-spinner"></span>
-											<input type="submit" name="submit" value="<?php if(ler('label_submitbutton')) { le('label_submitbutton'); } else { echo 'GO'; } ?>" id="submit-button" />
+											<input type="submit" name="submit" value="NOTIFY ME" id="submit-button" />
 										</span>
 								    </div>
 

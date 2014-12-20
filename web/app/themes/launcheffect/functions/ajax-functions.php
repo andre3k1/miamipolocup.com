@@ -381,7 +381,7 @@ function dynamic_css() {
 
 	html,
 	body {
-		background: <?php echo ($pg_bg_color = ler('page_background_color')); ?>
+		background: <?php echo ($pg_bg_color = '#13224D'); ?>
 
 	}
 	<?php if ( $supersize = leimg('supersize', 'supersize_disable', 'plugin_options')) : ?>

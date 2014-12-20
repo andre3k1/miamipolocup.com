@@ -373,7 +373,7 @@ function dynamic_css() {
 	$glow        = '-webkit-box-shadow: 0px 0px 10px #FFF;	-moz-box-shadow: 0px 0px 10px #FFF; box-shadow: 0px 0px 10px #FFF;';
 	$noShadow    = '-webkit-box-shadow: 0px 0px 0px #FFF; -moz-box-shadow: 0px 0px 0px #FFF; box-shadow: 0px 0px 0px #FFF;';
 	$pg_bg_color = '#D4DEE0';
-	$ct_bg_color = 'transparent';
+	$ct_bg_color = '#D4DEE0';
 
 	?>
 

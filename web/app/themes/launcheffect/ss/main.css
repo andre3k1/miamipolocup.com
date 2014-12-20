@@ -535,7 +535,7 @@ html.ie7 #signup textarea {
 
 /* 	Width of <li> must be specified because to keep field and button on same line, field must be set to 100% width */
 #signup.nocf ul#form-layout li.first {
-    width:300px;
+    width:510px;
     margin:0 0 10px 0;
 }
 

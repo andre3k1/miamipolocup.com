@@ -443,24 +443,7 @@ function dynamic_css() {
 		?>
 
 	}
-	#signup-page header h1 {
-		text-align: center;
-	}
-	#signup-page header h1 {
-		font-family: Raleway;
-		font-weight: 700;
-		font-style: normal;
-		color: #13224d;
-		text-shadow: #13224d -1px 1px 0,
-			#13224d -2px 2px 0,
-			#aa893a -3px 3px 0,
-			#aa893a -4px 4px 0;
-		font-size:2.5em;
-	}
-	#signup-page header h1 span {
-		display: block;
-		text-align: center;
-	}
+
 	#signup h2,
 	#privacy-policy h2 {
 		font-family:<?php legogl('subheading_font_goog', 'subheading_font'); ?>;

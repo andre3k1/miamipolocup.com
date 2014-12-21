@@ -1,3 +1,30 @@
+## Set up Capistrano
+Copy the example Capistrano files found in
+`_meta/examples/capistrano` to the `config`
+directory, customizing them to fit your
+environment.
+
+## Set up Vagrant
+Open the computer's `/etc/hosts` file in a text
+editor, and append the following line:
+```
+192.168.33.10 miamipolo.dev www.miamipolo.dev
+```
+## Getting Started with Vagrant
+### MySQL Database
+| Key | Value |
+|-----|-------|
+| **Hostname** | `localhost` |
+| **Username** | `root` |
+| **Password** | `root` |
+| **Database** | `scotchbox` |
+### SSH Access
+| Key | Value |
+|-----|-------|
+| **SSH Host** | `192.168.33.1` |
+| **SSH User** | `vagrant` |
+| **SSH Password** | `vagrant` |
+
 # [Bedrock](http://roots.io/wordpress-stack/)
 
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
@@ -234,7 +261,7 @@ Whenever you add a new plugin or update the WP version, run `composer update` to
 
 `!web/app/plugins/plugin-name`
 
-Note: Some plugins may create files or folders outside of their given scope, or even make modifications to `wp-config.php` and other files in the `app` directory. These files should be added to your `.gitignore` file as they are managed by the plugins themselves, which are managed via Composer. Any modifications to `wp-config.php` that are needed should be moved into `config/application.php`. 
+Note: Some plugins may create files or folders outside of their given scope, or even make modifications to `wp-config.php` and other files in the `app` directory. These files should be added to your `.gitignore` file as they are managed by the plugins themselves, which are managed via Composer. Any modifications to `wp-config.php` that are needed should be moved into `config/application.php`.
 
 #### Updating WP and plugin versions
 

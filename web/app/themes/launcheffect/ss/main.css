@@ -788,43 +788,19 @@ ul#inner-footer li.inner-footer_icon.facebooklike {
 }
 
 ul#inner-footer li.inner-footer_icon.facebook a {
-    background:url('../im/facebook.png') no-repeat top left;
+    background:url('../im/facebook-icon.png') no-repeat top left;
 }
 
 ul#inner-footer li.inner-footer_icon.twitter a {
-    background:url('../im/twitter.png') no-repeat top left;
+    background:url('../im/twitter-icon.png') no-repeat top left;
 }
 
 ul#inner-footer li.inner-footer_icon.instagram a {
-    background:url('../im/instagram.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.googleplus a {
-    background:url('../im/googleplus.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.pinterest a {
-    background:url('../im/pinterest.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.tumblr a {
-    background:url('../im/tumblr.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.soundcloud a {
-    background:url('../im/soundcloud.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.linkedin a {
-    background:url('../im/linkedin.png') no-repeat top left;
+    background:url('../im/instagram-icon.png') no-repeat top left;
 }
 
 ul#inner-footer li.inner-footer_icon.youtube a {
-    background:url('../im/youtube.png') no-repeat top left;
-}
-
-ul#inner-footer li.inner-footer_icon.yelp a {
-    background:url('../im/yelp.png') no-repeat top left;
+    background:url('../im/youtube-icon.png') no-repeat top left;
 }
 
 ul#inner-footer li.inner-footer_icon a:hover {

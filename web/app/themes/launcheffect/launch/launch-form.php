@@ -125,13 +125,10 @@
 
 							</div>
 
-							<?php if(get_option('disable_social_media') != 'true') : ?>
-
 							<!-- SOCIAL MEDIA BUTTONS -->
 							<div class="signup-left">
 								<?php get_template_part('launch/launch','social'); ?>
 							</div>
-							<?php endif; ?>
 
 							<!-- RETURNING USER REFERRAL URL -->
 							<div id="returninguserurl">

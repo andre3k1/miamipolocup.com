@@ -29,7 +29,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<!-- LOGO / HEADER -->
 					<header class="no-margin">
 						<h1 class="haslogo hastextheading">
-				  			<img src="/app/themes/launcheffect/im/logo.png" alt="The Polo Life, LLC." />
+				  			<img src="/app/themes/launcheffect/im/thepololife-logo.png" alt="The Polo Life, LLC." />
 							<span >April 23-25th, 2015 &#9816; South Beach Miami</span>
 						</h1>
 					</header>

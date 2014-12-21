@@ -141,6 +141,7 @@ a:active {
 
 #signup-content-wrapper {
     opacity:0;
+    text-align: center;
 }
 
 .spinner {

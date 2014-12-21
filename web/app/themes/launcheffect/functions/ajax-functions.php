@@ -461,10 +461,6 @@ function dynamic_css() {
 		display: block;
 		text-align: center;
 	}
-	#signup a,
-	#privacy-policy a {
-		color:<?php le('description_link_color'); ?> !important;
-	}
 	#signup h2,
 	#privacy-policy h2 {
 		font-family:<?php legogl('subheading_font_goog', 'subheading_font'); ?>;

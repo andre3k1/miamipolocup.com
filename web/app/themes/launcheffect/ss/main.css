@@ -350,6 +350,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 #signup a,
 #privacy-policy a {
     text-decoration:none;
+    color: rgb(197,63,167) !important;
 }
 
 #signup a:hover {

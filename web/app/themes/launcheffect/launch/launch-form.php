@@ -7,7 +7,7 @@
  *
  */
 ?>
-					<!-- FORM (PRE-SIGNUP) -->
+					<!-- EMAIL SIGNUP FORM (PRE-SIGNUP) -->
 					<form id="form" action="" class="signup-right">
 						<?php wp_nonce_field('pre_signup','verify_pre_signup'); ?>
 
@@ -17,12 +17,12 @@
 							<input type="hidden" name="code" id="code" value="<?php codeCheck(); ?>" />
 							<ul id="form-layout">
 								<li class="first">
-									<?php if(!get_option('lefx_cust_field1')) : ?>
 
 								    <div id="email-layout">
 								        <span id="emailinput">
-								            <input type="email" id="email" name="email" placeholder="Enter Your Email Address" />
+								            <input type="email" id="email" name="email" placeholder="Your Email Address" />
 								        </span>
+
 										<!-- SUBMIT BUTTON -->
 										<span id="submit-button-border">
 											<span id="submit-button-spinner"></span>
@@ -34,53 +34,6 @@
 									<div id="error"></div>
 								</li>
 
- 								<?php if(get_option('lefx_captcha')) : ?>
-
-								<!-- START CAPTCHA -->
-								<li class="captcha-holder">
-									<label for="captcha" id="spambot"><?php le('captcha_label');?></label>
-									<div class="input-holder-cap">
-										<input id="num1" class="sum" type="text" name="num1" value="<?php echo rand(1,4) ?>" readonly="readonly" /> <span class="calc">+</span>
-										<input id="num2" class="sum" type="text" name="num2" value="<?php echo rand(5,9) ?>" readonly="readonly" /> <span class="calc">=</span>
-										<input id="captcha" class="captcha" type="text" name="captcha" maxlength="2" />
-									</div>
-								</li>
-								<?php endif; ?>
-
-								<?php else: ?>
-
-									<input type="email" id="email" name="email" />
-
-									<!-- ERROR MESSAGING -->
-									<div id="error"></div>
-								</li>
-								<?php endif; ?>
-
-								<!-- INCLUDE CUSTOM FIELDS (Premium) -->
-								<?php if(lefx_version() == 'premium') get_template_part('premium/custom','fields'); ?>
-                                <?php if(get_option('lefx_cust_field1')) : ?>
-
-                                <?php if(get_option('lefx_captcha')) : ?>
-
-                                <!-- START IF CAPTCHA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-                                <li class="captcha-holder">
-                                    <label for="captcha" id="spambot"><?php le('captcha_label');?></label>
-                                    <div class="input-holder-cap">
-                                        <input id="num1" class="sum" type="text" name="num1" value="<?php echo rand(1,4) ?>" readonly="readonly" /> <span class="calc">+</span>
-                                        <input id="num2" class="sum" type="text" name="num2" value="<?php echo rand(5,9) ?>" readonly="readonly" /> <span class="calc">=</span>
-                                        <input id="captcha" class="captcha" type="text" name="captcha" maxlength="2" />
-                                    </div>
-                                </li>
-								<?php endif; ?>
-
-								<li class="hascf-submit-button">
-									<!-- SUBMIT BUTTON -->
-									<span id="submit-button-border">
-										<span id="submit-button-spinner"></span>
-										<input type="submit" name="submit" value="<?php echo ($label_submitbutton = ler('label_submitbutton')) ? $label_submitbutton : 'GO'; ?>" id="submit-button" />
-									</span>
-								</li>
-								<?php endif; ?>
 
 								<!-- PRIVACY POLICY LINK -->
 								<li>
@@ -91,7 +44,7 @@
 						</fieldset>
 					</form>
 
-					<!-- FORM (POST-SIGNUP) -->
+					<!-- EMAIL SIGNUP FORM  (POST-SIGNUP) -->
 					<form id="success" action="">
 						<fieldset>
 

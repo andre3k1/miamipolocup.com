@@ -27,34 +27,11 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
 
-	<title>Miami Beach Polo World Cup - Coming Soon | The Polo Life, LLC.</title>
+	<title>Coming Soon - Miami Beach Polo World Cup XII - Presented by The Polo Life, LLC.</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0">
-
-	<?php if(ler('lefx_meta_disable') == false): ?><!-- BEGIN Meta and Open Graph Tags -->
-	<meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>"/>
-	<?php if(is_single() || (is_page() && !is_page_template( 'launch.php' ))): ?>
-	<meta name="description" content="<?php echo $spl_desc;	?>" />
-	<meta property="og:description" content="<?php echo $spl_desc; ?>" />
-	<meta property="og:type" content="article" />
-	<?php if(is_array($ogImageSrc)): ?><meta property="og:image" content="<?php echo $ogImageSrc[0]; ?>" />
-	<?php elseif ($fpImage = getFirstPostImage()): ?><meta property="og:image" content="<?php echo $fpImage; ?>" />
-	<?php elseif ($bkt_thumb): ?><meta property="og:image" content="<?php echo $bkt_thumb; ?>" />
-	<?php endif; ?>
-	<?php else: ?><meta name="description" content="<?php echo $default_desc; ?>" />
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-	<meta property="og:description" content="<?php echo $default_desc; ?>" />
-	<meta property="og:type" content="website"/>
-	<?php if ($bkt_thumb):?><meta property="og:image" content="<?php echo $bkt_thumb; ?>"/><?php endif; ?>
-	<?php endif; ?>
-
-	<?php if ($lefx_desc_fbadmins):?><meta property="fb:admins" content="<?php echo $lefx_desc_fbadmins; ?>"/><?php endif; ?>
-	<?php if ($lefx_desc_fbappid):?><meta property="fb:app_id" content="<?php echo $lefx_desc_fbappid; ?>"/><?php endif; ?>
-	<?php endif; ?>
-
-	<?php if($bkt_favicon) : ?><link rel="shortcut icon" href="<?php echo $bkt_favicon; ?>" type="image/x-icon" /><?php endif; ?>
-
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<?php
 	ob_start();
 	wp_head();
@@ -65,13 +42,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	?>
 
 	<!-- Mobile Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ss/launch-effect-responsive.min.css" media="only screen and (max-width: <?php
-		switch(ler('container_width')) {
-			case 'large': echo '768px'; break;
-			case 'medium': echo '590px'; break;
-			default: echo '480px';
-		}
-	?>)"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ss/launch-effect-responsive.min.css" media="only screen and (max-width: 590px)"/>
 
 	<!-- WebFonts -->
 	<?php

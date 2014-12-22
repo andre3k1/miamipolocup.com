@@ -380,69 +380,8 @@ function dynamic_css() {
 /* Background Color/Image
 ================================================== */
 
-	html,
-	body {
-		background: <?php echo $pg_bg_color; ?>
-
-	}
-	<?php if ( $supersize = leimg('supersize', 'supersize_disable', 'plugin_options')) : ?>
-
-	#background {
-		display:block;
-		position:fixed;
-		top:0;
-		z-index:1;
-		height:100%;
-		width:100%;
-		background: <?php printf('url("%s") no-repeat fixed center center %s;', $supersize, $pg_bg_color); ?>
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-	#background.slideshow {
-		background-color: <?php echo $pg_bg_color; ?>
-		background-image: none;
-		filter: none;
-		-ms-filter: none;
-	}
-	#background div {
-		background-position: 50% 0%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-	#signup-bodytag #background {
-		opacity:0;
-	}
-	<?php endif; ?>
-
 /* Container
 ================================================== */
-
-	#signup {
-		<?php if ($background = leimg('background','background_disable', 'launchmodule_options')) : ?>
-
-		background-image:url("<?php echo $background; ?>");
-		background-color:transparent;
-		<?php elseif ( $ct_bg_color ) : ?>background-color: <?php echo $ct_bg_color; endif; ?>;
-		border-width:<?php le('container_border_width'); ?>;
-		border-color:<?php le('container_border_color'); ?>;
-		border-style:solid;
-		<?php
-			switch( get_option('container_effects') ) {
-				case 'dropshadow': echo $dropShadow; break;
-				case 'glow': echo $glow; break;
-				default: echo $noShadow;
-			}
-		?>
-
-	}
 
 	#signup h3, #signup h4 {
 		color:<?php echo $subheading_color; ?>;

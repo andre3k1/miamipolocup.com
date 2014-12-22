@@ -83,9 +83,22 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
     font-size:62.5%;
     text-align:left;
+}
+
+html,
+body {
+    background-color: rgb(19,34,77);
+    background-image: url('../im/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 html#signup-htmltag,
@@ -188,6 +201,14 @@ a:active {
 	clear: both;
     padding:40px;
     margin:0 auto 80px auto;
+    background-color: rgb(19,34,77);
+    background-color: rgba(19,34,77,0.6);
+    border-width:0px;
+    border-color:#fff;
+    border-style:solid;
+    -webkit-box-shadow: 0px 0px 10px #111;
+    -moz-box-shadow: 0px 0px 10px #111;
+    box-shadow: 0px 0px 10px #111;
 }
 
 /*----- Sizes -----*/
@@ -286,7 +307,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 
 #signup-page header h1 {
-    font-family: Raleway;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size:2.5em;

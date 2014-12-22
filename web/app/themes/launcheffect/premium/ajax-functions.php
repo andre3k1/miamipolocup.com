@@ -32,23 +32,6 @@ function dynamic_css_premium() {
 /* Learn More Tab
 ================================================== */
 
-	#learn-more-tab {
-		margin: 10px auto 0 auto;
-		width: 590px;
-	}
-
-	a#learn-more {
-		font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-		font-size: 1.6em;
-		font-weight: 700;
-		color: #C53FA7;
-		background: transparent;
-	}
-
-	a#learn-more:hover {
-		background: transparent;
-	}
-
 /* Sign Up with Custom Fields
 ================================================== */
 

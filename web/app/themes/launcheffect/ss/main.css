@@ -465,10 +465,16 @@ html.ie7 #launchlitemodule #signup .signup-left {
     margin:0;
 }
 
+#signup h2.social-heading,
 #signup label {
     display:block;
     margin:0 0 8px 0;
     line-height:1.3em;
+    font-family: Cubano, Helvetica, Arial, sans-serif !important;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #D4DEE0;
+    text-shadow: none;
 }
 
 /* Required field asterisk */
@@ -553,18 +559,15 @@ html.ie7 #signup textarea {
     height:35px;
     margin:0;
     padding:0px 15px;
-
     background:transparent;
+    border-color: #D4DEE0;
     border:none;
-    color:#fff;
-
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size:1.1em;
-    font-weight:bold;
+    color:#13224D;
+    font-family: Cubano, Helvetica, Arial, sans-serif !important;
+    font-size:1.7em;
+    font-weight:900;
     text-transform:uppercase;
-
     cursor:pointer;
-
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -582,16 +585,17 @@ html.ie7 #signup textarea {
     position:relative;
     overflow:hidden;
     z-index:999;
-
+    border-color: #D4DEE0;
+    background: #D4DEE0;
     border-width:1px;
     border-style:solid;
-
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
 #signup input#submit-button:hover {
+    background-color: #D4DEE0;
     -moz-transition: background-color 0.2s linear;
     -webkit-transition: background-color 0.2s linear;
     -o-transition: background-color 0.2s linear;
@@ -605,6 +609,7 @@ html.ie7 #signup textarea {
     width:100%;
     padding:0;
     display:none;
+    border-color: #D4DEE0;
 }
 
 /*----- Email Field Layout (Single — No Custom Fields) -----*/

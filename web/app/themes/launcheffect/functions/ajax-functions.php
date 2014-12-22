@@ -395,22 +395,6 @@ function dynamic_css() {
 		font-family:<?php legogl('subheading_font_goog', 'subheading_font'); ?>;
 	}
 
-	#signup h2.social-heading,
-	#signup label {
-		font-family:<?php legogl('label_font_goog', 'label_font'); ?>;
-		font-size:<?php le('label_size'); ?>em;
-		font-weight:<?php lewt('label_style') ?>;
-		font-style:<?php lestyle('label_style') ?>;
-		color:<?php echo $label_color = ler('label_color'); ?>;
-		text-shadow: <?php
-			switch( get_option('label_effects') ) {
-				case 'letterpress': echo $letterPress; break;
-				case 'shadow': echo $textShadow; break;
-				default: echo 'none';
-			}
-		?>;
-	}
-
 	#signup p,
 	#signup span.calc {
 		font-size:<?php echo $desc_size = ler('description_size'); ?>em !important;
@@ -451,20 +435,6 @@ function dynamic_css() {
 
 /* Form
 ================================================== */
-
-	#signup input#submit-button,
-	#signup #submit-button-spinner {
-		background-color:<?php echo $label_color; ?>;
-	}
-
-	#signup span#submit-button-border {
-		border-color:<?php echo ($label_dark = darker('label_color')); ?>;
-		background:<?php echo $label_dark; ?>;
-	}
-
-	#signup input#submit-button:hover {
-		background-color:<?php echo $label_dark; ?>;
-	}
 
 /* Media Queries
 ================================================== */

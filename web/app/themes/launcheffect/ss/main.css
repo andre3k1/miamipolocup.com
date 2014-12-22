@@ -351,7 +351,16 @@ html.ie7 #launchlitemodule #signup .signup-left {
     font-size:3.4em;
     text-align: center;
     color: #D4DEE0;
-    text-shadow: #AA893A -1px 1px 0;
+    text-shadow: #D4DEE0 -0.1px 0.1px 0,
+        #D4DEE0 -0.2px 0.2px 0,
+        #D4DEE0 -0.3px 0.3px 0,
+        #D4DEE0 -0.4px 0.4px 0,
+        #AA893A -0.5px 0.5px 0,
+        #AA893A -0.6px 0.6px 0,
+        #AA893A -0.7px 0.7px 0,
+        #AA893A -0.8px 0.8px 0,
+        #AA893A -0.9px 0.9px 0,
+        #AA893A -1px 1px 0;
     position:relative;
     margin:0;
 }

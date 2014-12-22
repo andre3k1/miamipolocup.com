@@ -36,9 +36,10 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 						</h1>
 					</header>
 
-					<?php echo $placed_content; ?>
-
 					<div id="signup-body">
+						<div id="presignup-content" class="signup-left">
+							<span class="privacy-policy">Sign Up, Stay in the Know</span>
+						</div>
 
 						<!-- H2 SUBHEADING / P DESCRIPTION (SUCCESS) -->
 						<div id="success-content">
@@ -47,13 +48,10 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 						<!-- EMAIL SIGNUP FORM -->
 						<?php get_template_part('launch/launch','form'); ?>
-						<?php if('After Sign-Up Form' == $lefx_editorcontent_placement) echo $placed_content; ?>
 
 					</div>
 
 					<?php get_template_part('launch/launch','footer'); ?>
-
-					<?php if('At Bottom' == $lefx_editorcontent_placement) echo $placed_content; ?>
 
 				</div>
 			</div>

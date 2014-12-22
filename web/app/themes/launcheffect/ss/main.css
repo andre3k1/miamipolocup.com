@@ -306,15 +306,12 @@ html.ie7 #launchlitemodule #signup .signup-left {
     font-weight: 700;
     font-style: normal;
     font-size:2.5em;
+    line-height:2.4em;
     text-align: center;
-    color: #13224d;
-    text-shadow: #13224d -1px 1px 0,
-        #13224d -2px 2px 0,
-        #aa893a -3px 3px 0,
-        #aa893a -4px 4px 0;
+    color: #D4DEE0;
+    text-shadow: #C53FA7 -1px 1px 0;
     position:relative;
     margin:0;
-    line-height:1.2em;
 }
 
 #signup-page header h1 span {

@@ -3,11 +3,11 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		banner: '/*\n<%= pkg.description %>\nLovingly coded by <%= pkg.author.name %>  - <%= pkg.author.url %> \n*/\n',
+		banner: '/*\n<%= pkg.description %>\nLovingly coded by <%= pkg.author.name %>  - <%= pkg.author.url %>\n*/\n',
 		cssmin: {
 			combine: {
 				options: {
-					banner: '/*\nTheme Name: <%= pkg.name %>\nTheme URI: http://www.<%= pkg.name %>.com\nDescription: \nAuthor: Barrel\nAuthor URI: http://barrelny.com/\nVersion: 1.0\nTags: responsive\n*/\n'
+					banner: '/*\nTheme Name: <%= pkg.name %>\nTheme URI: http://www.<%= pkg.name %>.com\nAuthor: Barrel\nAuthor URI: http://barrelny.com/\nVersion: 1.0\nTags: responsive\n*/\n'
 				},
 				files: {
 					'ss/<%= pkg.name %>.min.css': ['ss/main.css'],

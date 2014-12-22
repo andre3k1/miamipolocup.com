@@ -31,8 +31,8 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<!-- HEADING -->
 					<header class="no-margin">
 						<h1 class="haslogo hastextheading">
-				  			<img src="/app/themes/launcheffect/im/thepololife-logo.png" alt="The Polo Life, LLC." />
-							<span >April 23-25th, 2015 &#9816; South Beach Miami</span>
+				  			<img src="/app/themes/launcheffect/im/crest.png" alt="The Polo Life, LLC." />
+							<span>Miami Beach &#9816; April 23-25, 2015</span>
 						</h1>
 					</header>
 
@@ -40,19 +40,9 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<div id="signup-body">
 
-						<!-- H2 SUBHEADING / P DESCRIPTION (PRESIGNUP) -->
-						<div id="presignup-content" class="signup-left"></div>
-
 						<!-- H2 SUBHEADING / P DESCRIPTION (SUCCESS) -->
 						<div id="success-content">
-							<?php if($subheading_content2 = ler('subheading_content2')) :?><h2><?php echo $subheading_content2; ?></h2><?php endif; ?>
-
-							<?php if('After Subheading' == $lefx_editorcontent_placement) echo $placed_content; ?>
-
-							<?php if($description_content2 = ler('description_content2')) echo wpautop($description_content2); ?>
-
-							<?php if('After Body Text' == $lefx_editorcontent_placement) echo $placed_content; ?>
-
+							<h2>Great, Now You're in the Know!</h2>
 						</div>
 
 						<!-- EMAIL SIGNUP FORM -->

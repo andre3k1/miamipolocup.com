@@ -23,21 +23,21 @@
 								            <input type="email" id="email" name="email" placeholder="Your Email Address" />
 								        </span>
 
-										<!-- SUBMIT BUTTON -->
+										<!-- DISPLAY THE SUBMIT BUTTON -->
 										<span id="submit-button-border">
 											<span id="submit-button-spinner"></span>
 											<input type="submit" name="submit" value="Sign Up" id="submit-button" />
 										</span>
 								    </div>
 
-									<!-- ERROR MESSAGING -->
+									<!-- HANDLE ERROR MESSAGING -->
 									<div id="error"></div>
 								</li>
 
 
-								<!-- PRIVACY POLICY LINK -->
 								<li>
-									<span class="privacy-policy">Sign Up, <br/ ><span style="color: #C53FA7;">Stay in the Know</span></span>
+									<!-- DISPLAY THE CALL-TO-ACTION MESSAGE -->
+									<span class="privacy-policy">Sign Up, Stay in the Know</span>
 								</li>
 
 							</ul>

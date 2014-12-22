@@ -37,7 +37,7 @@
 
 								<!-- PRIVACY POLICY LINK -->
 								<li>
-									<span class="privacy-policy">Sign Up, Stay in the Know</span>
+									<span class="privacy-policy">Sign Up, <br/ ><span style="color: #C53FA7;">Stay in the Know</span></span>
 								</li>
 
 							</ul>

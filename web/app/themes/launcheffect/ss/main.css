@@ -362,10 +362,9 @@ html.ie7 #launchlitemodule #signup .signup-left {
 /* #Form
 ================================================== */
 
-#signup a,
-#privacy-policy a {
+#signup a {
     text-decoration:none;
-    color: rgb(197,63,167) !important;
+    color: #C53FA7 !important;
 }
 
 #signup a:hover {
@@ -374,13 +373,18 @@ html.ie7 #launchlitemodule #signup .signup-left {
 
 #signup h2,
 #signup h3,
-#signup h4,
-#privacy-policy h2 {
+#signup h4 {
     margin:0 0 10px 0;
 }
 
-#signup p,
-#privacy-policy p {
+#signup h2 {
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: #13224D;
+    text-shadow: 0px 2px 1px #333;
+}
+
+#signup p {
     margin:0 0 18px 0;
     line-height:1.4em;
 }
@@ -726,12 +730,16 @@ a#reusertip:hover {
 /* #Privacy Policy Modal
 ================================================== */
 
+#privacy-policy {
+    background-color: transparent;
+}
+
 span.privacy-policy {
     display:block;
     padding-top:10px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:1.1em;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    color: #D4DEE0;
+    font-size: 3em;
     line-height:1.2em;
 }
 
@@ -741,7 +749,24 @@ span.privacy-policy {
 
 #privacy-policy h2 {
     margin:0 0 15px 0;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: #D4DEE0 !important;
     text-transform: capitalize;
+    text-shadow: 0px 2px 1px #333;
+}
+
+#privacy-policy p {
+    margin:0 0 18px 0;
+    line-height:1.4em;
+    font-size: 1.4em;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    color: #D4DEE0 !important;
+}
+
+#privacy-policy a {
+    text-decoration:none;
+    color: #C53FA7 !important;
 }
 
 #privacy-policy a.close {

@@ -444,22 +444,6 @@ function dynamic_css() {
 
 	}
 
-	#signup h2,
-	#privacy-policy h2 {
-		font-family:<?php legogl('subheading_font_goog', 'subheading_font'); ?>;
-		font-size:<?php echo $subheading_size = ler('subheading_size'); ?>em;
-		font-weight:<?php lewt('subheading_style'); ?>;
-		font-style:<?php lestyle('subheading_style'); ?>;
-		color:<?php echo $subheading_color = ler('subheading_color'); ?>;
-		text-shadow: <?php
-			switch( get_option('subheading_effects') ) {
-				case 'letterpress': echo $letterPress; break;
-				case 'shadow': echo $textShadow; break;
-				default: echo 'none';
-			}
-		?>;
-	}
-
 	#signup h3, #signup h4 {
 		color:<?php echo $subheading_color; ?>;
 	}
@@ -489,8 +473,7 @@ function dynamic_css() {
 	}
 
 	#signup p,
-	#signup span.calc,
-	#privacy-policy p {
+	#signup span.calc {
 		font-size:<?php echo $desc_size = ler('description_size'); ?>em !important;
 		font-family:<?php legogl('description_font_goog', 'description_font'); ?>;
 		font-weight:<?php echo $desc_weight = ler('description_weight'); ?>;
@@ -522,22 +505,6 @@ function dynamic_css() {
 
 /* Privacy Policy Modal
 ================================================== */
-
-	span.privacy-policy {
-		color:<?php echo $desc_color; ?>;
-	}
-
-	#privacy-policy {
-		background-color: <?php echo (!($priv_bgcolor = ler('lefx_privacy_policy_bgcolor'))?'white':$priv_bgcolor); ?>;
-	}
-
-	#privacy-policy h2 {
-		color:<?php echo $subheading_color; ?> !important;
-	}
-
-	#privacy-policy p {
-		color:<?php echo $desc_color; ?> !important;
-	}
 
 	#privacy-policy a.close:hover {
 		color:<?php echo darker('description_link_color'); ?> !important;

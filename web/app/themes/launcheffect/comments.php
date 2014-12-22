@@ -19,7 +19,7 @@
 		<h3><?php comment_form_title( 'Comments', 'Reply to %s' ); ?></h3>
 
 	<?php if ('open' == $post->comment_status) : ?>
-	
+
 		<p class="comment-messages"><?php cancel_comment_reply_link(); ?></p>
 		<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 
@@ -28,16 +28,16 @@
 
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 			<p><textarea class="required" name="comment" id="comment" cols="100%" rows="10" tabindex="1" placeholder="Click to leave a comment..."></textarea></p>
-		
+
 			<div id="commentsform-hidden">
 				<?php if ( $user_ID ) : ?>
-			
+
 					<p class="comment-messages">
 						Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
 						<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a>
 					</p>
 				<?php else : ?>
-			
+
 					<p class="left">
 						<label for="comment-author"><small>Name <?php if ($req) echo "(required)"; ?></small></label>
 						<input class="required" type="text" name="author" id="comment-author" value="<?php echo $comment_author; ?>" size="22" tabindex="2" />
@@ -51,13 +51,13 @@
 						<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="4" />
 					</p>
 				<?php endif; ?>
-			
+
 				<p>
 					<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 					<?php comment_id_fields(); ?>
 				</p>
 				<?php do_action('comment_form', $post->ID); ?>
-		
+
 			</div>
 		</form>
 

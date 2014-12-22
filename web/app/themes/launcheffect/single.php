@@ -1,29 +1,29 @@
-<?php 
+<?php
 /**
  * Single Post Template
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
- 
-get_header(); 
+
+get_header();
 ?>
 
 <?php if(lefx_version() == 'premium'): ?>
-	
+
 	<?php get_template_part('premium/theme','header'); ?>
-	
+
 	<?php get_sidebar(); ?>
-	
+
 	<div id="main">
 		<?php get_template_part( 'loop', 'index' );?>
 	</div>
-	
+
 	<?php get_template_part('launch/launch','footer'); ?>
-	
+
 </div> <!-- end #wrapper -->
-	
+
 <?php else: ?>
 
 	<div id="wrapper">

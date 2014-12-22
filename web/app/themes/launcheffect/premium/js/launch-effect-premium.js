@@ -1,6 +1,6 @@
 /*
 A viral marketing theme for WordPress empowering designers, marketers, and enthusiasts to build websites with relative ease
-Lovingly coded by Barrel  - http://barrelny.com 
+Lovingly coded by Barrel  - http://barrelny.com
 */
 (function(){
 	var initializing = false;
@@ -10,7 +10,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 
 	// Collection of derived classes
 	JQClass.classes = {};
- 
+
 	// Create a new JQClass that inherits from this class
 	JQClass.extend = function extender(prop) {
 		var base = this.prototype;
@@ -36,7 +36,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 							return base[name].apply(this, args);
 						};
 
-						var ret = fn.apply(this, arguments);				
+						var ret = fn.apply(this, arguments);
 
 						// The method only need to be bound temporarily, so we
 						// remove it when we're done executing
@@ -88,7 +88,7 @@ Lovingly coded by Barrel  - http://barrelny.com
  	triggers: 'click'
  } */
 		defaultOptions: {},
-		
+
 		/** Options dependent on the locale.
 			Indexed by language and (optional) country code, with '' denoting the default language (English/US).
 			@example regionalOptions: {
@@ -97,7 +97,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 	}
  } */
 		regionalOptions: {},
-		
+
 		/** Names of getter methods - those that can't be chained (default: []).
 			@example _getters: ['activeTab'] */
 		_getters: [],
@@ -108,7 +108,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		_getMarker: function() {
 			return 'is-' + this.name;
 		},
-		
+
 		/** Initialise the plugin.
 			Create the jQuery bridge - plugin name <code>xyz</code>
 			produces <code>$.xyz</code> and <code>$.fn.xyz</code>. */
@@ -145,7 +145,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		setDefaults: function(options) {
 			$.extend(this.defaultOptions, options || {});
 		},
-		
+
 		/** Determine whether a method is a getter and doesn't permit chaining.
 			@private
 			@param name {string} The method name.
@@ -158,7 +158,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			}
 			return $.inArray(name, this._getters) > -1;
 		},
-		
+
 		/** Initialise an element. Called internally only.
 			Adds an instance object as data named for the plugin.
 			@param elem {Element} The element to enhance.
@@ -212,7 +212,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			try {
 				var data = elem.data(this.name.toLowerCase()) || '';
 				data = data.replace(/'/g, '"');
-				data = data.replace(/([a-zA-Z0-9]+):/g, function(match, group, i) { 
+				data = data.replace(/([a-zA-Z0-9]+):/g, function(match, group, i) {
 					var count = data.substring(0, i).match(/"/g); // Handle embedded ':'
 					return (!count || count.length % 2 === 0 ? '"' + group + '":' : group + ':');
 				});
@@ -236,7 +236,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		_getInst: function(elem) {
 			return $(elem).data(this.name) || {};
 		},
-		
+
 		/** Retrieve or reconfigure the settings for a plugin.
 			@param elem {Element} The source element.
 			@param name {object|string} The collection of new option values or the name of a single option.
@@ -264,7 +264,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			this._optionsChanged(elem, inst, options);
 			$.extend(inst.options, options);
 		},
-		
+
 		/** Plugin specific options processing.
 			Old value available in <code>inst.options[name]</code>, new value in <code>options[name]</code>.
 			Override this in a sub-class to perform extra activities.
@@ -278,7 +278,7 @@ Lovingly coded by Barrel  - http://barrelny.com
  } */
 		_optionsChanged: function(elem, inst, options) {
 		},
-		
+
 		/** Remove all trace of the plugin.
 			Override <code>_preDestroy</code> for plugin-specific processing.
 			@param elem {Element} The source element.
@@ -303,7 +303,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		_preDestroy: function(elem, inst) {
 		}
 	});
-	
+
 	/** Convert names from hyphenated to camel-case.
 		@private
 		@param value {string} The original hyphenated name.
@@ -313,11 +313,11 @@ Lovingly coded by Barrel  - http://barrelny.com
 			return group.toUpperCase();
 		});
 	}
-	
+
 	/** Expose the plugin base.
 		@namespace "$.JQPlugin" */
 	$.JQPlugin = {
-	
+
 		/** Create a new collection plugin.
 			@memberof "$.JQPlugin"
 			@param [superClass='JQPlugin'] {string} The name of the parent class to inherit from.
@@ -385,7 +385,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 				isRTL: false
 			}
 		},
-		
+
 		_getters: ['getTimes'],
 
 		_rtlClass: pluginName + '-rtl',
@@ -432,7 +432,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		requestAnimationFrame(timerCallBack);
 	}
 		},
-	
+
 	UTCDate: function(tz, year, month, day, hours, mins, secs, ms) {
 		if (typeof year == 'object' && year.constructor == Date) {
 			ms = year.getMilliseconds();
@@ -575,7 +575,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			}
 		}
 	},
-	
+
 		/** Calculate internal settings for an instance.
 			@private
 			@param elem {jQuery} The containing division.
@@ -680,7 +680,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 				inst[inst._since ? '_since' : '_until'] =
 					this._determineTime(sign + inst._periods[0] + 'y' +
 						sign + inst._periods[1] + 'o' + sign + inst._periods[2] + 'w' +
-						sign + inst._periods[3] + 'd' + sign + inst._periods[4] + 'h' + 
+						sign + inst._periods[3] + 'd' + sign + inst._periods[4] + 'h' +
 						sign + inst._periods[5] + 'm' + sign + inst._periods[6] + 's');
 					this._addElem(elem);
 			}
@@ -732,7 +732,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 					case 'd': day += parseInt(matches[1], 10); break;
 					case 'w': day += parseInt(matches[1], 10) * 7; break;
 					case 'o':
-						month += parseInt(matches[1], 10); 
+						month += parseInt(matches[1], 10);
 							day = Math.min(day, self._getDaysInMonth(year, month));
 						break;
 					case 'y':
@@ -823,8 +823,8 @@ Lovingly coded by Barrel  - http://barrelny.com
 			inst.options.compact, inst.options.significant, showSignificant) :
 			((inst.options.compact ? // Compact version
 			'<span class="' + this._rowClass + ' ' + this._amountClass +
-			(inst._hold ? ' ' + this._holdingClass : '') + '">' + 
-			showCompact(Y) + showCompact(O) + showCompact(W) + showCompact(D) + 
+			(inst._hold ? ' ' + this._holdingClass : '') + '">' +
+			showCompact(Y) + showCompact(O) + showCompact(W) + showCompact(D) +
 			(show[H] ? this._minDigits(inst, inst._periods[H], 2) : '') +
 			(show[M] ? (show[H] ? inst.options.timeSeparator : '') +
 			this._minDigits(inst, inst._periods[M], 2) : '') +
@@ -953,7 +953,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		show[S] = (format.match('s') ? '?' : (format.match('S') ? '!' : null));
 		return show;
 	},
-	
+
 		/** Calculate the requested periods between now and the target time.
 			@private
 			@param inst {object} The current settings for this instance.
@@ -1072,7 +1072,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest,
 
 		/*
-		 * Private methods 
+		 * Private methods
 		 */
 
 		_abort = function() {
@@ -1106,8 +1106,8 @@ Lovingly coded by Barrel  - http://barrelny.com
 
 		_start = function() {
 			var obj = selectedArray[ selectedIndex ],
-				href, 
-				type, 
+				href,
+				type,
 				title,
 				str,
 				emb,
@@ -1189,7 +1189,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 					selectedOpts.width = 'auto';
 					selectedOpts.height = 'auto';
 				} else {
-					selectedOpts.autoDimensions = false;	
+					selectedOpts.autoDimensions = false;
 				}
 			}
 
@@ -1207,7 +1207,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			tmp.css('padding', (selectedOpts.padding + selectedOpts.margin));
 
 			$('.fancybox-inline-tmp').unbind('fancybox-cancel').bind('fancybox-change', function() {
-				$(this).replaceWith(content.children());				
+				$(this).replaceWith(content.children());
 			});
 
 			switch (type) {
@@ -1328,14 +1328,14 @@ Lovingly coded by Barrel  - http://barrelny.com
 				w = parseInt( ($(window).width() - (selectedOpts.margin * 2)) * parseFloat(w) / 100, 10) + 'px';
 
 			} else {
-				w = w == 'auto' ? 'auto' : w + 'px';	
+				w = w == 'auto' ? 'auto' : w + 'px';
 			}
 
 			if (h.toString().indexOf('%') > -1) {
 				h = parseInt( ($(window).height() - (selectedOpts.margin * 2)) * parseFloat(h) / 100, 10) + 'px';
 
 			} else {
-				h = h == 'auto' ? 'auto' : h + 'px';	
+				h = h == 'auto' ? 'auto' : h + 'px';
 			}
 
 			tmp.wrapInner('<div style="width:' + w + ';height:' + h + ';overflow: ' + (selectedOpts.scrolling == 'auto' ? 'auto' : (selectedOpts.scrolling == 'yes' ? 'scroll' : 'hidden')) + ';position:relative;"></div>');
@@ -1488,8 +1488,8 @@ Lovingly coded by Barrel  - http://barrelny.com
 				return;
 			}
 
-			if (currentOpts.titlePosition == 'inside' && titleHeight > 0) {	
-				title.show();	
+			if (currentOpts.titlePosition == 'inside' && titleHeight > 0) {
+				title.show();
 			}
 
 			content
@@ -1603,7 +1603,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 				});
 			}
 
-			if (!currentOpts.showNavArrows) { 
+			if (!currentOpts.showNavArrows) {
 				nav_left.hide();
 				nav_right.hide();
 				return;
@@ -1639,7 +1639,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 			}
 
 			_set_navigation();
-	
+
 			if (currentOpts.hideOnContentClick)	{
 				content.bind('click', $.fancybox.close);
 			}
@@ -1670,7 +1670,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		},
 
 		_preload_images = function() {
-			var href, 
+			var href,
 				objNext;
 
 			if ((currentArray.length -1) > currentIndex) {
@@ -1824,7 +1824,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 		};
 
 	/*
-	 * Public methods 
+	 * Public methods
 	 */
 
 	$.fn.fancybox = function(options) {
@@ -2057,14 +2057,14 @@ Lovingly coded by Barrel  - http://barrelny.com
 		var view, align;
 
 		if (busy) {
-			return;	
+			return;
 		}
 
 		align = arguments[0] === true ? 1 : 0;
 		view = _get_viewport();
 
 		if (!align && (wrap.width() > view[0] || wrap.height() > view[1])) {
-			return;	
+			return;
 		}
 
 		wrap
@@ -2198,7 +2198,7 @@ Lovingly coded by Barrel  - http://barrelny.com
 
 })(jQuery);
 jQuery(function($){
-	
+
 	// ANIMATE BAR CHART
 	$(window).load(function(){
 		var barComplete = $('.barComplete').attr('value');
@@ -2212,7 +2212,7 @@ jQuery(function($){
 		}
 
 	});
-	
+
 	// FADE IN INNER PAGES NICELY
 	if($('#main').length) {
 		if($('#hero').length) {
@@ -2237,11 +2237,11 @@ jQuery(function($){
 							});
 						});
 					});
-				});	
-			});	
+				});
+			});
 		}
 	}
-	
+
 	// LAUNCH MODULE TAB
 	$('#launchtab a').click(function(){
 		$('#launchlitemodule').slideToggle(function(){
@@ -2252,14 +2252,14 @@ jQuery(function($){
 		LE_Handlers.reuserBubble();
 		return false;
 	});
-	
+
 	// RESPONSIVE NAV ARROW
 	$('<span>&rsaquo;</span>').appendTo($('#nav-responsive nav').find('a'));
 	$('#nav-responsive-menu-link').click(function(){
 		$(this).toggleClass('open');
 		return false;
 	});
-	
+
 	// COUNTDOWN TIMER
 	var launchMonth = $('input#launchMonth').attr('value');
 	var launchDay = $('input#launchDay').attr('value');
@@ -2268,7 +2268,7 @@ jQuery(function($){
 	launchDate = new Date(launchYear, launchMonth - 1, launchDay, 00, 00, 00);
 	$('#tearoff').countdown({
 		until: launchDate,
-		layout: $('#tearoff').html()		
+		layout: $('#tearoff').html()
 	});
 	// If three-digits
 	if($('input.daysLeft').attr('value') > 99) {
@@ -2292,14 +2292,14 @@ jQuery(function($){
 			return '<span id="fancybox-title-over">Image '+(idx + 1)+' / '+array.length+(title?' - '+title:'')+'</span>';
 		}
 	});
-	
+
 	// COMMENTS FORM EXPAND
 	var mouse_is_inside = false;
 
-    $('#respond').hover(function(){ 
-        mouse_is_inside=true; 
-    }, function(){ 
-        mouse_is_inside=false; 
+    $('#respond').hover(function(){
+        mouse_is_inside=true;
+    }, function(){
+        mouse_is_inside=false;
     });
 
 	$('#comment').focus(function(){
@@ -2310,10 +2310,10 @@ jQuery(function($){
 		var commentScroll = $('#respond').offset().top - 15;
 		$('html,body').animate({scrollTop:commentScroll}, 600);
 	}).blur(function(){
-		if( $('html').hasClass('ie') && (this.value == '')) 
+		if( $('html').hasClass('ie') && (this.value == ''))
 			this.value = 'Click to leave a comment...';
 	}).blur();
-	
+
 	$('#respond .required').focus(function(){
 		var $this = $(this);
 		if( $('html').hasClass('ie') && (this.value == 'Click to leave a comment...')) this.value = '';
@@ -2351,12 +2351,12 @@ jQuery(function($){
 		if ( $(this).find('.errors').length > 0 ) return false;
 		return true;
 	});
-	
-    $('body').mouseup(function(){ 
+
+    $('body').mouseup(function(){
         if(! mouse_is_inside) {
         	$('#respond textarea').css('height','46px');
         	$('#commentsform-hidden').hide();
         }
     });
-    
+
 });

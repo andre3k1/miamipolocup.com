@@ -1,6 +1,6 @@
 // DOCUMENT READY
 jQuery(function($){
-	
+
 	// ANIMATE BAR CHART
 	$(window).load(function(){
 		var barComplete = $('.barComplete').attr('value');
@@ -14,7 +14,7 @@ jQuery(function($){
 		}
 
 	});
-	
+
 	// FADE IN INNER PAGES NICELY
 	if($('#main').length) {
 		if($('#hero').length) {
@@ -39,11 +39,11 @@ jQuery(function($){
 							});
 						});
 					});
-				});	
-			});	
+				});
+			});
 		}
 	}
-	
+
 	// LAUNCH MODULE TAB
 	$('#launchtab a').click(function(){
 		$('#launchlitemodule').slideToggle(function(){
@@ -54,14 +54,14 @@ jQuery(function($){
 		LE_Handlers.reuserBubble();
 		return false;
 	});
-	
+
 	// RESPONSIVE NAV ARROW
 	$('<span>&rsaquo;</span>').appendTo($('#nav-responsive nav').find('a'));
 	$('#nav-responsive-menu-link').click(function(){
 		$(this).toggleClass('open');
 		return false;
 	});
-	
+
 	// COUNTDOWN TIMER
 	var launchMonth = $('input#launchMonth').attr('value');
 	var launchDay = $('input#launchDay').attr('value');
@@ -70,7 +70,7 @@ jQuery(function($){
 	launchDate = new Date(launchYear, launchMonth - 1, launchDay, 00, 00, 00);
 	$('#tearoff').countdown({
 		until: launchDate,
-		layout: $('#tearoff').html()		
+		layout: $('#tearoff').html()
 	});
 	// If three-digits
 	if($('input.daysLeft').attr('value') > 99) {
@@ -94,14 +94,14 @@ jQuery(function($){
 			return '<span id="fancybox-title-over">Image '+(idx + 1)+' / '+array.length+(title?' - '+title:'')+'</span>';
 		}
 	});
-	
+
 	// COMMENTS FORM EXPAND
 	var mouse_is_inside = false;
 
-    $('#respond').hover(function(){ 
-        mouse_is_inside=true; 
-    }, function(){ 
-        mouse_is_inside=false; 
+    $('#respond').hover(function(){
+        mouse_is_inside=true;
+    }, function(){
+        mouse_is_inside=false;
     });
 
 	$('#comment').focus(function(){
@@ -112,10 +112,10 @@ jQuery(function($){
 		var commentScroll = $('#respond').offset().top - 15;
 		$('html,body').animate({scrollTop:commentScroll}, 600);
 	}).blur(function(){
-		if( $('html').hasClass('ie') && (this.value == '')) 
+		if( $('html').hasClass('ie') && (this.value == ''))
 			this.value = 'Click to leave a comment...';
 	}).blur();
-	
+
 	$('#respond .required').focus(function(){
 		var $this = $(this);
 		if( $('html').hasClass('ie') && (this.value == 'Click to leave a comment...')) this.value = '';
@@ -153,12 +153,12 @@ jQuery(function($){
 		if ( $(this).find('.errors').length > 0 ) return false;
 		return true;
 	});
-	
-    $('body').mouseup(function(){ 
+
+    $('body').mouseup(function(){
         if(! mouse_is_inside) {
         	$('#respond textarea').css('height','46px');
         	$('#commentsform-hidden').hide();
         }
     });
-    
+
 });

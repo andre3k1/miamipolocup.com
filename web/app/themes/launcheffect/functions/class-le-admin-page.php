@@ -9,7 +9,7 @@
  * @subpackage Launch_Effect
  * @author Wes Turner
  * @version 1.0.0
- * @since 01.09.2014 
+ * @since 01.09.2014
  *
  */
 
@@ -29,7 +29,7 @@ if(!class_exists('LE_Admin_Page')) {
 	 */
 	class LE_Admin_Page {
 		var $panel_title, $panel_name, $panel_array, $suppress_submenu = true;
-	
+
 		function __construct($args){
 			$this->panel_title = $args['title'];
 			$this->panel_name = $args['name'];
@@ -46,7 +46,7 @@ if(!class_exists('LE_Admin_Page')) {
 				add_action('admin_init', array(&$this, 'register_defaults'));
 			}
 		}
-		
+
 		function build_le_page(){
 			?>
 
@@ -74,19 +74,19 @@ if(!class_exists('LE_Admin_Page')) {
 			$slug = preg_replace('/\s+/', '', strtolower($this->panel_title));
 			if ( !method_exists( $class_name = get_class($this), $callback )) {
 				add_settings_error(
-					$class_name, 
-					'invalid-callback', 
-					__("The callback method, <code>$callback</code>, does not exist within the <code>$class_name</code> class.", 'launcheffect'), 
+					$class_name,
+					'invalid-callback',
+					__("The callback method, <code>$callback</code>, does not exist within the <code>$class_name</code> class.", 'launcheffect'),
 					'error'
 				);
 				$callback = 'build_le_page';
 			}
-			$this->handle = add_submenu_page( 
+			$this->handle = add_submenu_page(
 				'lefx_designer',
-				__($this->panel_title, 'launcheffect'), 
-				__($this->panel_title, 'launcheffect'), 
-				'manage_options', 
-				'lefx_'.$slug, 
+				__($this->panel_title, 'launcheffect'),
+				__($this->panel_title, 'launcheffect'),
+				'manage_options',
+				'lefx_'.$slug,
 				array(&$this, $callback)
 			);
 		}
@@ -178,7 +178,7 @@ function lefx_exploder_message() {
 	<?php
 }
 
-function lefx_tabs($currtab) { 
+function lefx_tabs($currtab) {
 	?>
 
 	<div class="le-icons icon32"><br /></div>
@@ -187,10 +187,10 @@ function lefx_tabs($currtab) {
 		<a class="nav-tab <?php if($currtab == 'integrations_options') { echo ' nav-tab-active'; } ?>" href="<?php echo admin_url('admin.php?page=lefx_integrations'); ?>">Integrations</a>
 		<a class="nav-tab <?php if($currtab == 'stats' || $currtab == 'export') { echo ' nav-tab-active'; } ?>" href="<?php echo admin_url('admin.php?page=lefx_stats'); ?>">Stats</a>
 	</h2>
-	<?php 
+	<?php
 }
 
-function lefx_subtabs($currtab) { 
+function lefx_subtabs($currtab) {
 	?>
 
 	<ul class='subsubsub' style="float:none;">
@@ -199,5 +199,5 @@ function lefx_subtabs($currtab) {
 		<li><a<?php if($currtab=='product_options') echo ' class="current"'; ?> href="<?php echo admin_url('admin.php?page=lefx_product'); ?>">Product</a> |</li>
 		<li><a<?php if($currtab=='pages_options') echo ' class="current"'; ?> href="<?php echo admin_url('admin.php?page=lefx_theme'); ?>">Theme</a></li>
 	</ul>
-	<?php 
+	<?php
 }

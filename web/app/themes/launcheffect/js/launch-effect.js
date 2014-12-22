@@ -1,6 +1,6 @@
 /*
 A viral marketing theme for WordPress empowering designers, marketers, and enthusiasts to build websites with relative ease
-Lovingly coded by Barrel  - http://barrelny.com 
+Lovingly coded by Barrel  - http://barrelny.com
 */
 /*
  * jqModal - Minimalist Modaling with jQuery
@@ -10,7 +10,7 @@ Lovingly coded by Barrel  - http://barrelny.com
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
- * 
+ *
  * $Version: 03/01/2009 +r14
  */
 (function($) {
@@ -53,7 +53,7 @@ open:function(s,t){var h=H[s],c=h.c,cc='.'+c.closeClass,z=(parseInt(h.w.css('z-i
   r.html(c.ajaxText).load(u,function(){if(c.onLoad)c.onLoad.call(this,h);if(cc)h.w.jqmAddClose($(cc,h.w));e(h);});}
  else if(cc)h.w.jqmAddClose($(cc,h.w));
 
- if(c.toTop&&h.o)h.w.before('<span id="jqmP'+h.w[0]._jqm+'"></span>').insertAfter(h.o);	
+ if(c.toTop&&h.o)h.w.before('<span id="jqmP'+h.w[0]._jqm+'"></span>').insertAfter(h.o);
  (c.onShow)?c.onShow(h):h.w.show();e(h);return F;
 },
 close:function(s){var h=H[s];if(!h.a)return F;h.a=F;
@@ -393,7 +393,7 @@ hs=function(w,t,c){return w.each(function(){var s=this._jqm;$(t).each(function()
         function i(b, a) {
             b.src === k || -1 !== c.inArray(b, j) || (j.push(b), a ? g.push(b) : h.push(b), c.data(b, "imagesLoaded", {isBroken: a,src: b.src}), o && d.notifyWith(c(b), [a, e, c(h), c(g)]), e.length === j.length && (setTimeout(m), e.unbind(".imagesLoaded")))
         }
-        var f = this, d = c.isFunction(c.Deferred) ? c.Deferred() : 
+        var f = this, d = c.isFunction(c.Deferred) ? c.Deferred() :
         0, o = c.isFunction(d.notify), e = f.find("img").add(f.filter("img")), j = [], h = [], g = [];
         e.length ? e.bind("load.imagesLoaded error.imagesLoaded", function(b) {
             i(b.target, "error" === b.type)
@@ -411,20 +411,20 @@ hs=function(w,t,c){return w.each(function(){var s=this._jqm;$(t).each(function()
 })(jQuery);
 var LE_Handlers = {
 	spinners: {
-		big: { 
-			lines: 24, 
-			length: 8, 
-			width: 2, 
-			radius: 24, 
-			color: '#aaa', 
-			speed: 1.25, 
-			trail: 60, 
-			shadow: false, 
-			hwaccel: false, 
-			className: 'spinner', 
-			zIndex: 2e9, 
-			top: 'auto', 
-			left: 'auto' 
+		big: {
+			lines: 24,
+			length: 8,
+			width: 2,
+			radius: 24,
+			color: '#aaa',
+			speed: 1.25,
+			trail: 60,
+			shadow: false,
+			hwaccel: false,
+			className: 'spinner',
+			zIndex: 2e9,
+			top: 'auto',
+			left: 'auto'
 		},
 		little: {
 			lines: 10,
@@ -454,10 +454,10 @@ var LE_Handlers = {
 					id = $block.attr('data-id'),
 					signup = $block.parents('#signup').length,
 					parent_id = (signup ? '' : '-blog');
-				
+
 				$block.attr('id', (id+parent_id));
 			});
-			if ( $('.social-block[id$="blog"]').length && $blocks.length >= wp_js.sharing_platforms.length) 
+			if ( $('.social-block[id$="blog"]').length && $blocks.length >= wp_js.sharing_platforms.length)
 				LE_Handlers.sharing.buttons('');
 		},
 		enabled: false,
@@ -468,10 +468,10 @@ var LE_Handlers = {
 			var blogURL = wp_js.blogURL,
 				refUrl = (refCode!=''?(blogURL+'/?ref='+refCode):window.location.href),
 				target = (refCode!=''?'':'-blog'),
-				tweetUrl = 'http://twitter.com/intent?url=' + encodeURIComponent(refUrl), 
+				tweetUrl = 'http://twitter.com/intent?url=' + encodeURIComponent(refUrl),
 				tweetMessage = (refCode!=''?(wp_js.twitterMessage||document.title):document.title),
 				tumblr_button = document.createElement("a");
-		
+
 			// Twitter (note: refUrl might not show up in share box on localhost)
 			$('#tweetblock'+target).html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="'+refUrl+'" data-text="'+tweetMessage+'" data-count="none">Tweet</a>');
 			twttr.widgets.load();
@@ -684,10 +684,10 @@ jQuery(function($){
 	// SHARES
 	window.LE_Shares = setInterval(function (){
 		var initialised = 0;
-		
+
 		if (parseInt(wp_js.sharing_enabled) > 0) LE_Handlers.sharing.enabled = true;
 		for(i=0;i<wp_js.sharing_platforms.length;i++){
-			if ( typeof(window[ wp_js.sharing_platforms[i] ]) != 'undefined' ) 
+			if ( typeof(window[ wp_js.sharing_platforms[i] ]) != 'undefined' )
 				initialised += 1;
 		}
 		if ( initialised == wp_js.sharing_platforms.length ) {
@@ -697,7 +697,7 @@ jQuery(function($){
 			if (LE_Handlers.sharing.enabled) LE_Handlers.sharing.init();
 		}
 	}, 1000);
-	
+
 	// slideshow function
 	if(slideshow==true){
 		$bg = $('#background');

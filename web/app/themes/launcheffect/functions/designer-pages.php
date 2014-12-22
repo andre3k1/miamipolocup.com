@@ -8,7 +8,7 @@
  * @subpackage Launch_Effect
  *
  */
- 
+
 class LE_Theme_Admin_Page extends LE_Admin_Page {
 
 	function build_le_pages_options_page(){
@@ -41,7 +41,7 @@ new LE_Theme_Admin_Page(array(
 	'options' => array(
 		'Container' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Background Color',
 					'type' => 'color',
 					'option_name' => 'lefx_pages_container_bgcolor',
@@ -53,7 +53,7 @@ new LE_Theme_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Background Image',
 					'type' => 'image',
 					'option_name' => 'lefx_pages_container_bgimg',
@@ -176,7 +176,7 @@ new LE_Theme_Admin_Page(array(
 					'class' => '',
 					'premium' => 'section',
 					'std' => 'Menu'
-				),			
+				),
 			),
 			array( // subsection
 				array(
@@ -206,7 +206,7 @@ new LE_Theme_Admin_Page(array(
 		),
 		'Logo' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Logo Image',
 					'type' => 'image',
 					'option_name' => 'lefx_pages_logo',
@@ -217,7 +217,7 @@ new LE_Theme_Admin_Page(array(
 					'premium' => 'section',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Logo Image Alignment',
 					'type' => 'select',
 					'option_name' => 'lefx_pages_logo_alignment',
@@ -240,7 +240,7 @@ new LE_Theme_Admin_Page(array(
 					'premium' => 'section',
 					'std' => 'LAUNCH EFFECT'
 				),
-				array( 
+				array(
 					'label' => 'Disable Text-Based Logo',
 					'type' => 'check',
 					'option_name' => 'lefx_pages_textlogo_disable',
@@ -307,7 +307,7 @@ new LE_Theme_Admin_Page(array(
 					'premium' => 'section',
 					'std' => 'none'
 				),
-				array( 
+				array(
 					'label' => 'Alignment',
 					'type' => 'select',
 					'option_name' => 'lefx_pages_textlogo_alignment',
@@ -366,7 +366,7 @@ new LE_Theme_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Underline Links',
 					'type' => 'check',
 					'option_name' => 'lefx_pages_links_underline',
@@ -376,7 +376,7 @@ new LE_Theme_Admin_Page(array(
 					'premium' => 'section',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Underline Links on Hover Only',
 					'type' => 'check',
 					'option_name' => 'lefx_pages_links_underlinehover',
@@ -707,8 +707,8 @@ new LE_Theme_Admin_Page(array(
 			),
 		),
 		'Sign-Up Tab' => array(
-			array( // subsection 
-				array( 
+			array( // subsection
+				array(
 					'label' => 'Disable Sign-Up Tab',
 					'type' => 'check',
 					'option_name' => 'lefx_pages_tab_disable',
@@ -830,7 +830,7 @@ new LE_Theme_Admin_Page(array(
 		),
 		'404 Error Page' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Heading',
 					'type' => 'text',
 					'option_name' => 'lefx_pages_404_heading',
@@ -842,7 +842,7 @@ new LE_Theme_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Message',
 					'type' => 'tinymce',
 					'option_name' => 'lefx_pages_404_message',

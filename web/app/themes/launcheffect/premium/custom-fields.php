@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 ?>
 						<?php
@@ -24,7 +24,7 @@
 
 								<li>
 									<label><?php echo $fields[$i]['name'] ?><?php if($fields[$i]['req'] && ler('lefx_req_indicator')) echo '<span> *</span>'; ?></label>
-									<?php 
+									<?php
 									$close_field = false;
 									if (substr($field_type, 0, 4) != 'text') {
 										$close_field = true;
@@ -37,7 +37,7 @@
 									<input type="text" id="custom_field<?php echo $fields[$i]['index'] ?>" name="<?php echo $fields[$i]['id']; ?>" maxlength="250" />
 										<?php break; case "textarea" :?>
 
-									<textarea name="<?php echo $fields[$i]['id']; ?>" rows="10" cols="40" maxlength="250"></textarea>					
+									<textarea name="<?php echo $fields[$i]['id']; ?>" rows="10" cols="40" maxlength="250"></textarea>
 										<?php break; case "dropdown":?>
 
 										<select name="<?php echo $fields[$i]['id']; ?>">
@@ -54,15 +54,15 @@
 
 										<div class="radio-group">
 											<input type="radio" id="<?php echo $fields[$i]['id'] . "$k"; ?>" value="<?php echo $opt?>" name="<?php echo $fields[$i]['id']; ?>[]" />
-											<label for="<?php echo $fields[$i]['id'] . "$k"; ?>"><?php echo $opt?></label>														
+											<label for="<?php echo $fields[$i]['id'] . "$k"; ?>"><?php echo $opt?></label>
 										</div>
 										<?php endforeach; break; endswitch; ?>
-											
+
 										<?php if ($close_field): ?>
 
 										</div>
 										<?php endif; ?>
-									
+
 									<div class="error" id="lefx_cust_field<?php echo $fields[$i]['index']; ?>">This field is required.</div>
 								</li>
 							<?php endif; ?>

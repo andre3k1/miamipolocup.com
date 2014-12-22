@@ -10,22 +10,22 @@
  */
 
 class LE_Global_Admin_Page extends LE_Admin_Page {
-	
+
 	function build_admin_menu(){
 		add_menu_page(
 			__('Launch Effect','launcheffect'),
 			__('Launch Effect','launcheffect'),
 			'manage_options',
-			'lefx_'.preg_replace('/\s+/', '', strtolower($this->panel_title)), 
+			'lefx_'.preg_replace('/\s+/', '', strtolower($this->panel_title)),
 			null,
 			get_template_directory_uri()."/functions/im/launch_icon_sm.png"
 		);
 		add_submenu_page(
-			'lefx_designer', 
-			__($this->panel_title, 'launcheffect'), 
-			__($this->panel_title, 'launcheffect'), 
-			'manage_options', 
-			'lefx_'.preg_replace('/\s+/', '', strtolower($this->panel_title)), 
+			'lefx_designer',
+			__($this->panel_title, 'launcheffect'),
+			__($this->panel_title, 'launcheffect'),
+			'manage_options',
+			'lefx_'.preg_replace('/\s+/', '', strtolower($this->panel_title)),
 			array(&$this,'build_le_plugin_options_page')
 		);
 	}
@@ -61,7 +61,7 @@ class LE_Global_Admin_Page extends LE_Admin_Page {
 				<li><strong>Body Text:</strong> #signup p</li>
 				<li><strong>Progress Container Heading:</strong> #progress-container h3</li>
 			</ul>
-	
+
 			<h4>Theme Pages</h4>
 			<ul>
 				<li><strong>Nav Link:</strong> nav a:link, nav a:visited</li>
@@ -88,8 +88,8 @@ new LE_Global_Admin_Page(array(
 	'name' => 'plugin_options',
 	'options' => array(
 		'Thumbnails' => array(
-			array( // subsection 
-				array( 
+			array( // subsection
+				array(
 					'label' => 'Allow thumbnail size override',
 					'type' => 'check',
 					'option_name' => 'lefx_pages_thumbnail_override',
@@ -139,7 +139,7 @@ new LE_Global_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Open Graph Image (og:image)',
 					'type' => 'image',
 					'option_name' => 'bkt_thumb',
@@ -240,7 +240,7 @@ new LE_Global_Admin_Page(array(
 		),
 		'Page Background' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Background Color',
 					'type' => 'color',
 					'option_name' => 'page_background_color',
@@ -252,7 +252,7 @@ new LE_Global_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Background Image',
 					'type' => 'image',
 					'option_name' => 'supersize',
@@ -267,7 +267,7 @@ new LE_Global_Admin_Page(array(
 		),
 		'Slideshow' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Enable Slideshow',
 					'type' => 'check',
 					'option_name' => 'lefx_enable_slideshow',
@@ -277,7 +277,7 @@ new LE_Global_Admin_Page(array(
 					'std' => '',
 					'premium' => 'section'
 				),
-				array( 
+				array(
 					'label' => 'Transition Speed',
 					'type' => 'text',
 					'option_name' => 'lefx_slide_fx_speed',
@@ -287,7 +287,7 @@ new LE_Global_Admin_Page(array(
 					'std' => '2.5',
 					'premium' => 'section'
 				),
-				array( 
+				array(
 					'label' => 'Slideshow Duration',
 					'type' => 'text',
 					'option_name' => 'lefx_slide_speed',
@@ -328,7 +328,7 @@ new LE_Global_Admin_Page(array(
 					'class' => 'le-threecol',
 					'premium' => 'section',
 					'std' => ''
-				),	
+				),
 				array(
 					'label' => 'Background Image (5)',
 					'type' => 'image',
@@ -340,10 +340,10 @@ new LE_Global_Admin_Page(array(
 					'std' => ''
 				),
 			),
-		),		
+		),
 		'Favicon' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Upload Favicon',
 					'type' => 'image',
 					'option_name' => 'bkt_favicon',

@@ -383,7 +383,7 @@ function lefx_generate_product_shortcode() {
 	$thankYou        = ler('lefx_product_thankyou');
 	$submitText      = ler('lefx_product_submit_text');
 	$paypalCC        = ler('buy_now_show_cc');
-	
+
 	// unfortunately these were saved with words so, we'll have to loop thru
 	$opt_num = array('one','two','three','four','five','six','seven','eight','nine','ten');
 	$options = array();
@@ -436,11 +436,11 @@ function lefx_generate_product_shortcode() {
 
 			<input type="submit" value="<?php echo $submitText; ?>">
 		</form>
-		<?php if ($paypalCC == true) : ?><i class="buy-now-cc">&nbsp;</i><?php endif; 
-	
+		<?php if ($paypalCC == true) : ?><i class="buy-now-cc">&nbsp;</i><?php endif;
+
 	$formCode = ob_get_contents();
 	ob_end_clean();
-	
+
 	// Don't output anything if price is negative, business ID is missing.
 	if ($productPrice < 0) {
 		$formCode = '<div class="buy-now-error">Please use a product price greater than 0.</div>';

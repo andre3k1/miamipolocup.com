@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		banner: '/*\n<%= pkg.description %>\nLovingly coded by <%= pkg.author.name %>  - <%= pkg.author.url %> \n*/\n',		
+		banner: '/*\n<%= pkg.description %>\nLovingly coded by <%= pkg.author.name %>  - <%= pkg.author.url %> \n*/\n',
 		cssmin: {
 			combine: {
 				options: {
@@ -13,9 +13,9 @@ module.exports = function(grunt) {
 					'ss/<%= pkg.name %>.min.css': ['ss/main.css'],
 					'ss/<%= pkg.name %>-responsive.min.css': ['ss/responsive.css'],
 					'functions/ss/<%= pkg.name %>-admin.min.css': [
-						'functions/ss/stats.css', 
-						'functions/ss/main.css', 
-//						'functions/js/jpicker/css/jPicker-1.1.6.css', 
+						'functions/ss/stats.css',
+						'functions/ss/main.css',
+//						'functions/js/jpicker/css/jPicker-1.1.6.css',
 						'functions/js/jqueryui/css/overcast/jquery-ui-1.8.16.custom.css'
 					],
 					'premium/ss/<%= pkg.name %>-premium.min.css': ['premium/ss/main.css', 'premium/js/fancybox/jquery.fancybox-1.3.4.css' ]
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 			},
 			admin: {
 				src: [
-					'js/jqModal.js', 
-					'functions/js/jquerycookie.js', 
+					'js/jqModal.js',
+					'functions/js/jquerycookie.js',
 					'functions/js/jquery.scrollTo-min.js',
 					'functions/js/init.js'],
 				dest: 'functions/js/<%= pkg.name %>-admin.js'
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-	
+
 	grunt.registerTask('build', [
 		'cssmin',
 		'concat:dist',
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 		'uglify:admin',
 		'uglify:premium'
 	]);
-	
+
 	grunt.registerTask('server', [
 		'cssmin',
 		'concat:dist',

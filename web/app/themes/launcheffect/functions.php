@@ -96,12 +96,12 @@ function lefx_scripts() {
 	$lefx_twitter_message = (!empty($lefx_twitter_message)) ? $lefx_twitter_message : ler('heading_content');
 	$meta_desc = str_replace(array("\r\n", "\r", "\t", "\n"), " ", ler('bkt_metadesc'));
 	$sharing = array();
-	
+
 	if (get_option('lefx_disable_twitter') != 'true') $sharing[] = 'twttr';
 	if (get_option('lefx_disable_facebook') != 'true') $sharing[] = 'FB';
 	if (get_option('lefx_disable_plusone') != 'true') $sharing[] = 'gapi';
 	if (get_option('lefx_disable_linkedin') != 'true') $sharing[] = 'IN';
-	
+
 	wp_register_style('lefx_css_main', get_template_directory_uri() . '/ss/launch-effect.min.css', false, LE_VERSION);
 	wp_enqueue_style('lefx_css_main');
 
@@ -143,7 +143,7 @@ add_action( 'init', 'session_starter', 1);
 
 /**
  * Destroys session, removing any data saved in the session
- */              
+ */
 function session_kill() {
 	session_destroy();
 }
@@ -233,9 +233,9 @@ function lefx_admin_scripts($hook){
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		'delcol' => wp_create_nonce( 'remove-col-nonce' ),
 	) );
-	
+
 	if ( function_exists('wp_enqueue_media')) {
-		wp_enqueue_media(); 
+		wp_enqueue_media();
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 
@@ -249,7 +249,7 @@ function lefx_admin_inline_scripts(){
 	<script type="text/javascript">
 		jQuery(document).ready(function($){
 			var frame;
-			
+
 			/*
 			 * Upload button click event, which builds the choose-from-library frame.
 			 *
@@ -294,7 +294,7 @@ function lefx_admin_inline_scripts(){
 			}).on( 'click', '.le-preview', function (){
 				var $el = $(this),
 					conf = confirm('This will remove the image as an option but will not delete the image from your library.');
-				
+
 				if (conf) {
 					$el.parent().find('input[type="hidden"]').val('');
 					$el.remove();
@@ -360,7 +360,7 @@ function lefx_admin_inline_scripts(){
 						$this.find('input, label, select, .remove').each( function (){
 							var $el = $(this),
 								tag = this.tagName.toLowerCase();
-						
+
 							switch(tag){
 							case 'label':
 								tags = ['for'];
@@ -393,11 +393,11 @@ function lefx_admin_inline_scripts(){
 					// hide all unreserved fields except first
 					if ( !$parent.prev().hasClass('added')) $parent.hide();
 				}
-				
+
 				// no saved fields, show first
 				if ( $parent.is(':last-child') ) {
 					if ($added.length == 0) $section.find('.le-sub_section:first-child').show();
-				} 
+				}
 				$('.le-sub_section', $section).each( LE_CF.fixOrdering );
 				$parent.find('.custom_field_type :input').change(LE_CF.evalCustomOptions).change();
 			});
@@ -456,7 +456,7 @@ function lefx_admin_inline_scripts(){
 			});
 
 			/* TODO: Must determine a way to keep the data in sync with resort
-			$('#lefx_cust_field1').parents('.le-sectioncontent').sortable({ 
+			$('#lefx_cust_field1').parents('.le-sectioncontent').sortable({
 				items: "> .le-sub_section",
 				stop: function ( event, ui ) {
 					$moved = ui.item;
@@ -466,7 +466,7 @@ function lefx_admin_inline_scripts(){
 						if ( $cf.val() == '' ) $cf.val('Undefined');
 						$moved.find('a.add_custom_field-button:not(.remove)').click();
 					}
-					
+
 					$('.le-sub_section.added', $(this)).each( LE_CF.fixOrdering );
 				}
 			});
@@ -537,7 +537,7 @@ class WP_MimeType_Rewrite{
 	function __construct($args = null) {
 		if ( is_admin() ) {
 			add_filter('upload_mimes', array( &$this, 'add_custom_upload_mimes') );
-		}		
+		}
 	}
 
 	function add_custom_upload_mimes($existing_mimes){

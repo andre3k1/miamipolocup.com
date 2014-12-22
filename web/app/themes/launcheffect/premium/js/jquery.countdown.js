@@ -43,7 +43,7 @@
 				isRTL: false
 			}
 		},
-		
+
 		_getters: ['getTimes'],
 
 		_rtlClass: pluginName + '-rtl',
@@ -90,7 +90,7 @@
 		requestAnimationFrame(timerCallBack);
 	}
 		},
-	
+
 	UTCDate: function(tz, year, month, day, hours, mins, secs, ms) {
 		if (typeof year == 'object' && year.constructor == Date) {
 			ms = year.getMilliseconds();
@@ -233,7 +233,7 @@
 			}
 		}
 	},
-	
+
 		/** Calculate internal settings for an instance.
 			@private
 			@param elem {jQuery} The containing division.
@@ -338,7 +338,7 @@
 				inst[inst._since ? '_since' : '_until'] =
 					this._determineTime(sign + inst._periods[0] + 'y' +
 						sign + inst._periods[1] + 'o' + sign + inst._periods[2] + 'w' +
-						sign + inst._periods[3] + 'd' + sign + inst._periods[4] + 'h' + 
+						sign + inst._periods[3] + 'd' + sign + inst._periods[4] + 'h' +
 						sign + inst._periods[5] + 'm' + sign + inst._periods[6] + 's');
 					this._addElem(elem);
 			}
@@ -390,7 +390,7 @@
 					case 'd': day += parseInt(matches[1], 10); break;
 					case 'w': day += parseInt(matches[1], 10) * 7; break;
 					case 'o':
-						month += parseInt(matches[1], 10); 
+						month += parseInt(matches[1], 10);
 							day = Math.min(day, self._getDaysInMonth(year, month));
 						break;
 					case 'y':
@@ -481,8 +481,8 @@
 			inst.options.compact, inst.options.significant, showSignificant) :
 			((inst.options.compact ? // Compact version
 			'<span class="' + this._rowClass + ' ' + this._amountClass +
-			(inst._hold ? ' ' + this._holdingClass : '') + '">' + 
-			showCompact(Y) + showCompact(O) + showCompact(W) + showCompact(D) + 
+			(inst._hold ? ' ' + this._holdingClass : '') + '">' +
+			showCompact(Y) + showCompact(O) + showCompact(W) + showCompact(D) +
 			(show[H] ? this._minDigits(inst, inst._periods[H], 2) : '') +
 			(show[M] ? (show[H] ? inst.options.timeSeparator : '') +
 			this._minDigits(inst, inst._periods[M], 2) : '') +
@@ -611,7 +611,7 @@
 		show[S] = (format.match('s') ? '?' : (format.match('S') ? '!' : null));
 		return show;
 	},
-	
+
 		/** Calculate the requested periods between now and the target time.
 			@private
 			@param inst {object} The current settings for this instance.

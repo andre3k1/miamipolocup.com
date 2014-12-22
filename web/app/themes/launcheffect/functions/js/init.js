@@ -33,17 +33,17 @@ jQuery(function($) {
 			}, 600);
 		});
 
-		$(window).resize(function(){ 
-		
+		$(window).resize(function(){
+
 			var windowWidth = $(window).width();
-				
+
 			if(windowWidth < 1100) {
 				$('#le_floatnav').addClass('minimal');
 			} else {
 				$('#le_floatnav').removeClass('minimal');
 			}
-	
-		}).trigger('resize');			
+
+		}).trigger('resize');
 	}
 
 	// PREMIUM SECTION TEASERS
@@ -52,7 +52,7 @@ jQuery(function($) {
 			$(this).addClass('premium-section');
 			$(this).find('span.submit').hide();
 			$(this).find('a.premiumbutton').show();
-		} 
+		}
 	});
 
 	$('.le-input.premium-item').each(function(){
@@ -67,7 +67,7 @@ jQuery(function($) {
 
 	// Popups
 	$('.jqmWindow#selector-info').jqm({trigger: '.modal-trigger', overlay:60});
-	$('.jqmWindow#selector-info').jqmAddClose('a.close'); 
+	$('.jqmWindow#selector-info').jqmAddClose('a.close');
 
 	// IE7 AND LOWER POPUP
 	if ( $('html').hasClass('ie7') || $('html').hasClass('ie6') ) {
@@ -84,7 +84,7 @@ jQuery(function($) {
 			case "remove":
 				confirmed = confirm('This item will be permanently deleted and cannot be recovered. Continue?');
 			break;
-			default: 
+			default:
 				confirmed = true;
 		}
 		if (! confirmed ) return false;
@@ -94,7 +94,7 @@ jQuery(function($) {
 	$('.le-title').click(function(){
 
 		var thisID = $(this).find('span.expand').attr('id');
-	
+
 		if($(this).parent('.le-section').hasClass('open')) {
 			$(this).parent('.le-section').removeClass('open');
 			$(this).nextAll('.le-sectioncontent').hide();
@@ -119,19 +119,19 @@ jQuery(function($) {
 	var cooky = $.cookie();
 
 	$.each(cooky, function(key, value) {
-	
+
 		if(value == 'expandered') {
 			$('span.expand#' + key).parent('.le-title').parent('.le-section').addClass('open');
 			$('span.expand#' + key).parent('.le-title').nextAll('.le-sectioncontent').show();
 			$('span.expand#' + key).html('&ndash;');
 		}
-	
+
 		if(value == 'collapsered') {
 			$('span.expand').parent('.le-title').parent('.le-section').removeClass('open');
 			$('span.expand').parent('.le-title').nextAll('.le-sectioncontent').hide();
 			$('span.expand').text('+');
 		}
-	
+
 	});
 
 	// WEBFONT SELECT BOX PREVIEW
@@ -143,9 +143,9 @@ jQuery(function($) {
 	});
 
 	$('.le-select_webfont select').change(function(){
-	
+
 		var selectVal = $(this).find('option:selected').attr('value');
-	
+
 		if(selectVal.length > 0) {
 			$(this).parent().children('ul').children('li').hide();
 			$(this).parent().children('ul').children('li.' + $(this).find('option:selected').attr('class')).show();
@@ -154,10 +154,10 @@ jQuery(function($) {
 		}
 
 	});
-	
+
 	// PERCENTAGE AFTER TAX INPUT FOR PRODUCT PAGE
 	$('.le-tax input').after('%');
-	
+
 	// HIDE WORDPRESS FOOTER
 	$('#footer').hide();
 });

@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 $version = 'premium';
 ?>

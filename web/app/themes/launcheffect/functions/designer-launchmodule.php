@@ -8,7 +8,7 @@
  * @subpackage Launch_Effect
  *
  */
- 
+
 class LE_Launch_Admin_Page extends LE_Admin_Page {
 
 	function build_le_launchmodule_options_page(){
@@ -220,7 +220,7 @@ new LE_Launch_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Background Image',
 					'type' => 'image',
 					'option_name' => 'background',
@@ -235,7 +235,7 @@ new LE_Launch_Admin_Page(array(
 		),
 		'Logo and Heading' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Logo Image',
 					'type' => 'image',
 					'option_name' => 'bkt_logo',
@@ -248,7 +248,7 @@ new LE_Launch_Admin_Page(array(
 				)
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Logo Image Alignment',
 					'type' => 'select',
 					'option_name' => 'lefx_logo_alignment',
@@ -271,7 +271,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => 'LAUNCH EFFECT'
 				),
-				array( 
+				array(
 					'label' => 'Don\'t show Logo Text?',
 					'type' => 'check',
 					'option_name' => 'heading_disable',
@@ -326,7 +326,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => 'letterpress'
 				),
-				array( 
+				array(
 					'label' => 'Alignment',
 					'type' => 'select',
 					'option_name' => 'heading_alignment',
@@ -549,7 +549,7 @@ new LE_Launch_Admin_Page(array(
 		),
 		'Loop Content' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Content Placement',
 					'type' => 'select',
 					'option_name' => 'lefx_editorcontent_placement',
@@ -851,7 +851,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -904,7 +904,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -957,7 +957,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -1010,7 +1010,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -1063,7 +1063,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -1116,7 +1116,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -1169,7 +1169,7 @@ new LE_Launch_Admin_Page(array(
 					'std' => ''
 				),
 			),
-			array( // subsection					
+			array( // subsection
 				array(
 					'label' => 'Field Name',
 					'type' => 'customfield',
@@ -1221,11 +1221,11 @@ new LE_Launch_Admin_Page(array(
 					'premium' => 'section',
 					'std' => ''
 				),
-			),					
+			),
 		),
 		'Privacy Policy' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Enable Privacy Policy',
 					'type' => 'check',
 					'option_name' => 'lefx_enable_privacy_policy',
@@ -1237,7 +1237,7 @@ new LE_Launch_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Popup Background Color',
 					'type' => 'color',
 					'option_name' => 'lefx_privacy_policy_bgcolor',
@@ -1258,7 +1258,7 @@ new LE_Launch_Admin_Page(array(
 					'subtype' => '',
 					'premium' => '',
 					'std' => 'By submitting my email, I understand the'
-				),	
+				),
 				array(
 					'label' => 'Title',
 					'type' => 'text',
@@ -1268,7 +1268,7 @@ new LE_Launch_Admin_Page(array(
 					'subtype' => '',
 					'premium' => '',
 					'std' => 'privacy policy.'
-				),	
+				),
 				array(
 					'label' => 'Popup Window Content',
 					'type' => 'textarea',
@@ -1278,7 +1278,7 @@ new LE_Launch_Admin_Page(array(
 					'subtype' => '',
 					'premium' => '',
 					'std' => 'Your email will never be shared with a third party.  We\'ll only use it to notify you of our launch and of special events taking place in your city.  You\'ll have the opportunity to unsubscribe at any time, immediately, once you receive your first email.'
-				),		
+				),
 			),
 		),
 		'Returning Visitors' => array(
@@ -1375,7 +1375,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => 'section',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Enable Countdown Timer',
 					'type' => 'check',
 					'option_name' => 'lefx_progcountenable',
@@ -1463,7 +1463,7 @@ new LE_Launch_Admin_Page(array(
 				)
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Progress Bar Styles',
 					'type' => 'radio',
 					'option_name' => 'lefx_progbarstyle',
@@ -1487,7 +1487,7 @@ new LE_Launch_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Countdown Timer Styles',
 					'type' => 'radio',
 					'option_name' => 'lefx_progcountstyle',
@@ -1560,11 +1560,11 @@ new LE_Launch_Admin_Page(array(
 					'std' => '#FFFFFF'
 				),
 			),
-			
+
 		),
 		'Video' => array(
 			array( // subsection
-				array( 
+				array(
 					'label' => 'YouTube/Vimeo Embed Code',
 					'type' => 'textarea',
 					'option_name' => 'video_embed',
@@ -1600,7 +1600,7 @@ new LE_Launch_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Disable Unique URL Generator',
 					'type' => 'check',
 					'option_name' => 'disable_unique_link',
@@ -1611,7 +1611,7 @@ new LE_Launch_Admin_Page(array(
 				),
 			),
 			array( // subsection
-				array( 
+				array(
 					'label' => 'Disable Entire Share Section',
 					'type' => 'check',
 					'option_name' => 'disable_social_media',
@@ -1620,7 +1620,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Disable Twitter',
 					'type' => 'check',
 					'option_name' => 'lefx_disable_twitter',
@@ -1629,7 +1629,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Disable Facebook',
 					'type' => 'check',
 					'option_name' => 'lefx_disable_facebook',
@@ -1638,7 +1638,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Disable Google +1',
 					'type' => 'check',
 					'option_name' => 'lefx_disable_plusone',
@@ -1647,7 +1647,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Disable Tumblr',
 					'type' => 'check',
 					'option_name' => 'lefx_disable_tumblr',
@@ -1656,7 +1656,7 @@ new LE_Launch_Admin_Page(array(
 					'premium' => '',
 					'std' => ''
 				),
-				array( 
+				array(
 					'label' => 'Disable LinkedIn',
 					'type' => 'check',
 					'option_name' => 'lefx_disable_linkedin',

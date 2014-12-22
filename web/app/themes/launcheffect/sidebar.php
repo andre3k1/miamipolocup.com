@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 ?>
 <div id="sidebar">

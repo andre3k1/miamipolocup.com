@@ -5,7 +5,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 
 /* Table of Contents
@@ -23,7 +23,7 @@
 #Comments (Viewing)
 #Comment Form
 #Media Queries */
-	
+
 /* #To Fade In On Load
 ================================================== */
 
@@ -50,10 +50,10 @@ a#learn-more {
 	width: auto;
 	margin-right: 40px;
 	padding: 8px 40px;
-	
+
 	font-size:1.5em;
 	text-decoration: none;
-	
+
 	-moz-transition: background-color 0.2s linear;
 	-webkit-transition: background-color 0.2s linear;
 	-o-transition: background-color 0.2s linear;
@@ -68,7 +68,7 @@ a#learn-more:hover {
 /* #Sign-Up Page: Medium Size
 ================================================== */
 
-#signup.medium.hascf #error, 
+#signup.medium.hascf #error,
 #signup.medium .error {
 	right:10px;
 	left:auto;
@@ -77,7 +77,7 @@ a#learn-more:hover {
 
 #signup.medium.hascf label {
 	float:left;
-	margin:0;	
+	margin:0;
 	width:165px;
 	padding-right:45px;
 }
@@ -101,17 +101,17 @@ html.ie7 #signup.medium.hascf label {
 
 #signup.medium.hascf ul#form-layout li.hascf-submit-button {
 	overflow:hidden;
-	padding-left:210px;	
+	padding-left:210px;
 	margin-bottom:35px;
 }
 
-#signup.medium.hascf input[type=text], 
-#signup.medium.hascf input[type=email], 
+#signup.medium.hascf input[type=text],
+#signup.medium.hascf input[type=email],
 #signup.medium.hascf textarea,
 #signup.medium.hascf .radio-group,
 #signup.medium.hascf .checkbox-group,
 #signup.medium.hascf select {
-	float:right; 
+	float:right;
 }
 
 #signup.medium.hascf .radio-group,
@@ -170,7 +170,7 @@ html.ie7 #signup.medium.hascf label {
 	height:70px;
 	width:70px;
 	padding: 12px 0 0 0;
-		
+
 	font-size:5em;
 	text-align:center;
 	font-family:Arial;
@@ -187,7 +187,7 @@ html.ie7 #signup.medium.hascf label {
 	width:66px;
 	margin:0 2px;
 	padding:11px 0 0 0;
-	
+
 	border-radius:4px;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
@@ -223,12 +223,12 @@ html.ie7 #signup.medium.hascf label {
 .tearoff .unit {
 	display: block;
 	margin-top: 2px;;
-	
+
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	font-weight: bold;
 	text-align: center;
-}	
+}
 
 /*----- Bar Chart -----*/
 
@@ -238,9 +238,9 @@ html.ie7 #signup.medium.hascf label {
 	width:80%;
 	height:23px;
 	margin:0px auto;
-	
+
 	background:white;
-	
+
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -259,7 +259,7 @@ html.ie7 #signup.medium.hascf label {
 	left:0px;
 	height:23px;
 	min-width:35px !important;
-	
+
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -269,18 +269,18 @@ html.ie7 #signup.medium.hascf label {
 	position:absolute;
 	top:0;
 	left:0;
-	
+
 	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), inset 0px -5px 8px 0px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), inset 0px -5px 8px 0px rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), inset 0px -5px 8px 0px rgba(0, 0, 0, 0.3);
-	
+
 }
 
 #bar-complete span {
 	display:block;
 	padding:5px 8px 0 0;
 	opacity:0;
-	
+
 	text-align:right;
 	color:#222;
 	font-size:1.2em;
@@ -306,7 +306,7 @@ html.ie7 #signup.medium.hascf label {
 	overflow:hidden;
 	margin-right:40px;
 	padding:8px 40px;
-	
+
 	font-size:1.5em;
 	text-align: center;
 	text-decoration:none;
@@ -330,9 +330,9 @@ html.ie7 #signup.medium.hascf label {
 	position:static; /* fix for IE7 */
 	width: 780px;
 	margin:0;
-	
+
 	border:none !important;
-	
+
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
@@ -342,7 +342,7 @@ html.ie7 #launchlitemodule #signup {
 	width:700px;
 }
 
-#launchlitemodule #presignup-content, 
+#launchlitemodule #presignup-content,
 #launchlitemodule #success-content {
 	margin-bottom:0px !important;
 }
@@ -387,7 +387,7 @@ html.ie7 #wrapper {
 }
 
 #wrapper header h1 {
-	position:relative;	
+	position:relative;
 	margin:0;
 	line-height:1.2em;
 }
@@ -397,7 +397,7 @@ html.ie7 #wrapper {
 }
 
 #wrapper header h1.notextheading.haslogo {
-	
+
 }
 
 #wrapper header h1.notextheading.haslogo span {
@@ -419,7 +419,7 @@ html.ie7 #wrapper {
 
 #hero {
 	margin:0 0 30px 0;
-}	
+}
 
 /* #Sidebar
 ================================================== */
@@ -444,7 +444,7 @@ nav ul {
 	margin:0 0 40px 0;
 }
 
-nav ul li, 
+nav ul li,
 nav ul li ul li {
 	margin:0 0 0.8em 0;
 }
@@ -459,7 +459,7 @@ nav a {
 }
 
 #nav-responsive nav ul,
-#nav-responsive nav ul li, 
+#nav-responsive nav ul li,
 #nav-responsive nav ul li ul li {
 	margin:0;
 }
@@ -526,7 +526,7 @@ ul#widgets li ul li,
 }
 
 ul#widgets li ul li a,
-.textwidget {	
+.textwidget {
 	text-decoration:none !important;
 }
 
@@ -543,21 +543,21 @@ form#search-form {
 	height:34px;
 	margin:0px auto;
 }
-	
+
 #search_box {
 	width: 188px;
 	height:34px;
 	padding: 0px 30px 0px 10px;
 	margin: 0;
-	
+
 	color: #999;
 	font-style:italic;
 	background: #f1f1f1;
 	border: 1px solid #ddd;
-	
+
 	outline: none;
 	font-size: 11px;
-	
+
 	-moz-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
 	-webkit-transition: all 0.5s ease-out;
@@ -576,7 +576,7 @@ html.ie7 #search_box {
 html.ie7 #search_box,
 html.ie8 #search_box {
 	height:34px;
-	padding: 10px 30px 0px 10px;		
+	padding: 10px 30px 0px 10px;
 }
 
 #search_box:hover {
@@ -594,14 +594,14 @@ html.ie8 #search_box {
 	color: #999;
 }
 
-#search_btn { 
+#search_btn {
 	display: block;
 	position: absolute;
 	right:10px;
 	top: 9px;
 	height: 16px;
 	width: 20px;
-	
+
 	background:url('../im/search-icon.png') no-repeat 0 0;
 
 	text-indent: -9999px;
@@ -614,7 +614,7 @@ html.ie8 #search_box {
 }
 
 /*----- Recent Comments -----*/
-ul#recentcomments a {	
+ul#recentcomments a {
 /* 		font-style:italic; */
 }
 
@@ -702,7 +702,7 @@ ul#recentcomments a {
 	margin:0 0 50px 0;
 }
 
-.lepost h1, 
+.lepost h1,
 .lepost h2 {
 	line-height:1.2em;
 	margin:0 0 10px 0;
@@ -794,7 +794,7 @@ li.comment {
 
 .lepost .postmeta {
 	margin:15px 0 0 0;
-	padding:10px 0;	
+	padding:10px 0;
 	border-top:1px dotted #999;
 	border-bottom:1px dotted #999;
 }
@@ -1023,7 +1023,7 @@ li.comment {
 #respond p.comment-messages {
 	display:block;
 	margin:0 0 5px 0;
-	
+
 	color: #888;
 	font-size: 11px;
 }
@@ -1031,19 +1031,19 @@ li.comment {
 #respond input,
 #respond textarea {
 	float:left;
-	overflow:hidden;		
+	overflow:hidden;
 	width:100%;
 	padding:15px 20px;
-	
+
 	background:none;
 	border:1px solid #aaa;
-	
+
 	font-size:1.2em;
 	color:#222;
 	font-style:normal;
 	line-height:1.3em;
 	outline:none;
-	
+
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1074,7 +1074,7 @@ li.comment {
 	border:none;
 	color: white !important;
 	cursor:pointer;
-	
+
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
@@ -1093,43 +1093,43 @@ li.comment {
 	#launchlite  {
 		display:block !important;
 	}
-	
+
 	#nav-responsive-menu-items nav {
 		display:none;
 	}
-	
+
 }
 
 @media screen and (max-width: 768px) {
-	
+
 	#wrapper,
 	#wrapper header,
 	#sidebar,
 	#main {
 		width:auto;
 	}
-	
+
 	#wrapper,
 	#sidebar {
 		margin:0;
 	}
-	
+
 	#sidebar,
 	#main {
 		float:none !important;
 	}
-	
+
 	#sidebar nav,
 	ul#widgets li { /* Don't show the regular sidebar nav or widgets */
 		display:none;
 	}
-	
+
 	#nav-responsive,
 	#nav-responsive-menu-link { /* Show the responsive dropdown nav instead */
 		display:block;
 	}
 
-		
+
 	ul#widgets li.widget_search {
 		display:block !important;
 		width:auto;
@@ -1138,11 +1138,11 @@ li.comment {
 		border-top:1px dotted #999;
 		border-bottom:1px dotted #999;
 	}
-	
+
 	ul#widgets li.widget_search h3 {
 		display:none;
 	}
-	
+
 
 	#respond p.left,
 	#respond p.right {
@@ -1150,30 +1150,30 @@ li.comment {
 		width:auto;
 		overflow:hidden;
 	}
-	
+
 	cite.fn {
 		margin:0;
 	}
-	
+
 	a.comment-permalink {
 		display:block;
 	}
-	
+
 	a.comment-reply-link {
 		display:block;
 		float:none !important;
 		margin-bottom:15px;
 	}
-	
+
 	span.slash {
 		display:none;
 	}
-	
+
 
 	#launchtab {
 		border-bottom:none;
 	}
-	
+
 	#launchtab a {
 		margin-right:0px;
 		float:none;
@@ -1183,42 +1183,42 @@ li.comment {
 		padding:0px 40px;
 		line-height:3.5em;
 	}
-	
+
 	#launchtab a span {
 		float:right;
 		font-size:1.5em;
 		padding-right:3px;
 		display:inline-block;
 	}
-	
+
 	#launchlite {
 		display:none;
 		width:auto;
 		margin:0;
 		overflow:hidden;
 	}
-		
+
 	#launchlitemodule #signup {
 		width: auto;
 	}
 
 	#launchlitemodule #signup .signup-left,
 	#launchlitemodule #signup .signup-right {
-		float:none !important;	
+		float:none !important;
 		width: auto !important;
 		margin:0 !important;
 		border:none !important;
-		-webkit-box-shadow: none; 
+		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
 	}
-	
+
 	#launchlitemodule #signup .signup-left h2,
 	#launchlitemodule #signup .signup-left p,
 	#launchlitemodule #signup .signup-left div {
 		margin-right:0;
 	}
-	
+
 	#launchlitemodule #form-layout li.first,
 	#launchlitemodule #form-layout li.hascf-submit-button {
 		width:auto !important;
@@ -1231,7 +1231,7 @@ li.comment {
 	#wrapper {
 		padding:20px;
 	}
-	
+
 	#nav-responsive-menu-link,
 	#nav-responsive nav a,
 	#launchtab a {

@@ -8,12 +8,12 @@
  * @subpackage Launch_Effect
  *
  */
- 
+
 // CREATE REFERRAL CODE
 function randomString() {
     $length = 3;
     $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
-    $string = '';    
+    $string = '';
     for ($p = 0; $p < $length; $p++) {
         $string .= $characters[mt_rand(0, strlen($characters) - 1)];
     }
@@ -27,7 +27,7 @@ function get_referral_index() {
 	$parseurl = parse_url($url, PHP_URL_PATH);
 	$parseurlstr = substr($parseurl, -5, 5);
 
-	if (isset($_GET['ref'])||isset($_GET['fb_ref'])) { 
+	if (isset($_GET['ref'])||isset($_GET['fb_ref'])) {
 		$referralindex = htmlspecialchars(!isset($_GET['ref'])?$_GET['fb_ref']:$_GET['ref']);
 	} elseif(strstr($parseurlstr, '/') OR $parseurlstr == '') {
 		$referralindex = 'direct';
@@ -46,7 +46,7 @@ function wpdbQuery($query, $type, $args = false) {
 	return $result;
 }
 
-// LOG VISITS 
+// LOG VISITS
 function log_visits() {
 	global $wpdb;
 	$referral = get_referral_index();
@@ -63,7 +63,7 @@ function postData($table, $referral, $premium = null) {
 	if ( !is_null($premium) && count($premium['fields'])) {
 		$prem_fields = ", " . implode(", ", $premium['fields']);
 		$prem_values = ",'" . implode("','", $premium['values']) . "'";
-	}	
+	}
 	$query = "INSERT INTO $table (time, email, code, referred_by, visits, conversions, ip" . $prem_fields . ")"
 		." VALUES('" . date('Y-m-d H:i:s') . "','$_POST[email]', '$_POST[code]','$referral',0,0,'" . $_SERVER['REMOTE_ADDR'] . "'" . $prem_values . ")";
 	$result = wpdbQuery($query, 'query');
@@ -82,7 +82,7 @@ function clearColumn($table, $colname) {
 // COUNT CHECK (RETURN COUNT OF INSTANCES WHERE X = Y)
 function countCheck($table, $entry, $value) {
 	$query = wpdbQuery(
-		"SELECT COUNT(*) FROM $table WHERE $entry = '$value'", 
+		"SELECT COUNT(*) FROM $table WHERE $entry = '$value'",
 		'get_var'
 	);
 	return $query;
@@ -91,17 +91,17 @@ function countCheck($table, $entry, $value) {
 // REPEAT CODE CHECK
 function codeCheck() {
 	global $wpdb;
-	$code = randomString(); 
+	$code = randomString();
 	$count = countCheck($wpdb->prefix . 'launcheffect', 'code', $code);
-	if ($count > 0) { 
+	if ($count > 0) {
 		/*
 		 * This should create another randomString() and check
 		 * against the database before outputting the string
 		 */
-		codeCheck(); 
-	} else { 
-		echo $code; 
-	}	
+		codeCheck();
+	} else {
+		echo $code;
+	}
 }
 
 // GET DATA, PAGINATE IT
@@ -124,7 +124,7 @@ function getDetail($table, $entry, $value) {
 
 // COUNT DATA
 function countData($table) {
-	$count = wpdbQuery( 
+	$count = wpdbQuery(
 		"SELECT COUNT(*) FROM $table",
 		'get_var'
 	);

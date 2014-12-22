@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Functions: integrations.php
  *
@@ -30,7 +30,7 @@ class LE_Integrations_Admin_Page extends LE_Admin_Page {
 
 			<div class="le-intro no-heading">
 				<p>You can use the controls on this page to configure other apps you might want to use in conjunction with Launch Effect. If you're having any issues, please feel free to contact us at our <a href="http://launcheffect.tenderapp.com" target="_blank">support forums</a>.</p>
-			</div>		
+			</div>
 			<?php lefx_form($this->panel_name, $this->panel_array); ?>
 
 		</div>
@@ -111,7 +111,7 @@ new LE_Integrations_Admin_Page(array(
 					'premium' => '',
 				),
 			),
-			
+
 		),
 		'Campaign Monitor' => array(
 			array(

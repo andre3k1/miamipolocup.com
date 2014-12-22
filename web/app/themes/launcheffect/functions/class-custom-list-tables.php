@@ -34,7 +34,7 @@ if(!class_exists('WP_List_Table')) require_once( ABSPATH . 'wp-admin/includes/cl
  */
 class Custom_List_Table extends WP_List_Table {
 	var $_sort_columns, $_bulk_actions, $_query, $_where, $_search, $_table_name;
-	
+
 	/**
 	 * Constructor, we override the parent to pass our own arguments
 	 * We usually focus on three parameters: singular and plural labels, as well as whether the class supports AJAX.
@@ -101,9 +101,9 @@ class Custom_List_Table extends WP_List_Table {
 		if ( !isset($this->_table_name) ) return false;
 		$tbl = $wpdb->prefix . $this->_table_name;
 		$page = @$_GET['page'];
-		
+
 		if (! isset($where) && isset($this->_where) ) $where = "WHERE ({$this->_where})";
-		
+
 		// the query
 		if ( isset($this->_query) ) $query = $this->_query;
 		else $query = "SELECT * FROM $tbl".(isset($where)?" $where":"");
@@ -142,7 +142,7 @@ class Custom_List_Table extends WP_List_Table {
 		$hidden = array();
 		$sortable = $this->get_sortable_columns();
 		$this->_column_headers = array($columns, $hidden, $sortable);
-		
+
 		/* -- Fetch the items -- */
 		$this->items = $wpdb->get_results($query);
 	}
@@ -159,7 +159,7 @@ class Custom_List_Table extends WP_List_Table {
 	function get_bulk_actions() {
 		return $this->_bulk_actions;
 	}
-	
+
 	function column_cb( $item) {
 		$this->column_default( $item, $column_name = 'cb');
 	}
@@ -174,7 +174,7 @@ class Custom_List_Table extends WP_List_Table {
 		//links
 		$editlink  = admin_url("admin.php?page=$page&view={$item->code}");
 		$deleteLink = admin_url("admin.php?page=$page&id={$item->id}&action=trash");
-	
+
 		//Display the cell
 		$actions = array(
 			'view' => '<a class="view" href="'.$editlink.'" title="View">View</a>',
@@ -182,17 +182,17 @@ class Custom_List_Table extends WP_List_Table {
 		);
 		switch ( $column_name ) {
 			case "cb":
-				echo '<input type="checkbox" name="id[]" value="'.$item->id.'" />'; 
+				echo '<input type="checkbox" name="id[]" value="'.$item->id.'" />';
 				break;
-			case "col_conversion_rate": 
-				$rate = ($item->visits + $item->conversions != 0 ) ? (($item->conversions/$item->visits) * 100) : ''; 
-				echo round($rate, 2) . '%'; 
+			case "col_conversion_rate":
+				$rate = ($item->visits + $item->conversions != 0 ) ? (($item->conversions/$item->visits) * 100) : '';
+				echo round($rate, 2) . '%';
 				break;
-			case "col_email": 
-				echo '<a href="'.$editlink.'">'.$item->email.'</a>'.$this->row_actions($actions); 
+			case "col_email":
+				echo '<a href="'.$editlink.'">'.$item->email.'</a>'.$this->row_actions($actions);
 				break;
-			default : 
-				echo $item->{str_replace('col_', '', $column_name)}; 
+			default :
+				echo $item->{str_replace('col_', '', $column_name)};
 		}
 	}
 }

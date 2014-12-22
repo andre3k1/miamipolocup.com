@@ -9,7 +9,7 @@
         function i(b, a) {
             b.src === k || -1 !== c.inArray(b, j) || (j.push(b), a ? g.push(b) : h.push(b), c.data(b, "imagesLoaded", {isBroken: a,src: b.src}), o && d.notifyWith(c(b), [a, e, c(h), c(g)]), e.length === j.length && (setTimeout(m), e.unbind(".imagesLoaded")))
         }
-        var f = this, d = c.isFunction(c.Deferred) ? c.Deferred() : 
+        var f = this, d = c.isFunction(c.Deferred) ? c.Deferred() :
         0, o = c.isFunction(d.notify), e = f.find("img").add(f.filter("img")), j = [], h = [], g = [];
         e.length ? e.bind("load.imagesLoaded error.imagesLoaded", function(b) {
             i(b.target, "error" === b.type)

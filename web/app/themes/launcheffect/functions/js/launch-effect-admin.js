@@ -1,6 +1,6 @@
 /*
 A viral marketing theme for WordPress empowering designers, marketers, and enthusiasts to build websites with relative ease
-Lovingly coded by Barrel  - http://barrelny.com 
+Lovingly coded by Barrel  - http://barrelny.com
 */
 /*
  * jqModal - Minimalist Modaling with jQuery
@@ -10,7 +10,7 @@ Lovingly coded by Barrel  - http://barrelny.com
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
- * 
+ *
  * $Version: 03/01/2009 +r14
  */
 (function($) {
@@ -53,7 +53,7 @@ open:function(s,t){var h=H[s],c=h.c,cc='.'+c.closeClass,z=(parseInt(h.w.css('z-i
   r.html(c.ajaxText).load(u,function(){if(c.onLoad)c.onLoad.call(this,h);if(cc)h.w.jqmAddClose($(cc,h.w));e(h);});}
  else if(cc)h.w.jqmAddClose($(cc,h.w));
 
- if(c.toTop&&h.o)h.w.before('<span id="jqmP'+h.w[0]._jqm+'"></span>').insertAfter(h.o);	
+ if(c.toTop&&h.o)h.w.before('<span id="jqmP'+h.w[0]._jqm+'"></span>').insertAfter(h.o);
  (c.onShow)?c.onShow(h):h.w.show();e(h);return F;
 },
 close:function(s){var h=H[s];if(!h.a)return F;h.a=F;
@@ -258,17 +258,17 @@ jQuery.cookie = function(name, value, options) {
 			}, 600);
 		});
 
-		$(window).resize(function(){ 
-		
+		$(window).resize(function(){
+
 			var windowWidth = $(window).width();
-				
+
 			if(windowWidth < 1100) {
 				$('#le_floatnav').addClass('minimal');
 			} else {
 				$('#le_floatnav').removeClass('minimal');
 			}
-	
-		}).trigger('resize');			
+
+		}).trigger('resize');
 	}
 
 	// PREMIUM SECTION TEASERS
@@ -277,7 +277,7 @@ jQuery.cookie = function(name, value, options) {
 			$(this).addClass('premium-section');
 			$(this).find('span.submit').hide();
 			$(this).find('a.premiumbutton').show();
-		} 
+		}
 	});
 
 	$('.le-input.premium-item').each(function(){
@@ -292,7 +292,7 @@ jQuery.cookie = function(name, value, options) {
 
 	// Popups
 	$('.jqmWindow#selector-info').jqm({trigger: '.modal-trigger', overlay:60});
-	$('.jqmWindow#selector-info').jqmAddClose('a.close'); 
+	$('.jqmWindow#selector-info').jqmAddClose('a.close');
 
 	// IE7 AND LOWER POPUP
 	if ( $('html').hasClass('ie7') || $('html').hasClass('ie6') ) {
@@ -309,7 +309,7 @@ jQuery.cookie = function(name, value, options) {
 			case "remove":
 				confirmed = confirm('This item will be permanently deleted and cannot be recovered. Continue?');
 			break;
-			default: 
+			default:
 				confirmed = true;
 		}
 		if (! confirmed ) return false;
@@ -319,7 +319,7 @@ jQuery.cookie = function(name, value, options) {
 	$('.le-title').click(function(){
 
 		var thisID = $(this).find('span.expand').attr('id');
-	
+
 		if($(this).parent('.le-section').hasClass('open')) {
 			$(this).parent('.le-section').removeClass('open');
 			$(this).nextAll('.le-sectioncontent').hide();
@@ -344,19 +344,19 @@ jQuery.cookie = function(name, value, options) {
 	var cooky = $.cookie();
 
 	$.each(cooky, function(key, value) {
-	
+
 		if(value == 'expandered') {
 			$('span.expand#' + key).parent('.le-title').parent('.le-section').addClass('open');
 			$('span.expand#' + key).parent('.le-title').nextAll('.le-sectioncontent').show();
 			$('span.expand#' + key).html('&ndash;');
 		}
-	
+
 		if(value == 'collapsered') {
 			$('span.expand').parent('.le-title').parent('.le-section').removeClass('open');
 			$('span.expand').parent('.le-title').nextAll('.le-sectioncontent').hide();
 			$('span.expand').text('+');
 		}
-	
+
 	});
 
 	// WEBFONT SELECT BOX PREVIEW
@@ -368,9 +368,9 @@ jQuery.cookie = function(name, value, options) {
 	});
 
 	$('.le-select_webfont select').change(function(){
-	
+
 		var selectVal = $(this).find('option:selected').attr('value');
-	
+
 		if(selectVal.length > 0) {
 			$(this).parent().children('ul').children('li').hide();
 			$(this).parent().children('ul').children('li.' + $(this).find('option:selected').attr('class')).show();
@@ -379,10 +379,10 @@ jQuery.cookie = function(name, value, options) {
 		}
 
 	});
-	
+
 	// PERCENTAGE AFTER TAX INPUT FOR PRODUCT PAGE
 	$('.le-tax input').after('%');
-	
+
 	// HIDE WORDPRESS FOOTER
 	$('#footer').hide();
 });

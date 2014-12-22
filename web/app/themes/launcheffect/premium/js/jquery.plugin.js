@@ -6,7 +6,7 @@
 
 	// Collection of derived classes
 	JQClass.classes = {};
- 
+
 	// Create a new JQClass that inherits from this class
 	JQClass.extend = function extender(prop) {
 		var base = this.prototype;
@@ -32,7 +32,7 @@
 							return base[name].apply(this, args);
 						};
 
-						var ret = fn.apply(this, arguments);				
+						var ret = fn.apply(this, arguments);
 
 						// The method only need to be bound temporarily, so we
 						// remove it when we're done executing
@@ -84,7 +84,7 @@
  	triggers: 'click'
  } */
 		defaultOptions: {},
-		
+
 		/** Options dependent on the locale.
 			Indexed by language and (optional) country code, with '' denoting the default language (English/US).
 			@example regionalOptions: {
@@ -93,7 +93,7 @@
 	}
  } */
 		regionalOptions: {},
-		
+
 		/** Names of getter methods - those that can't be chained (default: []).
 			@example _getters: ['activeTab'] */
 		_getters: [],
@@ -104,7 +104,7 @@
 		_getMarker: function() {
 			return 'is-' + this.name;
 		},
-		
+
 		/** Initialise the plugin.
 			Create the jQuery bridge - plugin name <code>xyz</code>
 			produces <code>$.xyz</code> and <code>$.fn.xyz</code>. */
@@ -141,7 +141,7 @@
 		setDefaults: function(options) {
 			$.extend(this.defaultOptions, options || {});
 		},
-		
+
 		/** Determine whether a method is a getter and doesn't permit chaining.
 			@private
 			@param name {string} The method name.
@@ -154,7 +154,7 @@
 			}
 			return $.inArray(name, this._getters) > -1;
 		},
-		
+
 		/** Initialise an element. Called internally only.
 			Adds an instance object as data named for the plugin.
 			@param elem {Element} The element to enhance.
@@ -208,7 +208,7 @@
 			try {
 				var data = elem.data(this.name.toLowerCase()) || '';
 				data = data.replace(/'/g, '"');
-				data = data.replace(/([a-zA-Z0-9]+):/g, function(match, group, i) { 
+				data = data.replace(/([a-zA-Z0-9]+):/g, function(match, group, i) {
 					var count = data.substring(0, i).match(/"/g); // Handle embedded ':'
 					return (!count || count.length % 2 === 0 ? '"' + group + '":' : group + ':');
 				});
@@ -232,7 +232,7 @@
 		_getInst: function(elem) {
 			return $(elem).data(this.name) || {};
 		},
-		
+
 		/** Retrieve or reconfigure the settings for a plugin.
 			@param elem {Element} The source element.
 			@param name {object|string} The collection of new option values or the name of a single option.
@@ -260,7 +260,7 @@
 			this._optionsChanged(elem, inst, options);
 			$.extend(inst.options, options);
 		},
-		
+
 		/** Plugin specific options processing.
 			Old value available in <code>inst.options[name]</code>, new value in <code>options[name]</code>.
 			Override this in a sub-class to perform extra activities.
@@ -274,7 +274,7 @@
  } */
 		_optionsChanged: function(elem, inst, options) {
 		},
-		
+
 		/** Remove all trace of the plugin.
 			Override <code>_preDestroy</code> for plugin-specific processing.
 			@param elem {Element} The source element.
@@ -299,7 +299,7 @@
 		_preDestroy: function(elem, inst) {
 		}
 	});
-	
+
 	/** Convert names from hyphenated to camel-case.
 		@private
 		@param value {string} The original hyphenated name.
@@ -309,11 +309,11 @@
 			return group.toUpperCase();
 		});
 	}
-	
+
 	/** Expose the plugin base.
 		@namespace "$.JQPlugin" */
 	$.JQPlugin = {
-	
+
 		/** Create a new collection plugin.
 			@memberof "$.JQPlugin"
 			@param [superClass='JQPlugin'] {string} The name of the parent class to inherit from.

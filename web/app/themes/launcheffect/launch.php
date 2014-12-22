@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Launch Template
  *
@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 
 
@@ -16,8 +16,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 	// GET THE LAUNCH PAGE
 	get_template_part('launch/launch');
-	
-endwhile; else: 
+
+endwhile; else:
 
 endif;
 

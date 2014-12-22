@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Main Template File
  *
@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage Launch_Effect
- * 
+ *
  */
 
 get_header(); ?>
@@ -20,20 +20,20 @@ get_header(); ?>
 <?php elseif(is_home()): ?>
 
 	<?php if(lefx_version() == 'premium'): ?>
-		
+
 		<?php get_template_part('premium/theme','header'); ?>
 		<?php get_sidebar(); ?>
-		
+
 		<div id="main">
 			<?php get_template_part( 'loop', 'index' );?>
 		</div>
-		
+
 		<?php get_template_part('launch/launch','footer'); ?>
-		
+
 		</div> <!-- end #wrapper -->
-		
+
 	<?php else: ?>
-	
+
 		<div id="wrapper">
 			<header>
 				<h1><a href="<?php echo home_url(); ?>">LAUNCH EFFECT</a></h1>
@@ -47,17 +47,17 @@ get_header(); ?>
 				<?php endwhile; else: endif; ?>
 			</div>
 		</div> <!-- end #wrapper -->
-	
+
 	<?php endif; ?>
 
 <?php else: ?>
-	<?php 
+	<?php
 	/*
 	 * ***DEPRECATED***
-	 * Since we transitioned referral codes to be query strings 
+	 * Since we transitioned referral codes to be query strings
 	 * we should remove the below after people have had time to transition.
 	 */
-	get_template_part('launch/launch'); 
+	get_template_part('launch/launch');
 	?>
 
 <?php endif; ?>

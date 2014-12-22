@@ -27,7 +27,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
 
-	<title>Miami Beach Polo World Cup | The Polo Life, LLC.</title>
+	<title>Miami Beach Polo World Cup - Coming Soon | The Polo Life, LLC.</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0">
@@ -55,9 +55,9 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 
 	<?php if($bkt_favicon) : ?><link rel="shortcut icon" href="<?php echo $bkt_favicon; ?>" type="image/x-icon" /><?php endif; ?>
 
-	<?php 
-	ob_start(); 
-	wp_head(); 
+	<?php
+	ob_start();
+	wp_head();
 	$wp_head = ob_get_contents();
 	ob_end_clean();
 	$wp_head = explode("\n", $wp_head);
@@ -65,31 +65,31 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	?>
 
 	<!-- Mobile Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ss/launch-effect-responsive.min.css" media="only screen and (max-width: <?php 
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ss/launch-effect-responsive.min.css" media="only screen and (max-width: <?php
 		switch(ler('container_width')) {
-			case 'large': echo '768px'; break; 
+			case 'large': echo '768px'; break;
 			case 'medium': echo '590px'; break;
 			default: echo '480px';
 		}
 	?>)"/>
-	
+
 	<!-- WebFonts -->
-	<?php 
+	<?php
 	$lefx_typekit       = ler('lefx_typekit');
 	$lefx_monotype      = ler('lefx_monotype');
 	$lefx_webfonts_dups = array(
-		ler('heading_font_goog'), 
-		ler('subheading_font_goog'), 
-		ler('label_font_goog'), 
-		ler('description_font_goog'), 
-		ler('lefx_pages_nav_font_goog'), 
-		ler('lefx_pages_textlogo_font_goog'), 
-		ler('lefx_pages_h2_font_goog'), 
-		ler('lefx_pages_h3_font_goog'), 
-		ler('lefx_pages_h4_font_goog'), 
-		ler('lefx_pages_bodytext_font_goog'), 
-		ler('lefx_pages_tab_font_goog'), 
-		ler('lefx_pages_learnmoretab_font_goog'), 
+		ler('heading_font_goog'),
+		ler('subheading_font_goog'),
+		ler('label_font_goog'),
+		ler('description_font_goog'),
+		ler('lefx_pages_nav_font_goog'),
+		ler('lefx_pages_textlogo_font_goog'),
+		ler('lefx_pages_h2_font_goog'),
+		ler('lefx_pages_h3_font_goog'),
+		ler('lefx_pages_h4_font_goog'),
+		ler('lefx_pages_bodytext_font_goog'),
+		ler('lefx_pages_tab_font_goog'),
+		ler('lefx_pages_learnmoretab_font_goog'),
 		ler('buy_now_goog')
 	);
 	$lefx_webfonts_unique = array_filter(array_unique($lefx_webfonts_dups));
@@ -102,7 +102,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	if ($lefx_webfonts||$lefx_typekit||$lefx_monotype): ?><script type="text/javascript">
 	WebFontConfig = <?php echo json_encode($config); ?>;
 	(function() {var wf = document.createElement('script');wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +'://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';wf.type = 'text/javascript';wf.async = 'true';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf, s);})();
-	</script><?php endif; ?>  
+	</script><?php endif; ?>
 
 	<!--[if lt IE 9]>
 	<style>
@@ -128,8 +128,8 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	?>>
 		<?php if ( $slides_enabled && ($output = $supersize) ) {
 			$output = "<div style='background-image: url($output);'></div>";
-			for ( $i=2;$i<6;$i++) 
-				if ($img = get_option('lefx_bg_image'.$i)) 
+			for ( $i=2;$i<6;$i++)
+				if ($img = get_option('lefx_bg_image'.$i))
 					$output .= "\n\t\t<div style='background-image: url($img);'></div>";
 			echo $output;
 		} ?>

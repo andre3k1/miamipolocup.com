@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Functions: optionspanel.php
  *
@@ -212,7 +212,7 @@ function lefx_form($optionspanel_name, $optionspanel_array) {
 							if($op['premium']=='section'&&lefx_version()=='free') echo ' premium-section';
 							else if($op['premium']=='item'&&lefx_version()=='free') echo ' premium-item';
 						?>">
-							<label for="<?php echo $op['option_name']; ?>"><?php 
+							<label for="<?php echo $op['option_name']; ?>"><?php
 								echo $op['label'];
 							?><br /><a href="http://www.launcheffectapp.com/premium" target="_blank" class="premiumlink">Go Premium &raquo;</a></label>
 
@@ -234,10 +234,10 @@ function lefx_form($optionspanel_name, $optionspanel_array) {
 		?>
 
 	</form>
-	<?php 
+	<?php
 	if ($tab_title == "lefx_integrations") {
-		chimp_sync($aweber_custom_fields); 
-		aweber_sync($aweber_custom_fields); 
+		chimp_sync($aweber_custom_fields);
+		aweber_sync($aweber_custom_fields);
 		cm_sync($cm_custom_fields, $custom_field_names);
 	}
 }
@@ -256,11 +256,11 @@ function lefx_field($op, $optionspanel_name) {
 			update_option($op['option_name'], $opt_value);
 		}
 	}
-	
+
 	switch( $op['type'] ) :	case 'color': ?>
 
-			<input name="<?php echo $op['option_name']; ?>" type='text' value="<?php 
-				if (!empty($opt_value)) echo stripslashes($opt_value); 
+			<input name="<?php echo $op['option_name']; ?>" type='text' value="<?php
+				if (!empty($opt_value)) echo stripslashes($opt_value);
 			?>" class="colorpicker" <?php if($is_not_free) echo 'disabled'; ?>/>
 			<small><?php echo $op['desc']; ?></small>
 
@@ -288,7 +288,7 @@ function lefx_field($op, $optionspanel_name) {
 					(($is_not_free) ? 'disabled' : ''),
 				));
 			} ?>
-		
+
 			</div>
 
 		<?php break; case 'select': ?>
@@ -307,7 +307,7 @@ function lefx_field($op, $optionspanel_name) {
 				$firstfive = substr($option, 0, 5);
 				$nospace = str_replace(' ','',$firstfive);
 				$nospace = str_replace('"','',$nospace);
-				$sel_sel = ($opt_value==$option)?'selected="selected"':''; 
+				$sel_sel = ($opt_value==$option)?'selected="selected"':'';
 				?>
 
 				<option class="<?php echo $nospace; ?>" <?php echo $sel_sel; ?>><?php echo $option; ?></option>
@@ -324,9 +324,9 @@ function lefx_field($op, $optionspanel_name) {
 						$firstfive = substr($selectarray, 0, 5);
 						$nospace = str_replace(' ','',$firstfive);
 						printf(
-							'<li class="%s"><img src="%s/functions/im/webfont-previews/%s.png" alt="" /></li>%s', 
-							$nospace, 
-							get_template_directory_uri(), 
+							'<li class="%s"><img src="%s/functions/im/webfont-previews/%s.png" alt="" /></li>%s',
+							$nospace,
+							get_template_directory_uri(),
 							$nospace,
 							"\n"
 						);
@@ -446,8 +446,8 @@ function lefx_field($op, $optionspanel_name) {
 			<?php endif; ?>
 
 		<?php break; case 'aweberauthurl': ?>
-		
-			<?php 
+
+			<?php
 				$auth_url = get_template_directory_uri() .  '/inc/aweber/authorize.php';
 				echo $op['desc'],  "<br/ ><a href='$auth_url' target='_blank'>Authorize Launch Effect</a>";
 
@@ -555,7 +555,7 @@ function lefx_field($op, $optionspanel_name) {
 			<small><?php echo $op['desc']; ?></small>
 
 		<?php break; case "tinymce": ?>
-				
+
 			<div class="editor-container clear"><?php wp_editor($opt_value, $op['option_name'], array('textarea_name' => $op['option_name']) ); ?></div>
 
 		<?php break; case 'image': ?>
@@ -592,10 +592,10 @@ function lefx_field($op, $optionspanel_name) {
 
 		<?php break; case 'customfield': ?>
 
-			<input name="<?php echo $op['option_name']; ?>" id="<?php echo $op['option_name']; ?>" type="text" class="customfield<?php 
-				echo (!empty($opt_value) ? ' populated' : ''); 
+			<input name="<?php echo $op['option_name']; ?>" id="<?php echo $op['option_name']; ?>" type="text" class="customfield<?php
+				echo (!empty($opt_value) ? ' populated' : '');
 			?>" value="<?php
-				if (!empty($opt_value)) echo stripslashes($opt_value); 
+				if (!empty($opt_value)) echo stripslashes($opt_value);
 			?>" <?php if($is_not_free) echo 'disabled '; ?>/>
 			<small><?php echo $op['desc']; ?>
 
@@ -636,15 +636,15 @@ function lefx_field($op, $optionspanel_name) {
 			<input name="<?php echo $op['option_name']; ?>" type='text' value="<?php echo $opt_value; ?>" <?php if($is_not_free) echo 'disabled'; ?> />
 
 		<?php break; ?>
-	
+
 	<?php endswitch;
-	
+
 }
 
 function chimp_sync($chimp_custom_fields){
 	$mc_list_id = get_option('lefx_mclistid');
 	$mc_api_key = get_option('lefx_mcapikey');
-	if (empty($mc_list_id) || empty($mc_api_key)) return; 
+	if (empty($mc_list_id) || empty($mc_api_key)) return;
 	$api = new MCAPI($mc_api_key); ?>
 
 	<div id="chimpSync">
@@ -709,10 +709,10 @@ function chimp_sync($chimp_custom_fields){
 					$clicks = $stat->visits;
 					$conversions = $stat->conversions;
 					$data = array(
-						'EMAIL'=>$email, 
-						'EMAIL_TYPE'=>'html', 
-						'LECODE'=>$code, 
-						'LEVISITS'=>$clicks, 
+						'EMAIL'=>$email,
+						'EMAIL_TYPE'=>'html',
+						'LECODE'=>$code,
+						'LEVISITS'=>$clicks,
 						'LESIGNUPS'=>$conversions
 					);
 
@@ -773,7 +773,7 @@ function chimp_sync($chimp_custom_fields){
 		<?php endif;?>
 
 	</div>
-	<?php 
+	<?php
 }
 
 function aweber_sync($aweber_custom_fields){
@@ -951,7 +951,7 @@ function cm_sync($cm_custom_fields, $custom_field_names){
 	$cmapikey = get_option('lefx_cmapikey');
 	$cmclientid = get_option('lefx_cmclientid');
 	$cmlistid = get_option('lefx_cmlistid');
-	
+
 	if ( empty($cmapikey) || empty($cmapikey) || empty($cmapikey)) return;
 	$cmlist = new CS_REST_Lists($cmlistid, $cmapikey);
 	$monlist = $cmlist->get()->response; ?>

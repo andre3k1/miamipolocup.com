@@ -6,7 +6,7 @@
  * @subpackage Launch_Effect
  *
  */
- 
+
 class LE_Stats_Admin_Page extends LE_Admin_Page {
 
 	function __construct($args){
@@ -33,7 +33,7 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 		);
 		$admin_bar->add_menu( $args);
 	}
-	
+
 	function highlight_current_submenu() {
 		global $menu, $submenu, $submenu_file, $parent_file;
 		$exclusions = array( 'lefx_designer', 'lefx_integrations', 'lefx_stats' );
@@ -57,8 +57,8 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 	    add_menu_page(
 			__('Export CSV', 'launcheffect'),
 			__('Export CSV', 'launcheffect'),
-			'manage_options', 
-			'lefx_export', 
+			'manage_options',
+			'lefx_export',
 			array(&$this, 'build_le_export_page')
 		);
 		remove_menu_page('lefx_export');
@@ -85,12 +85,12 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 
 	function build_le_stats_page(){
 		global $wpdb;
-	
+
 	    if (!current_user_can('manage_options')) {
 			wp_die( __('You do not have sufficient permissions to access this page.', 'launcheffect') );
 	    }
 		$view = isset($_GET['view']) ? $_GET['view'] : false;
-	 
+
 		if ( isset($_REQUEST['action']) || isset($_REQUEST['action2']) ) {
 			$id = $_REQUEST['id'];
 			switch($_REQUEST['action']) {
@@ -106,10 +106,10 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 			}
 			if ($handle) {
 				add_settings_error(
-					'Removed', // setting title 
-					'item-removed', // error ID  
-					$msg, // error message  
-					'updated' // type of message  
+					'Removed', // setting title
+					'item-removed', // error ID
+					$msg, // error message
+					'updated' // type of message
 				);
 			}
 		} ?>
@@ -126,10 +126,10 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 			<div class="stats-header">
 			<?php $emails = getDetail(LE_TABLE, 'code', $view); ?>
 			<?php foreach ($emails as $email) : ?>
-				<h3><?php echo $email->email; ?></h3>	
-				<?php if($email->referred_by != 'direct') : ?><br /><span class="refby"><?php _e('Signed Up Via: ', 'launcheffect'); ?><a href="<?php 
-					echo admin_url("admin.php?page=lefx_stats&amp;view={$email->referred_by}"); 
-				?>"><?php 
+				<h3><?php echo $email->email; ?></h3>
+				<?php if($email->referred_by != 'direct') : ?><br /><span class="refby"><?php _e('Signed Up Via: ', 'launcheffect'); ?><a href="<?php
+					echo admin_url("admin.php?page=lefx_stats&amp;view={$email->referred_by}");
+				?>"><?php
 					$referred_by = $email->referred_by;
 					$referrers = getDetail(LE_TABLE, 'code', $referred_by);
 					foreach ($referrers as $referrer) echo $referrer->email; ?></a></span>
@@ -160,7 +160,7 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 					</tr><?php endfor; ?>
 
 				</tbody>
-			</table> 
+			</table>
 			<?php endif; ?>
 
 			<h3><?php _e('Conversions', 'launcheffect'); ?>: <?php echo count($results); ?></h3>
@@ -181,12 +181,12 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 					</tr><?php endforeach; ?>
 
 				</tbody>
-			</table> 
+			</table>
 			<?php endif; ?>
 			<?php else : ?>
-	
+
 			<?php settings_errors(); ?>
-	
+
 			<ul class='subsubsub' style="float:none; border:none;">
 				<li><a class="current" href="<?php echo admin_url("admin.php?page=lefx_stats"); ?>"><?php _e('Stats', 'launcheffect'); ?></a> |</li>
 				<li><a href="<?php echo admin_url("admin.php?page=lefx_export"); ?>"><?php _e('Export as CSV', 'launcheffect'); ?></a></li>
@@ -217,22 +217,22 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 				$wp_list_table = new Custom_List_Table($args);
 				$wp_list_table->prepare_items();
 				$wp_list_table->display();
-		
+
 				?>
 			</form>
-	
+
 			<?php endif; ?>
-	
+
 		</div>
-		<?php 
+		<?php
 	}
 
 	function build_le_export_page() {
 		?>
-	
+
 		<div class="wrap">
 			<?php lefx_tabs('export'); ?>
-		
+
 			<ul class='subsubsub' style="float:none; border:none;">
 				<li><a href="<?php echo admin_url('admin.php?page=lefx_stats'); ?>"><?php _e('Stats', 'launcheffect'); ?></a> |</li>
 				<li><a class="current" href="<?php echo admin_url('admin.php?page=lefx_export'); ?>"><?php _e('Export as CSV', 'launcheffect'); ?></a></li>
@@ -253,7 +253,7 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 		if ( !isset($_POST['verify_export']) || !wp_verify_nonce($_POST['verify_export'], 'export_csv') ) return;
 
 		global $wpdb;
-	
+
 		$table = LE_TABLE;
 		$csv_terminated = "\n";
 		$csv_separator = ",";
@@ -271,10 +271,10 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 			$schema_insert .= $l;
 			$schema_insert .= $csv_separator;
 		}
- 
+
 		$out = trim(substr($schema_insert, 0, -1));
 		$out .= $csv_terminated;
- 
+
 		// Format the data
 		foreach($results as $j => $row) {
 			$schema_insert = '';
@@ -289,12 +289,12 @@ class LE_Stats_Admin_Page extends LE_Admin_Page {
 				} else {
 					$schema_insert .= '';
 				}
- 
+
 				if ($j < $fields_cnt - 1) {
 					$schema_insert .= $csv_separator;
 				}
 			}
- 
+
 			$out .= $schema_insert;
 			$out .= $csv_terminated;
 		}

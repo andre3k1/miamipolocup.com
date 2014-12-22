@@ -202,13 +202,8 @@ a:active {
     padding:40px;
     margin:0 auto 80px auto;
     background-color: rgb(19,34,77);
-    background-color: rgba(19,34,77,0.6);
-    border-width:0px;
-    border-color:#fff;
-    border-style:solid;
-    -webkit-box-shadow: 0px 0px 10px #111;
-    -moz-box-shadow: 0px 0px 10px #111;
-    box-shadow: 0px 0px 10px #111;
+    /* background-color: rgba(19,34,77,0.7); */
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQIW2NkgAJhJd//ICYjiIBxwALInLf3NjPCBUAckAoAHYgLB0CygrIAAAAASUVORK5CYII=) repeat; */
 }
 
 /*----- Sizes -----*/

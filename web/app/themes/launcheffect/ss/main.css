@@ -263,6 +263,9 @@ a#learn-more:hover {
     padding:40px;
     margin:0 auto 80px auto;
     background-color: #13224D;
+    -webkit-box-shadow: 0px 0px 10px #111;
+    -moz-box-shadow: 0px 0px 10px #111;
+    box-shadow: 0px 0px 10px #111;
 }
 
 /*----- Sizes -----*/

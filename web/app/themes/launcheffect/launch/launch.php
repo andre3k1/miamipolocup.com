@@ -98,7 +98,9 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					</ul> -->
 
 					<!-- DISPLAY SPONSOR LOGOS -->
-					<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
+					<div id="sponsor-logos">
+						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
+					</div>
 
 					<!-- SPONSOR US LINK -->
 					<div id="learn-more-tab">

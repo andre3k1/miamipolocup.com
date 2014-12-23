@@ -43,6 +43,7 @@
 #Form
 #Messages
 #Social Media Buttons
+#Sponsor Logos
 #Returning User Tooltip
 #Privacy Policy Modal
 #Footer
@@ -209,7 +210,8 @@ a:active {
 ================================================== */
 
 #learn-more-tab {
-    margin: 10px auto 0 auto;
+    margin: 0px auto 0 auto !important;
+    padding:0px !important;
     width: 590px;
 }
 
@@ -739,6 +741,13 @@ span.conversions {
 
 .fb_iframe_widget iframe {
     overflow:visible !important;
+}
+
+/* #Sponsor Logos
+================================================== */
+
+#sponsor-logos {
+    margin-top: 15px
 }
 
 /* #Returning User Tooltip

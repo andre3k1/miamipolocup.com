@@ -43,7 +43,7 @@ function le_submit() {
 	require_once dirname(__FILE__) . '/../inc/MCAPI.class.php';
 
 	// grab an API Key from http://admin.mailchimp.com/account/api/
-	$chimpkey = get_option('lefx_mcapikey');
+	$chimpkey = '037c8b539b1af5b5c249a2a34f8cc6d7-us9';
 	$cmkey = get_option('lefx_cmapikey');
 	$cmclient = get_option('lefx_cmclientid');
 	$cmlist = get_option('lefx_cmlistid');
@@ -59,9 +59,9 @@ function le_submit() {
 
 	// grab your List's Unique Id by going to http://admin.mailchimp.com/lists/
 	// Click the "settings" link for the list - the Unique Id is at the bottom of that page.
-	$list_id = get_option('lefx_mclistid');
+	$list_id = 'c4ce418554';
 
-	$opt_in = (get_option('lefx_mcdouble') == true) ? false : true;
+	$opt_in = false;
 	$referralpost = (!empty($_REQUEST['referredBy'])) ? $_REQUEST['referredBy'] : '';
 
 	// POST FORM WITH AJAX

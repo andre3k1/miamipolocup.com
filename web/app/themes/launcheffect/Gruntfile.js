@@ -74,18 +74,30 @@ module.exports = function(grunt) {
 			},
 			cssmin: {
 				files: ['ss/*.css', 'functions/ss/*.css', 'premium/ss/*.css'],
-				tasks: ['cssmin']
+				tasks: ['cssmin'],
+				options: {
+					livereload: true
+				}
 			},
 			concat: {
 				files: ['js/*.js', 'functions/js/*.js', 'premium/js/*.js'],
-				tasks: ['concat:dist', 'concat:admin', 'concat:premium']
+				tasks: ['concat:dist', 'concat:admin', 'concat:premium'],
+				options: {
+					livereload: true
+				}
 			},
 			uglify: {
 				files: ['js/<%= pkg.name %>.js', 'functions/js/<%= pkg.name %>-admin.js', 'premium/js/<%= pkg.name %>-premium.js'],
-				tasks: ['uglify:dist', 'uglify:admin', 'uglify:premium']
+				tasks: ['uglify:dist', 'uglify:admin', 'uglify:premium'],
+				options: {
+					livereload: true
+				}
 			},
 			php: {
-				files: '**/*.php'
+				files: '**/*.php',
+				options: {
+					livereload: true
+				}
 			}
 		}
 	});

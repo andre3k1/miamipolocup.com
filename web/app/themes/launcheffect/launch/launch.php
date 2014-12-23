@@ -56,7 +56,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 									        </span>
 
 											<!-- DISPLAY THE SUBMIT BUTTON -->
-											<span id="submit-button-border">
+											<span id="submit-button-border" id="button">
 												<span id="submit-button-spinner"></span>
 												<input type="submit" name="submit" value="Sign Up" id="submit-button" />
 											</span>

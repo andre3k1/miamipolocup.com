@@ -124,7 +124,7 @@ function lefx_scripts() {
 		'sharing_enabled' => get_option('disable_social_media')=='true'?0:1,
 		'sharing_platforms' => $sharing,
 		'l10n' => array(
-			'invalid_email' => __('This email address is invalid.', 'launcheffect'),
+			'invalid_email' => __('Error, please try again.', 'launcheffect'),
 		),
 	) );
 }

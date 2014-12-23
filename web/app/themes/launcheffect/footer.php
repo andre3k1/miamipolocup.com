@@ -23,7 +23,9 @@
 			if (window.matchMedia('(min-width: 900px)').matches) {
 				$(".player").YTPlayer();
 				$('#bgndVideo').on("YTPStart",function(e){
-					$('#background').fadeOut(5000);
+					setTimeout(function () {
+						$('#background').fadeOut(8000);
+					}, 5000);
 				});
 			}
 		});

@@ -109,7 +109,7 @@ html {
 
 body {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    font-size:62.5%;
+    font-size:90%;
     text-align:left;
 }
 
@@ -215,9 +215,7 @@ a:active {
 
 a#learn-more {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.6em;
     font-weight: 700;
-    color: #C53FA7;
     background: transparent;
 }
 
@@ -348,10 +346,10 @@ html.ie7 #launchlitemodule #signup .signup-left {
 
 #signup-page header h1 {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    font-size:3.4em;
+    font-size:2.4em;
     text-align: center;
-    color: #D4DEE0;
-    text-shadow: #D4DEE0 -0.1px 0.1px 0,
+    color: #AA893A;
+    /*text-shadow: #D4DEE0 -0.1px 0.1px 0,
         #D4DEE0 -0.2px 0.2px 0,
         #D4DEE0 -0.3px 0.3px 0,
         #D4DEE0 -0.4px 0.4px 0,
@@ -360,7 +358,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
         #C53FA7 -0.7px 0.7px 0,
         #C53FA7 -0.8px 0.8px 0,
         #C53FA7 -0.9px 0.9px 0,
-        #C53FA7 -1px 1px 0;
+        #C53FA7 -1px 1px 0; */
     position:relative;
     margin:0;
 }
@@ -427,12 +425,11 @@ html.ie7 #launchlitemodule #signup .signup-left {
 ================================================== */
 
 #signup a {
-    text-decoration:none;
-    color: #C53FA7 !important;
+    color: #D4DEE0 !important;
 }
 
 #signup a:hover {
-    text-decoration:underline;
+    text-decoration:none;
 }
 
 #signup h2,
@@ -807,9 +804,9 @@ span.privacy-policy {
     display:block;
     padding-top:10px;
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    color: #AA893A;
     font-size: 3em;
     line-height:1.2em;
+    color: #D4DEE0;
 }
 
 .nocf span.privacy-policy {

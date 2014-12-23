@@ -33,13 +33,6 @@
 									<!-- HANDLE ERROR MESSAGING -->
 									<div id="error"></div>
 								</li>
-
-
-								<li>
-									<!-- DISPLAY THE CALL-TO-ACTION MESSAGE -->
-									<span class="privacy-policy">Sign Up, Stay in the Know</span>
-								</li>
-
 							</ul>
 						</fieldset>
 					</form>

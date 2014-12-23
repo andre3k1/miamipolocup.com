@@ -14,22 +14,14 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 	<div id="signup-page-wrapper">
 		<div id="signup-page">
-
-			<!-- SPONSOR US LINK -->
-			<div id="learn-more-tab">
-				<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
-			</div>
-
 			<div id="signup" class="<?php
 				echo 'medium center nocf';
 				$lefx_editorcontent_placement = ler('lefx_editorcontent_placement');
 			?>">
 
 				<div id="signup-content-wrapper">
-					<?php if('At Top' == $lefx_editorcontent_placement) echo $placed_content; ?>
-
+					<!-- DISPLAY HEADER IMAGE AND TEXT -->
 					<header class="no-margin">
-						<!-- DISPLAY HEADER IMAGE AND TEXT -->
 						<h1 class="haslogo hastextheading">
 				  			<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
 							<span>Miami Beach &#9816; April 23-25, 2015</span>
@@ -60,6 +52,10 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<!-- DISPLAY SPONSOR LOGOS -->
 					<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
 
+					<!-- SPONSOR US LINK -->
+					<div id="learn-more-tab">
+						<a href="mailto:info@actproductions.com" id="learn-more">Sponsor Us &rsaquo;</a>
+					</div>
 				</div>
 			</div>
 		</div>

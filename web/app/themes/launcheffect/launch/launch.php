@@ -41,13 +41,13 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					</div>
 
 					<!-- DISPLAY SOCIAL MEDIA ICONS -->
-					<ul id="inner-footer" class="clearfix">
+					<!-- <ul id="inner-footer" class="clearfix">
 						<li class="inner-footer_icon facebook"><a href="https://www.facebook.com/thepololife" target="_blank">Facebook</a></li>
 						<li class="inner-footer_icon twitter"><a href="https://twitter.com/thepololife" target="_blank">Twitter</a></li>
 						<li class="inner-footer_icon instagram"><a href="http://instagram.com/thepololife" target="_blank">Instagram</a></li>
 						<li class="inner-footer_icon youtube"><a href="https://www.youtube.com/user/MiamiBeachPolo" target="_blank">YouTube</a></li>
-						<!-- <li class="inner-footer_icon facebooklike"><div class="fb-like" data-href="https://www.facebook.com/thepololife" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li> -->
-					</ul>
+						<li class="inner-footer_icon facebooklike"><div class="fb-like" data-href="https://www.facebook.com/thepololife" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+					</ul> -->
 
 					<!-- DISPLAY SPONSOR LOGOS -->
 					<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />

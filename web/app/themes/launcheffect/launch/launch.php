@@ -29,13 +29,13 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					</header>
 
 					<div id="signup-body">
-						<!-- DISPLAY CALL-TO-ACTION TEXT BEFORE SIGNUP -->
+						<!-- DISPLAY CALL-TO-ACTION TEXT BEFORE SIGNUP
 						<div id="presignup-content" class="signup-left">
 							<span class="privacy-policy">Sign Up, Stay in the Know</span>
-						</div>
+						</div>  -->
 						<!-- DISPLAY CONFIRMATION TEXT AFTER SIGN UP -->
 						<div id="success-content">
-							<h2>Great, Now You're in the Know!</h2>
+							<h2>Congrats, You're in the Know!</h2>
 						</div>
 						<?php get_template_part('launch/launch','form'); ?>
 					</div>

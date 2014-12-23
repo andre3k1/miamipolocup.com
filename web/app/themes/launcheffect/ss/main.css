@@ -215,7 +215,6 @@ a:active {
 
 a#learn-more {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
     background: transparent;
 }
 
@@ -425,7 +424,8 @@ html.ie7 #launchlitemodule #signup .signup-left {
 ================================================== */
 
 #signup a {
-    color: #D4DEE0 !important;
+    color: #AA893A !important;
+    font-size: 0.8em !important;
 }
 
 #signup a:hover {

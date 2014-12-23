@@ -102,7 +102,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<!-- SPONSOR US LINK -->
 					<div id="learn-more-tab">
-						<a href="mailto:info@actproductions.com" id="learn-more">Sponsor Us &rsaquo;</a>
+						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
 					</div>
 				</div>
 			</div>

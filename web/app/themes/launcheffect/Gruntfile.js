@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 				banner: '<%= banner %>'
 			},
 			dist: {
-				src: ['js/jqModal.js', 'js/spin.js', 'js/jquery.imagesloaded.js', 'js/init.js', 'js/bigtext.js'],
+				src: ['js/jqModal.js', 'js/spin.js', 'js/jquery.imagesloaded.js', 'js/init.js', 'js/bigtext.js', 'js/jquery.mb.YTPlayer.js'],
 				dest: 'js/<%= pkg.name %>.js'
 			},
 			admin: {

@@ -439,25 +439,6 @@ function dynamic_css() {
 /* Media Queries
 ================================================== */
 
-	@media screen and <?php
-		switch( ler('container_width') ) {
-			case 'large': echo '(max-width: 768px) '; break;
-			case 'medium': echo '(max-width: 590px) '; break;
-			default: echo '(max-width: 420px) ';
-		}
-	?>{
-		html,
-		body{
-			background-color:<?php echo ($ct_bg_color ? $ct_bg_color : $pg_bg_color); ?>;
-		}
-		<?php if ($heading_size > 5) : ?>
-
-		#signup-page header {
-			font-size: 0.7em;
-		}
-		<?php endif; ?>
-
-	}
 	<?php
 	ob_end_flush();
 	exit;

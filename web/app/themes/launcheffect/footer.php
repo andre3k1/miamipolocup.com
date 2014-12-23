@@ -10,10 +10,23 @@
  */
 ?>
 
-	<!-- FOOTER -->
+	<!-- BigText.js -->
 	<script>
 		$(function() {
 			$('#bigtext').bigtext();
+		});
+	</script>
+
+	<!-- jQuery.mb.YTPlayer.js -->
+	<script>
+		$(document).ready(function() {
+			if (!window.matchMedia('(max-width: 900px)').matches) {
+				$(".player").YTPlayer();
+				$('#bgndVideo').on("YTPStart",function(e){
+					$('#background').fadeOut(2000);
+					$('#signup').animate({"opacity":0.9},2000);
+				});
+			}
 		});
 	</script>
 

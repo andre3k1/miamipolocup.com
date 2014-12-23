@@ -88,21 +88,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 	</style>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<?php if($lefx_addcsshead = ler('lefx_addcsshead')) printf('<style type="text/css">%s</style>', "\n\t$lefx_addcsshead\n\t"); ?>
-	<?php if($lefx_addjshead = ler('lefx_addjshead')) echo "\n\t$lefx_addjshead"; ?>
 
 </head>
 <body <?php body_class((lefx_version() != 'premium')?"lite":""); ?>>
-	<div id="background"<?php
-		$slides_enabled = get_option('lefx_enable_slideshow');
-		echo (get_option('lefx_bg_image2')&&$slides_enabled) ? ' class="slideshow"' : '';
-	?>>
-		<?php if ( $slides_enabled && ($output = $supersize) ) {
-			$output = "<div style='background-image: url($output);'></div>";
-			for ( $i=2;$i<6;$i++)
-				if ($img = get_option('lefx_bg_image'.$i))
-					$output .= "\n\t\t<div style='background-image: url($img);'></div>";
-			echo $output;
-		} ?>
-
-	</div>
+	<div id="background"></div>

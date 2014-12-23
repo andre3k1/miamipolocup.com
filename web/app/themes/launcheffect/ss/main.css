@@ -9,18 +9,6 @@
  */
 
 @font-face {
-    font-family: 'Accent';
-    src: url('./fonts/accent-webfont.eot');
-    src: url('./fonts/accent-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/accent-webfont.woff2') format('woff2'),
-         url('./fonts/accent-webfont.woff') format('woff'),
-         url('./fonts/accent-webfont.ttf') format('truetype'),
-         url('./fonts/accent-webfont.svg#accent') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Cubano';
     src: url('./fonts/cubano-webfont.eot');
     src: url('./fonts/cubano-webfont.eot?#iefix') format('embedded-opentype'),
@@ -116,7 +104,20 @@ body {
 
 html,
 body {
-    background-color: #D4DEE0;
+    background-color: #13224D;
+}
+
+@media screen and (max-width: 590px) {
+    html,
+    body{
+        background-color: #13224D;
+    }
+    #background {
+        background-image: none;
+    }
+}
+
+#background {
     background-image: url('../im/background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -125,6 +126,23 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: fixed;
+    z-index: 0;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 2s;
+}
+
+#background.visible {
+  opacity: 1;
 }
 
 html#signup-htmltag,
@@ -177,7 +195,6 @@ a:active {
 }
 
 /*----- To Fade In On Load -----*/
-
 #signup-content-wrapper {
     opacity:0;
     text-align: center;
@@ -246,8 +263,6 @@ a#learn-more:hover {
     padding:40px;
     margin:0 auto 80px auto;
     background-color: #13224D;
-    /* background-color: rgba(19,34,77,0.7); */
-    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQIW2NkgAJhJd//ICYjiIBxwALInLf3NjPCBUAckAoAHYgLB0CygrIAAAAASUVORK5CYII=) repeat; */
 }
 
 /*----- Sizes -----*/

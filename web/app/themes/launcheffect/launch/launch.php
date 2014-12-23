@@ -108,6 +108,23 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<div id="learn-more-tab">
 						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
 					</div>
+
+					<div id="bgndVideo" class="player"
+						data-property="{
+							videoURL:'https://www.youtube.com/watch?v=xDKuSRdTTp4',
+							containment:'body',
+							autoPlay:true,
+							mute:true,
+							startAt:0,
+							opacity:0.7,
+							ratio:'auto',
+							loop:true,
+							showYTLogo:false,
+							showControls:false,
+							addRaster:true,
+							stopMovieOnBlur:false
+						}">
+					</div>
 				</div>
 			</div>
 		</div>

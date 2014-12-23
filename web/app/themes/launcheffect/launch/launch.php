@@ -21,12 +21,14 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 				<div id="signup-content-wrapper">
 					<!-- DISPLAY HEADER IMAGE AND TEXT -->
-					<header class="no-margin">
-						<h1 class="haslogo hastextheading">
-				  			<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
-							<span>Miami Beach &#9816; April 23-25, 2015</span>
-						</h1>
-					</header>
+						<header class="no-margin">
+							<h1 class="haslogo hastextheading">
+					  			<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
+								<div id="bigtext">
+									<span>Miami Beach &#9816; April 23-25, 2015</span>
+								</div>
+							</h1>
+						</header>
 
 					<div id="signup-body">
 						<!-- DISPLAY CALL-TO-ACTION TEXT BEFORE SIGNUP

@@ -11,11 +11,11 @@
 ?>
 
 	<!-- FOOTER -->
-	<!--
-	<ul id="footer">
-		<li>Powered by <a href="http://www.launcheffectapp.com" class="logo" target="_blank">Launch Effect</a> for WordPress by <a href="http://www.barrelny.com" target="_blank">Barrel</a></li>
-	</ul>
-	-->
+	<script>
+		$(function() {
+			$('#bigtext').bigtext();
+		});
+	</script>
 
 	<!-- Launch Effect Scripts -->
 	<?php

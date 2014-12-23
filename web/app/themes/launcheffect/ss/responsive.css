@@ -225,7 +225,7 @@
 		#signup input[type=email],
 		#signup textarea,
 		#signup select {
-			font-size:1.6em !important;
+			font-size:1em !important;
 		}
 
 		#signup input[type=text],

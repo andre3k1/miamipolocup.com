@@ -36,3 +36,4 @@ node_modules
 bin
 .vagrant
 web/app/themes/twentyfifteen/
+backups/

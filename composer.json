@@ -41,10 +41,9 @@
   ],
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "4.0.1",
+    "johnpbloch/wordpress": "4.1",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "1.0.9",
-    "wpackagist-plugin/wpmbytplayer": "~1.9"
+    "vlucas/phpdotenv": "1.0.9"
   },
   "extra": {
     "installer-paths": {

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "429774c2405a7b26903ada0fd8020f3b",
+    "hash": "3da6c8272b2a2b52098a724698a71b08",
     "packages": [
         {
             "name": "composer/installers",
@@ -221,6 +221,26 @@
                 "environment"
             ],
             "time": "2014-10-16 14:50:21"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-database-reset",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-database-reset/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-database-reset.2.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-database-reset/"
         }
     ],
     "packages-dev": [],

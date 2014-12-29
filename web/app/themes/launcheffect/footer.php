@@ -20,12 +20,13 @@
 	<!-- jQuery.mb.YTPlayer.js -->
 	<script>
 		$(document).ready(function() {
-			if (window.matchMedia('(min-width: 900px)').matches) {
+			if (window.matchMedia('(min-width: 992px)').matches) {
 				$(".player").YTPlayer();
 				$('#bgndVideo').on("YTPStart",function(e){
 					setTimeout(function () {
-						$('#background').fadeOut(8000);
-					}, 5000);
+						$('body').css('background-color','rgb(0,0,0)');
+						// $('#background').fadeOut(5000);
+					}, 2000);
 				});
 			}
 		});

@@ -484,7 +484,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 
 #signup ul#form-layout li {
-    margin:0 0 24px 0;
+    margin:0 0 0px 0;
     position:relative;
     box-sizing:content-box;
     -webkit-box-sizing:content-box;
@@ -884,9 +884,9 @@ span.privacy-policy {
     display:block;
     padding-top:10px;
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     line-height:1.2em;
-    color: #D4DEE0;
+    color: #d3d3d3;
 }
 
 .nocf span.privacy-policy {
@@ -907,7 +907,7 @@ span.privacy-policy {
     line-height:1.4em;
     font-size: 1.4em;
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
-    color: #D4DEE0 !important;
+    color: #d3d3d3 !important;
 }
 
 #privacy-policy a {

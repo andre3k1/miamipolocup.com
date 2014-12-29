@@ -19,6 +19,9 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 				$lefx_editorcontent_placement = ler('lefx_editorcontent_placement');
 			?>">
 
+				<!-- <li class="inner-footer_icon facebooklike"><div class="fb-like" data-href="https://www.facebook.com/thepololife" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li> -->
+
+
 				<div id="signup-content-wrapper">
 					<!-- DISPLAY HEADER IMAGE AND TEXT -->
 						<header class="no-margin">
@@ -31,17 +34,12 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 						</header>
 
 					<div id="signup-body">
-						<!-- DISPLAY CALL-TO-ACTION TEXT BEFORE SIGNUP
-						<div id="presignup-content" class="signup-left">
-							<span class="privacy-policy">Sign Up, Stay in the Know</span>
-						</div>  -->
-
 						<!-- DISPLAY CONFIRMATION TEXT AFTER SIGN UP -->
 						<div id="success-content">
 							<h2>Congrats, You're in the Know!</h2>
 						</div>
 
-						<!-- EMAIL SIGNUP FORM (PRE-SIGNUP) -->
+						<!-- DISPLAY EMAIL SIGNUP FORM -->
 						<form id="form" action="" class="signup-right">
 							<?php wp_nonce_field('pre_signup','verify_pre_signup'); ?>
 
@@ -66,6 +64,11 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 										<!-- HANDLE ERROR MESSAGING -->
 										<div id="error"></div>
+
+										<!-- PRIVACY POLICY LINK -->
+										<li>
+											<span class="privacy-policy">Sign Up, <br/ ><span style="color: #FFD1DC;">Stay in the Know</span></span>
+										</li>
 									</li>
 								</ul>
 							</fieldset>
@@ -96,7 +99,6 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 						<li class="inner-footer_icon twitter"><a href="https://twitter.com/thepololife" target="_blank">Twitter</a></li>
 						<li class="inner-footer_icon instagram"><a href="http://instagram.com/thepololife" target="_blank">Instagram</a></li>
 						<li class="inner-footer_icon youtube"><a href="https://www.youtube.com/user/MiamiBeachPolo" target="_blank">YouTube</a></li>
-						<li class="inner-footer_icon facebooklike"><div class="fb-like" data-href="https://www.facebook.com/thepololife" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
 					</ul> -->
 
 					<!-- DISPLAY SPONSOR LOGOS -->

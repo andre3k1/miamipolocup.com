@@ -373,11 +373,11 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 
 #signup-page header.no-margin h1 {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 #signup-page header h1 {
-    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /*font-size:2.4em;*/
     text-align: center;
     color: #D4DEE0;
@@ -401,7 +401,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 
 #signup-page header h1.hastextheading.haslogo span {
-    margin-top:15px;
+    margin-top:30px;
 }
 
 #signup-page header h1.notextheading.haslogo {

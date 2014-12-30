@@ -365,7 +365,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 #signup-page header {
     overflow:hidden;
     position:relative;
-    margin:0 0 30px 0;
+    margin:0 0 50px 0;
 }
 
 #signup-page header.no-margin {
@@ -373,7 +373,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 }
 
 #signup-page header.no-margin h1 {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 #signup-page header h1 {

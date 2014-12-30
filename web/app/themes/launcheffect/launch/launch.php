@@ -66,9 +66,9 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 										<div id="error"></div>
 
 										<!-- PRIVACY POLICY LINK -->
-										<li>
+										<!-- <li>
 											<span class="privacy-policy">Sign Up, <br/ ><span style="color: #FFD1DC;">Stay in the Know</span></span>
-										</li>
+										</li> -->
 									</li>
 								</ul>
 							</fieldset>

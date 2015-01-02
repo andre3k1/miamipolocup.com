@@ -105,33 +105,31 @@ body {
 
 html,
 body {
-    background-color: #13224D;
+    background-color: rgb(0, 0, 0);
 }
 
-@media only screen and (min-width: 320px) and (max-width: 992px) {
-    #background {
-        background-image: url('../im/background.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        position: fixed;
-        z-index: 0;
-        min-width: 100%;
-        min-height: 100%;
-        left: 0px;
-        top: 0px;
-        overflow: hidden;
-        opacity: 0;
-        -webkit-animation-name: fade-in;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in;
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation-delay: 2s;
-    }
+#background {
+    background-image: url('../im/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    z-index: 0;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 2s;
 }
 
 #bgndVideo {
@@ -271,16 +269,18 @@ a#learn-more:hover {
 	clear: both;
     padding:40px;
     margin:0 auto 80px auto;
-    background-color: #13224D;
-    background-color: rgba(19,34,77,0.8);
-    border: 1px solid #FFF;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    /*border: 1px solid #FFF;*/
+    -webkit-box-shadow: 0px 0px 10px #111;
+    -moz-box-shadow: 0px 0px 10px #111;
+    box-shadow: 0px 0px 10px #111;
+
+    /*
     -webkit-box-shadow: 0px 0px 5px rgb(212,222,224);
     -moz-box-shadow: 0px 0px 5px rgb(212,222,224);
     box-shadow: 0px 0px 5px rgb(212,222,224);
-
-    /*-webkit-box-shadow: 0px 0px 10px #111;
-    -moz-box-shadow: 0px 0px 10px #111;
-    box-shadow: 0px 0px 10px #111;*/
+    */
 }
 
 /*----- Sizes -----*/
@@ -633,7 +633,7 @@ html.ie7 #signup textarea {
     margin:0;
     padding:0px 15px;
     background:transparent;
-    color:#13224D;
+    color:rgb(0, 0, 0);
     font-family: Cubano, Helvetica, Arial, sans-serif !important;
     font-size:2.2em;
     font-weight:900;

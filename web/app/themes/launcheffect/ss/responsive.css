@@ -300,10 +300,10 @@
     @media screen and (max-width: 590px) {
         html,
         body{
-            background-color: #13224D;
+            background-color: rgb(0, 0, 0);
         }
         #background {
-            background-image: none;
+            background-image: none !important;
         }
 
         #signup input#submit-button {

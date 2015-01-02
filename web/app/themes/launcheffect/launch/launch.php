@@ -120,7 +120,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 							autoPlay:true,
 							mute:true,
 							startAt:0,
-							opacity:0.3,
+							opacity:0.5,
 							ratio:'auto',
 							loop:true,
 							showYTLogo:false,

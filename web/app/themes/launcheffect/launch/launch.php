@@ -19,7 +19,9 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 				$lefx_editorcontent_placement = ler('lefx_editorcontent_placement');
 			?>">
 
-				<!-- <li class="inner-footer_icon facebooklike"><div class="fb-like" data-href="https://www.facebook.com/thepololife" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li> -->
+				<div id="fb-like-container">
+					<div class="fb-like" data-href="https://www.facebook.com/thepololife" data-layout="button_count"></div>
+				</div>
 
 
 				<div id="signup-content-wrapper">

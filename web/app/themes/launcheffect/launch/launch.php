@@ -54,7 +54,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 									    <div id="email-layout">
 									        <span id="emailinput">
-									            <input type="email" id="email" name="email" placeholder="Your Email Address" />
+									            <input type="email" id="email" name="email" placeholder="Your Email" />
 									        </span>
 
 											<!-- DISPLAY THE SUBMIT BUTTON -->

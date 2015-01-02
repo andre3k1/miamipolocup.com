@@ -108,16 +108,6 @@ body {
     background-color: #13224D;
 }
 
-@media screen and (max-width: 590px) {
-    html,
-    body{
-        background-color: #13224D;
-    }
-    #background {
-        background-image: none;
-    }
-}
-
 @media only screen and (min-width: 320px) and (max-width: 992px) {
     #background {
         background-image: url('../im/background.jpg');

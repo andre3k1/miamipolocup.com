@@ -234,7 +234,7 @@ a:active {
 ================================================== */
 
 #learn-more-tab {
-    margin: 0px auto 0 auto !important;
+    margin: 0px auto 25px auto !important;
     padding:0px !important;
     width: 590px;
 }
@@ -270,7 +270,7 @@ a#learn-more:hover {
     padding:40px;
     margin:0 auto 80px auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     /*border: 1px solid #FFF;*/
     -webkit-box-shadow: 0px 0px 10px #111;
     -moz-box-shadow: 0px 0px 10px #111;
@@ -367,15 +367,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 #signup-page header {
     overflow:hidden;
     position:relative;
-    margin:0 0 50px 0;
-}
-
-#signup-page header.no-margin {
-    margin: 0;
-}
-
-#signup-page header.no-margin h1 {
-    padding-bottom: 40px;
+    margin:0 0 0 0;
 }
 
 #signup-page header h1 {
@@ -810,7 +802,7 @@ span.conversions {
 ================================================== */
 
 #sponsor-logos {
-    margin-top: 25px
+    margin-top: 23px
 }
 
 /* #Returning User Tooltip
@@ -925,6 +917,7 @@ span.privacy-policy {
 
 ul#inner-footer {
     display: inline-table;
+    margin-top: 20px;
 }
 
 ul#inner-footer li {

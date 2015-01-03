@@ -19,23 +19,35 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 				$lefx_editorcontent_placement = ler('lefx_editorcontent_placement');
 			?>">
 
+				<!--
 				<div id="fb-like-container">
 					<div class="fb-like" data-href="https://www.facebook.com/thepololife" data-layout="button_count"></div>
 				</div>
-
+				-->
 
 				<div id="signup-content-wrapper">
 					<!-- DISPLAY HEADER IMAGE AND TEXT -->
-						<header class="no-margin">
-							<h1 class="haslogo hastextheading">
-					  			<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
-								<div id="bigtext">
-									<span>April 23-25th, 2015 &#9816; South Beach Miami</span>
-									<!-- <span>Miami Beach &#9816; April 23-25, 2015</span> -->
-								</div>
-							</h1>
-						</header>
+					<header class="no-margin">
+						<h1 class="haslogo hastextheading">
+							<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
+							<div id="bigtext">
+								<span>April 23-25th, 2015 &#9816; South Beach Miami</span>
+								<!-- <span>Miami Beach &#9816; April 23-25, 2015</span> -->
+							</div>
+						</h1>
+					</header>
 
+					<!-- DISPLAY SPONSOR LOGOS -->
+					<div id="sponsor-logos">
+						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
+					</div>
+
+					<!-- DISPLAY SPONSOR US LINK -->
+					<div id="learn-more-tab">
+						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
+					</div>
+
+					<!-- DISPLAY MAILCHIMP INTEGRATION -->
 					<div id="signup-body">
 						<!-- DISPLAY CONFIRMATION TEXT AFTER SIGN UP -->
 						<div id="success-content">
@@ -97,22 +109,12 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					</div>
 
 					<!-- DISPLAY SOCIAL MEDIA ICONS -->
-					<!-- <ul id="inner-footer" class="clearfix">
+					<ul id="inner-footer" class="clearfix">
 						<li class="inner-footer_icon facebook"><a href="https://www.facebook.com/thepololife" target="_blank">Facebook</a></li>
 						<li class="inner-footer_icon twitter"><a href="https://twitter.com/thepololife" target="_blank">Twitter</a></li>
 						<li class="inner-footer_icon instagram"><a href="http://instagram.com/thepololife" target="_blank">Instagram</a></li>
 						<li class="inner-footer_icon youtube"><a href="https://www.youtube.com/user/MiamiBeachPolo" target="_blank">YouTube</a></li>
-					</ul> -->
-
-					<!-- DISPLAY SPONSOR LOGOS -->
-					<div id="sponsor-logos">
-						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
-					</div>
-
-					<!-- SPONSOR US LINK -->
-					<div id="learn-more-tab">
-						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
-					</div>
+					</ul>
 
 					<div id="bgndVideo" class="player"
 						data-property="{

@@ -25,27 +25,21 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 				</div>
 				-->
 
+				<!-- DISPLAY SPONSOR US LINK -->
+				<div id="learn-more-tab">
+					<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
+				</div>
+
 				<div id="signup-content-wrapper">
 					<!-- DISPLAY HEADER IMAGE AND TEXT -->
 					<header class="no-margin">
 						<h1 class="haslogo hastextheading">
 							<img src="/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
 							<div id="bigtext">
-								<span>April 23-25th, 2015 &#9816; South Beach Miami</span>
-								<!-- <span>Miami Beach &#9816; April 23-25, 2015</span> -->
+								<span>April 23-25, 2015 &#9816; Miami Beach</span>
 							</div>
 						</h1>
 					</header>
-
-					<!-- DISPLAY SPONSOR LOGOS -->
-					<div id="sponsor-logos">
-						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
-					</div>
-
-					<!-- DISPLAY SPONSOR US LINK -->
-					<div id="learn-more-tab">
-						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
-					</div>
 
 					<!-- DISPLAY MAILCHIMP INTEGRATION -->
 					<div id="signup-body">
@@ -106,6 +100,11 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 							</fieldset>
 						</form>
+					</div>
+
+					<!-- DISPLAY SPONSOR LOGOS -->
+					<div id="sponsor-logos">
+						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
 					</div>
 
 					<!-- DISPLAY SOCIAL MEDIA ICONS -->

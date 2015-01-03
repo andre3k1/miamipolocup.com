@@ -234,7 +234,7 @@ a:active {
 ================================================== */
 
 #learn-more-tab {
-    margin: 0px auto 25px auto !important;
+    margin: 0px auto 30px auto !important;
     padding:0px !important;
     width: 590px;
 }
@@ -386,6 +386,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 
 #signup-page header h1.hastextheading.haslogo span {
     margin-top:30px;
+    margin-bottom:30px;
 }
 
 #signup-page header h1.notextheading.haslogo {
@@ -802,7 +803,8 @@ span.conversions {
 ================================================== */
 
 #sponsor-logos {
-    margin-top: 23px
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 /* #Returning User Tooltip
@@ -917,7 +919,6 @@ span.privacy-policy {
 
 ul#inner-footer {
     display: inline-table;
-    margin-top: 20px;
 }
 
 ul#inner-footer li {

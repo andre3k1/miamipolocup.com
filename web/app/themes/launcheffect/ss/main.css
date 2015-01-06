@@ -733,7 +733,7 @@ html.ie7 #email-layout #email {
 #error, .error {
     display: none;
     position:absolute;
-    bottom:3px;
+    bottom:10px;
     left:10px;
 
     width:auto;
@@ -742,7 +742,7 @@ html.ie7 #email-layout #email {
     background:#DA342E;
     color:white;
 
-    font-size:2.15em;
+    font-size:1.15em;
     font-weight:bold;
 
     -webkit-border-top-left-radius: 2px;

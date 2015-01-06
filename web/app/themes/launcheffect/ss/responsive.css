@@ -255,7 +255,7 @@
         #signup.small,
         #signup.large .signup-left,
         #signup.large .signup-right {
-            padding: 20px !important;
+            padding: 0px !important;
         }
 
         #signup,
@@ -305,6 +305,7 @@
         body{
             background-color: #13224D;
         }
+
         #background {
             background-image: none !important;
         }
@@ -313,9 +314,7 @@
             font-size: 1.4em;
             line-height:1.4em;
         }
-        #signup-page header h1 {
-            color: #FDFDBA !important;
-        }
+
         #signup {
             background-color: #13224D;
         }

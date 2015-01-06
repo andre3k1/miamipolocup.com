@@ -35,16 +35,6 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 						</h1>
 					</header>
 
-					<!-- DISPLAY SPONSOR LOGOS -->
-					<div id="sponsor-logos">
-						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
-					</div>
-
-					<!-- DISPLAY SPONSOR US LINK -->
-					<div id="learn-more-tab">
-						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
-					</div>
-
 					<!-- DISPLAY MAILCHIMP INTEGRATION -->
 					<div id="signup-body">
 						<!-- DISPLAY CONFIRMATION TEXT AFTER SIGN UP -->
@@ -110,6 +100,16 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 							</fieldset>
 						</form>
+					</div>
+
+					<!-- DISPLAY SPONSOR LOGOS -->
+					<div id="sponsor-logos">
+						<img src="/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
+					</div>
+
+					<!-- DISPLAY SPONSOR US LINK -->
+					<div id="learn-more-tab">
+						<a href="mailto:info@actproductions.com" id="learn-more">sponsor us &rsaquo;</a>
 					</div>
 
 					<!-- DISPLAY SOCIAL MEDIA ICONS -->

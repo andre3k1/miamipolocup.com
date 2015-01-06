@@ -805,7 +805,7 @@ span.conversions {
 ================================================== */
 
 #sponsor-logos {
-    margin-top: 5px;
+    margin-top: -5px;
     margin-bottom: 5px;
 }
 
@@ -921,7 +921,7 @@ span.privacy-policy {
 
 ul#inner-footer {
     display: inline-table;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 ul#inner-footer li {

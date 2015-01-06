@@ -300,7 +300,7 @@
     @media screen and (max-width: 590px) {
         html,
         body{
-            background-color: rgb(0, 0, 0);
+            background-color: #13224D;
         }
         #background {
             background-image: none !important;
@@ -309,5 +309,11 @@
         #signup input#submit-button {
             font-size: 1.4em;
             line-height:1.4em;
+        }
+        #signup-page header h1 {
+            color: #FDFDBA !important;
+        }
+        #signup {
+            background-color: #13224D;
         }
     }

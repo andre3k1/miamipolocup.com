@@ -152,6 +152,9 @@
         float:none;
     }
 
+    #signup label {
+        text-align: center;
+    }
 
 
 /* #Footer (Social Icons)

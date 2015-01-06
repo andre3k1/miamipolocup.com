@@ -63,7 +63,13 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 								<ul id="form-layout">
 									<li class="first">
 
+									<!-- DISPLAY CALL-TO-ACTION TEXT -->
+										<label for="email">
+											Sign Up, Stay in the Know
+										</label>
+
 									    <div id="email-layout">
+									    	<!-- DISPLAY THE TEXT FORM -->
 									        <span id="emailinput">
 									            <input type="email" id="email" name="email" placeholder="Your Email" />
 									        </span>

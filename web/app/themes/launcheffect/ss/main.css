@@ -386,7 +386,7 @@ html.ie7 #launchlitemodule #signup .signup-left {
 
 #signup-page header h1.hastextheading.haslogo span {
     margin-top:30px;
-    margin-bottom:30px;
+    margin-bottom:0px;
 }
 
 #signup-page header h1.notextheading.haslogo {
@@ -803,8 +803,8 @@ span.conversions {
 ================================================== */
 
 #sponsor-logos {
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-bottom: 15px;
 }
 
 /* #Returning User Tooltip

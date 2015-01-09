@@ -272,14 +272,14 @@ a#learn-more:hover {
     background-color: #13224D;
     background-color: rgba(19,34,77,0.8);
     border: 2px solid #FFF;
-    -webkit-box-shadow: 0px 0px 5px rgb(212,222,224);
-    -moz-box-shadow: 0px 0px 5px rgb(212,222,224);
-    box-shadow: 0px 0px 5px rgb(212,222,224);
-
-    /*
     -webkit-box-shadow: 0px 0px 10px #111;
     -moz-box-shadow: 0px 0px 10px #111;
     box-shadow: 0px 0px 10px #111;
+
+    /*
+    -webkit-box-shadow: 0px 0px 5px rgb(212,222,224);
+    -moz-box-shadow: 0px 0px 5px rgb(212,222,224);
+    box-shadow: 0px 0px 5px rgb(212,222,224);
     */
 }
 

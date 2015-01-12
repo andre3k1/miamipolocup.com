@@ -30,7 +30,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 						<h1 class="haslogo hastextheading">
 							<img src="http://andre.me/projects/pololife/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
 							<div id="bigtext">
-								<span>April 23-25, 2015 &#9816; Miami Beach</span>
+								<span>April 23-26, 2015 &#9816; Miami Beach</span>
 							</div>
 						</h1>
 					</header>

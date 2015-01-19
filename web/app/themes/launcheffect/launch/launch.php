@@ -28,7 +28,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 					<!-- DISPLAY HEADER -->
 					<header class="no-margin">
 						<h1 class="haslogo hastextheading">
-							<img src="http://andre.me/projects/pololife/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
+							<img src="http://miamipolo.com/app/themes/launcheffect/im/header.png" alt="Miami Beach Polo World Cup" />
 							<div id="bigtext">
 								<span>April 23-26, 2015 &#9816; Miami Beach</span>
 							</div>
@@ -104,7 +104,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<!-- DISPLAY SPONSOR LOGOS -->
 					<div id="sponsor-logos">
-						<img src="http://andre.me/projects/pololife/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
+						<img src="http://miamipolo.com/app/themes/launcheffect/im/sponsors.png" alt="Sponsors - Miami Beach Polo World Cup" />
 					</div>
 
 					<!-- DISPLAY SPONSOR US LINK -->
@@ -122,7 +122,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<div id="bgndVideo" class="player"
 						data-property="{
-							videoURL:'https://www.youtube.com/watch?v=xDKuSRdTTp4',
+              videoURL:'https://www.youtube.com/watch?v=ECKN6mK8jio',
 							containment:'body',
 							autoPlay:true,
 							mute:true,

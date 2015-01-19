@@ -27,7 +27,7 @@ $ogImageSrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), arr
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
 
-	<title>Coming Soon - Miami Beach Polo World Cup XII - Presented by The Polo Life, LLC.</title>
+	<title>Miami Beach Polo World Cup - Presented by Polo Life and ACT Productions</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0">

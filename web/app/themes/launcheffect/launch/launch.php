@@ -122,7 +122,7 @@ $placed_content = sprintf('<div id="signup-editor-content">%s</div>', wpautop(ge
 
 					<div id="bgndVideo" class="player"
 						data-property="{
-              videoURL:'https://www.youtube.com/watch?v=ECKN6mK8jio',
+              videoURL:'https://www.youtube.com/watch?v=xDKuSRdTTp4',
 							containment:'body',
 							autoPlay:true,
 							mute:true,
